@@ -7,7 +7,6 @@ class Ipget < Formula
   head "https://github.com/ipfs/ipget.git", branch: "master"
 
   depends_on "go@1.18" => :build # quic-go cannot be built with go 1.19
-  depends_on "make" => :build
 
   def install
     system "make", "build"
@@ -15,8 +14,13 @@ class Ipget < Formula
   end
 
   test do
-    system "#{bin}/ipget", "--version"
-    # IPFS-provided example CID
-    system "#{bin}/ipget", "ipfs://bafybeihkoviema7g3gxyt6la7vd5ho32ictqbilu3wnlo3rs7ewhnp7lly/"
+    # Make sure correct version is reported
+    assert_match version.to_s, shell_output("#{bin}/ipget --version")
+
+    # An example content identifier (CID) used in IPFS docs:
+    # https://docs.ipfs.tech/concepts/content-addressing/
+    cid = "bafybeihkoviema7g3gxyt6la7vd5ho32ictqbilu3wnlo3rs7ewhnp7lly"
+    system "#{bin}/ipget", "ipfs://#{cid}/"
+    assert_match "JPEG image data", shell_output("file #{cid}")
   end
 end
