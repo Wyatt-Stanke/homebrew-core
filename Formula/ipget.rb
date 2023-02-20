@@ -6,7 +6,9 @@ class Ipget < Formula
   license "MIT"
   head "https://github.com/ipfs/ipget.git", branch: "master"
 
-  depends_on "go@1.18" => :build # quic-go cannot be built with go 1.19
+  # The current version of `quic-go` dependency can only be built with `go@1.18`.
+  # Try `go@1.19` or newer at next release; upstream has already upgraded `quic-go` at master branch.
+  depends_on "go@1.18" => :build
 
   def install
     system "make", "build"
