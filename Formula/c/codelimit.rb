@@ -6,15 +6,16 @@ class Codelimit < Formula
   url "https://files.pythonhosted.org/packages/48/32/a34e630e5f63e3302bab5c92ecb8c172efc82d8f3e4413a3c5d4fcd3f58f/codelimit-0.9.3.tar.gz"
   sha256 "ce2a5d82bb06b5370da7135ebeb805b7439860bfd383f07fcaec7f19296947c6"
   license "GPL-3.0-or-later"
+  revision 2
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "3c173d596c8a077dfe33aa7e608653002e70b0b5d9c1e9ed38a4e6a28cfa7870"
-    sha256 cellar: :any,                 arm64_ventura:  "5e0d5d60287fee23663c700f69049657c47b6ad1425a08c03c0559a7e21b96f2"
-    sha256 cellar: :any,                 arm64_monterey: "cb8a280f00a55642a1b76a74c9dc8f1380c2d641a96a2b6be293635e3d681668"
-    sha256 cellar: :any,                 sonoma:         "27259ec7357c329a9b1214528df808f643699d524524557ce7be22f9921d2647"
-    sha256 cellar: :any,                 ventura:        "df62fdaa7474ce7d75534ec6b1fe936db3e6b2dfe56b80b286907cb351ae7049"
-    sha256 cellar: :any,                 monterey:       "bfd4c900bc718c52b0540bb4977807eef8b81c6e57a0fbf2cb0a4b404566f113"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e54efa18c9b290fd03ed8108ccb94eb27fabd363138febfe4e482fbee988b8ed"
+    sha256 cellar: :any,                 arm64_sonoma:   "0e54f914df6657ea64b2d9801245c736b2a7cb09bc93df295b2f282de1d80182"
+    sha256 cellar: :any,                 arm64_ventura:  "20b8a54b6fac49501be01601228395caaf3079837280bcbf0b399bdab4ee256a"
+    sha256 cellar: :any,                 arm64_monterey: "d412fb05adcb87c3e53aed735cd6b1a20e1ce7d2356737e13ae6598dc3f153ca"
+    sha256 cellar: :any,                 sonoma:         "1b2b5a4466106e8381489d30a9332bcd11477dbc1b156282cde6f5f3de409a79"
+    sha256 cellar: :any,                 ventura:        "17d2dfe5cba36490f3fad14db55bc0f0060891278631a3e3540a17acf144c4a0"
+    sha256 cellar: :any,                 monterey:       "f0319c88664a9a3f8731ab50d720a86b6cca9308b99e1c29b4e1ce7ce62bbb49"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fbd89148a1de14ea223c4232cda5ec56e07d9a51e73578a4a66147836a407695"
   end
 
   depends_on "certifi"
@@ -77,8 +78,8 @@ class Codelimit < Formula
   end
 
   resource "pygments" do
-    url "https://files.pythonhosted.org/packages/55/59/8bccf4157baf25e4aa5a0bb7fa3ba8600907de105ebc22b0c78cfbf6f565/pygments-2.17.2.tar.gz"
-    sha256 "da46cec9fd2de5be3a8a784f434e4c4ab670b4ff54d605c4c2717e9d49c4c367"
+    url "https://files.pythonhosted.org/packages/8e/62/8336eff65bcbc8e4cb5d05b55faf041285951b6e80f33e2bff2024788f31/pygments-2.18.0.tar.gz"
+    sha256 "786ff802f32e91311bff3889f6e9a86e81505fe99f2735bb6d60ae0c5004f199"
   end
 
   resource "pyyaml" do
@@ -87,8 +88,8 @@ class Codelimit < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/9d/be/10918a2eac4ae9f02f6cfe6414b7a155ccd8f7f9d4380d62fd5b955065c3/requests-2.31.0.tar.gz"
-    sha256 "942c5a758f98d790eaed1a29cb6eefc7ffb0d1cf7af05c3d2791656dbd6ad1e1"
+    url "https://files.pythonhosted.org/packages/63/70/2bf7780ad2d390a8d301ad0b550f1581eadbd9a20f896afe06353c2a2913/requests-2.32.3.tar.gz"
+    sha256 "55365417734eb18255590a9ff9eb97e9e1da868d4ccd6402399eaf68af20a760"
   end
 
   resource "rich" do
@@ -102,13 +103,13 @@ class Codelimit < Formula
   end
 
   resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/f6/f3/b827b3ab53b4e3d8513914586dcca61c355fa2ce8252dea4da56e67bf8f2/typing_extensions-4.11.0.tar.gz"
-    sha256 "83f085bd5ca59c80295fc2a82ab5dac679cbe02b9f33f7d83af68e241bea51b0"
+    url "https://files.pythonhosted.org/packages/df/db/f35a00659bc03fec321ba8bce9420de607a1d37f8342eee1863174c69557/typing_extensions-4.12.2.tar.gz"
+    sha256 "1a7ead55c7e559dd4dee8856e3a88b41225abfe1ce8df57b7c13915fe121ffb8"
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/7a/50/7fd50a27caa0652cd4caf224aa87741ea41d3265ad13f010886167cfcc79/urllib3-2.2.1.tar.gz"
-    sha256 "d0570876c61ab9e520d776c38acbbb5b05a776d3f9ff98a5c8fd5162a444cf19"
+    url "https://files.pythonhosted.org/packages/43/6d/fa469ae21497ddc8bc93e5877702dca7cb8f911e337aca7452b5724f1bb6/urllib3-2.2.2.tar.gz"
+    sha256 "dd505485549a7a552833da5e6063639d0d177c04f23bc3864e41e5dc5f612168"
   end
 
   resource "yarl" do

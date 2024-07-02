@@ -1,8 +1,8 @@
 class Jenkins < Formula
   desc "Extendable open source continuous integration server"
   homepage "https://www.jenkins.io/"
-  url "https://get.jenkins.io/war/2.458/jenkins.war"
-  sha256 "236b5902266c1c9e42e83bc7bed39ec03cd3cc5bfcaa0f88eff3cfc955b43232"
+  url "https://get.jenkins.io/war/2.464/jenkins.war"
+  sha256 "e39402fc21802d22458b499113ad08fcdd57c11ac3efca7e015d2ff826eefcd4"
   license "MIT"
 
   livecheck do
@@ -11,13 +11,13 @@ class Jenkins < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "49e092149fa4ee282ebdc5631ad33b25fd105ee19830d5322f768ab5cddec58f"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "0098d651d528fbe3b06ed9a743ba918f566bfc78f12b1bbad2e4a671d4a722f6"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "9110eca971538add8d5c49f2b56bca3c82aabb5ce407373ba4b33baab148037b"
-    sha256 cellar: :any_skip_relocation, sonoma:         "4f1b58ce378379b65d6048dc915e1114fa5dd90fd79a7ddbb0a955f482947521"
-    sha256 cellar: :any_skip_relocation, ventura:        "a82e762fbc4708e0a770b82648d5703d3e2e20c6be02b423352e713843ee45ff"
-    sha256 cellar: :any_skip_relocation, monterey:       "61cea0bdf7197c623461beac348bb3f1ac65bdaadcaf859108e7f047a37f7c2e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c3041af9bba473f2d2f491634b29f1526bc908dda9ae0410d7dfd5c50e9e007f"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "4576c22188735a15c3afa857d337c35a3e71a154bbd5e0f3f1990d8e7361af55"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "4576c22188735a15c3afa857d337c35a3e71a154bbd5e0f3f1990d8e7361af55"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "4576c22188735a15c3afa857d337c35a3e71a154bbd5e0f3f1990d8e7361af55"
+    sha256 cellar: :any_skip_relocation, sonoma:         "4576c22188735a15c3afa857d337c35a3e71a154bbd5e0f3f1990d8e7361af55"
+    sha256 cellar: :any_skip_relocation, ventura:        "4576c22188735a15c3afa857d337c35a3e71a154bbd5e0f3f1990d8e7361af55"
+    sha256 cellar: :any_skip_relocation, monterey:       "4576c22188735a15c3afa857d337c35a3e71a154bbd5e0f3f1990d8e7361af55"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0930f0f12f8984b491e329ddd2fb3e8b3bea1d78b864c410fb19b12a12b20ed6"
   end
 
   head do
@@ -25,17 +25,17 @@ class Jenkins < Formula
     depends_on "maven" => :build
   end
 
-  depends_on "openjdk"
+  depends_on "openjdk@21"
 
   def install
     if build.head?
       system "mvn", "clean", "install", "-pl", "war", "-am", "-DskipTests"
     else
-      system "#{Formula["openjdk"].opt_bin}/jar", "xvf", "jenkins.war"
+      system "#{Formula["openjdk@21"].opt_bin}/jar", "xvf", "jenkins.war"
     end
     libexec.install Dir["**/jenkins.war", "**/cli-#{version}.jar"]
-    bin.write_jar_script libexec/"jenkins.war", "jenkins"
-    bin.write_jar_script libexec/"cli-#{version}.jar", "jenkins-cli"
+    bin.write_jar_script libexec/"jenkins.war", "jenkins", java_version: "21"
+    bin.write_jar_script libexec/"cli-#{version}.jar", "jenkins-cli", java_version: "21"
 
     (var/"log/jenkins").mkpath
   end

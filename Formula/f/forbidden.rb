@@ -6,16 +6,17 @@ class Forbidden < Formula
   url "https://files.pythonhosted.org/packages/fa/03/9f18651dbe09f130e444b836c448b3b3b8a6ddec4996c4183c17e9131592/forbidden-11.2.tar.gz"
   sha256 "be837a5f9bf22ab4f73dfe900f10f2b28baea7d766771becaeebe788968e78bb"
   license "MIT"
+  revision 2
   head "https://github.com/ivan-sincek/forbidden.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "63769938ebba8c2933a102216f4174a71bd04b210e84db1785d8a4f0f2e79f0e"
-    sha256 cellar: :any,                 arm64_ventura:  "5ed07e360344939056479f117edcde2a737e7a415b0e8fbabd43f4eab8900032"
-    sha256 cellar: :any,                 arm64_monterey: "56c00c02ff481e7b5b5243d1bb5c055a0c11a7e3c1ddfc30c694aec54ed9ecf4"
-    sha256 cellar: :any,                 sonoma:         "993b929119f242447dd237743b1cae05bfd37fbb254703fae9cd0e03c5262818"
-    sha256 cellar: :any,                 ventura:        "9d3c53ac99f1f80397d512eeb4511afd2e433bb4a03d57d980d0f25d423de778"
-    sha256 cellar: :any,                 monterey:       "e1ef099df77f1a22d262e41cfc74b4f6e70f0833a3414a0ea7bd57d9c74db753"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5d2e3e2b1a8dd131c9c4521e979b33e622a7751efcdb8f3cef26e31a6d4d7adb"
+    sha256 cellar: :any,                 arm64_sonoma:   "a406f0f24ec68bf160fe6cdca8467dac6a3e66eaafb74ca25cf6b61e96164da4"
+    sha256 cellar: :any,                 arm64_ventura:  "18f4680277020f6842af94c3572fed8b1a73afbedc04c8a639561179e5fa7be9"
+    sha256 cellar: :any,                 arm64_monterey: "70a3bd6915302ca84442307ecf79ad792ca015fd6ad1f125906bea9f6e404513"
+    sha256 cellar: :any,                 sonoma:         "40b0e76863be0ba4b04ac23d2374cb3db1ed64d2def36afb0d11999657667ea8"
+    sha256 cellar: :any,                 ventura:        "433f70b434b87e152bb974bb99cf21944f9d120db8861c99643030a68a04dbc8"
+    sha256 cellar: :any,                 monterey:       "fb06968463df87e16cf3b3a02e5ce97090735c8463a33615583dc6735519be75"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "75dd8d2df39946926ed11b905316edb8f976066172b6ab54569ec5b253fb414f"
   end
 
   depends_on "certifi"
@@ -59,18 +60,18 @@ class Forbidden < Formula
   end
 
   resource "regex" do
-    url "https://files.pythonhosted.org/packages/24/ca/2477acbf4d4abe7b2efaa775d5e96dfa236982671bd01a4172e81278d411/regex-2024.5.10.tar.gz"
-    sha256 "304e7e2418146ae4d0ef0e9ffa28f881f7874b45b4994cc2279b21b6e7ae50c8"
+    url "https://files.pythonhosted.org/packages/7a/db/5ddc89851e9cc003929c3b08b9b88b429459bf9acbf307b4556d51d9e49b/regex-2024.5.15.tar.gz"
+    sha256 "d3ee02d9e5f482cc8309134a91eeaacbdd2261ba111b0fef3748eeb4913e6a2c"
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/9d/be/10918a2eac4ae9f02f6cfe6414b7a155ccd8f7f9d4380d62fd5b955065c3/requests-2.31.0.tar.gz"
-    sha256 "942c5a758f98d790eaed1a29cb6eefc7ffb0d1cf7af05c3d2791656dbd6ad1e1"
+    url "https://files.pythonhosted.org/packages/63/70/2bf7780ad2d390a8d301ad0b550f1581eadbd9a20f896afe06353c2a2913/requests-2.32.3.tar.gz"
+    sha256 "55365417734eb18255590a9ff9eb97e9e1da868d4ccd6402399eaf68af20a760"
   end
 
   resource "setuptools" do
-    url "https://files.pythonhosted.org/packages/d6/4f/b10f707e14ef7de524fe1f8988a294fb262a29c9b5b12275c7e188864aed/setuptools-69.5.1.tar.gz"
-    sha256 "6c1fccdac05a97e598fb0ae3bbed5904ccb317337a51139dcd51453611bbb987"
+    url "https://files.pythonhosted.org/packages/aa/60/5db2249526c9b453c5bb8b9f6965fcab0ddb7f40ad734420b3b421f7da44/setuptools-70.0.0.tar.gz"
+    sha256 "f211a66637b8fa059bb28183da127d4e86396c991a942b028c6650d4319c3fd0"
   end
 
   resource "tabulate" do
@@ -84,13 +85,13 @@ class Forbidden < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/7a/50/7fd50a27caa0652cd4caf224aa87741ea41d3265ad13f010886167cfcc79/urllib3-2.2.1.tar.gz"
-    sha256 "d0570876c61ab9e520d776c38acbbb5b05a776d3f9ff98a5c8fd5162a444cf19"
+    url "https://files.pythonhosted.org/packages/43/6d/fa469ae21497ddc8bc93e5877702dca7cb8f911e337aca7452b5724f1bb6/urllib3-2.2.2.tar.gz"
+    sha256 "dd505485549a7a552833da5e6063639d0d177c04f23bc3864e41e5dc5f612168"
   end
 
   resource "zope-interface" do
-    url "https://files.pythonhosted.org/packages/2a/bd/a30bf6df24480017171da4f52ee527a72c7a6450c86355011e0156e71723/zope.interface-6.3.tar.gz"
-    sha256 "f83d6b4b22262d9a826c3bd4b2fbfafe1d0000f085ef8e44cd1328eea274ae6a"
+    url "https://files.pythonhosted.org/packages/09/06/7c1202972bc99dd1b731c3c01157855cbc8d0944894c3b234473b1f4119c/zope.interface-6.4.post2.tar.gz"
+    sha256 "1c207e6f6dfd5749a26f5a5fd966602d6b824ec00d2df84a7e9a924e8933654e"
   end
 
   def install

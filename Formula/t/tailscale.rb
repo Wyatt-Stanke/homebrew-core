@@ -2,8 +2,8 @@ class Tailscale < Formula
   desc "Easiest, most secure way to use WireGuard and 2FA"
   homepage "https://tailscale.com"
   url "https://github.com/tailscale/tailscale.git",
-      tag:      "v1.66.3",
-      revision: "eae73f821381ce653468ba3c4eec3453c0808953"
+      tag:      "v1.68.1",
+      revision: "92eacec73f10616b2be7aae7a1ac53c8e44e9268"
   license "BSD-3-Clause"
 
   livecheck do
@@ -12,13 +12,13 @@ class Tailscale < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "0b0e9e56594d7112bf1ce6842fc128a8fb587fac66d2b46ea13acb9ab01714ea"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "1631ab02e3d08022d7e475c74e01d863dea461a6cf08493871adddc6f0673ddd"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6f14298a8343a09ad43ba63e229e46cfc20a14c15d176fc629b3c18ff412f789"
-    sha256 cellar: :any_skip_relocation, sonoma:         "9e0a58bd6706826715c16e9bfe05591bb0c1a2a3e97a3d7ab3e536cb9bfa6c85"
-    sha256 cellar: :any_skip_relocation, ventura:        "83303822622768c25dc0c273ee112821f1a17436890757c6fee0a4157d233567"
-    sha256 cellar: :any_skip_relocation, monterey:       "ff93b8a467d58814bea2d16c9a1d9e7fbd77b4b7da827c22015c0fc78af87e0e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7bc09f4f697b888c7fe768c67cead9c6a519bc1517ffc5cf1f0b8af1170af397"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "eb7ce9b6a4234669a81752aaf2ed7d6a066c72e4b8781543c43d0956b81a5d1f"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "c60e1a248ca5ae576a1dbf3cbd0176756e1872fed6a36ad0b81d8bc8a3c8979c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "9c2c0b671925f3418b6c3dc669e0533d0df2709c7125fa2fb545eaa542386226"
+    sha256 cellar: :any_skip_relocation, sonoma:         "a6f7e94946abb16eff20c8070bca5d9e9bffed9c25bbd606f2795dcc822f2d6d"
+    sha256 cellar: :any_skip_relocation, ventura:        "7c8f5d7e0fbb8e4de6a6756583ecfa37419e597960e7eb94f44a2b9b266f580c"
+    sha256 cellar: :any_skip_relocation, monterey:       "1ebe854bacb8eb39869dd205c73b0300e780c81671a5668eb744dcb9260fa110"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "873df22e03a9a6d9fbb6b73ba7851ccc5bfec5668ceaffcb46049cc2a89dd853"
   end
 
   depends_on "go" => :build
@@ -33,6 +33,8 @@ class Tailscale < Formula
     ]
     system "go", "build", *std_go_args(ldflags:), "./cmd/tailscale"
     system "go", "build", *std_go_args(ldflags:, output: bin/"tailscaled"), "./cmd/tailscaled"
+
+    generate_completions_from_executable(bin/"tailscale", "completion")
   end
 
   service do

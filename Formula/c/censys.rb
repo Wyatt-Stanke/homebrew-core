@@ -6,24 +6,24 @@ class Censys < Formula
   url "https://files.pythonhosted.org/packages/d1/21/9797900ebbed0fa2c961b2432a1c9cf9e41bbd6e8902debcf22ad9473d31/censys-2.2.12.tar.gz"
   sha256 "da75c2e37f064b9ffd579650217cb8d3f129048949f997acee31a0cb34b6e0dd"
   license "Apache-2.0"
-  revision 1
+  revision 3
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "fd31fb05d2f91f92176f124ed2f8f9ab1c0efdf8c16591eb825049558fd81c18"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "fd31fb05d2f91f92176f124ed2f8f9ab1c0efdf8c16591eb825049558fd81c18"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "fd31fb05d2f91f92176f124ed2f8f9ab1c0efdf8c16591eb825049558fd81c18"
-    sha256 cellar: :any_skip_relocation, sonoma:         "91c529f07376ba7afb17c981f6d31d829bd9264e1ef01ffb8d10218b477ab811"
-    sha256 cellar: :any_skip_relocation, ventura:        "91c529f07376ba7afb17c981f6d31d829bd9264e1ef01ffb8d10218b477ab811"
-    sha256 cellar: :any_skip_relocation, monterey:       "91c529f07376ba7afb17c981f6d31d829bd9264e1ef01ffb8d10218b477ab811"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a9e758c4a979c03663abddc26c0daa913fc0ea94986e2f38c649e956432e537e"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "14f606d6f10b2b8a5257177768c1ac9599366c3f45771b15b21d6ce50f488f7f"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "14f606d6f10b2b8a5257177768c1ac9599366c3f45771b15b21d6ce50f488f7f"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "14f606d6f10b2b8a5257177768c1ac9599366c3f45771b15b21d6ce50f488f7f"
+    sha256 cellar: :any_skip_relocation, sonoma:         "b08270aa227459cdc5357406b74014e3f4b552da4fffe5e6fdd4fc9a14bf95f4"
+    sha256 cellar: :any_skip_relocation, ventura:        "b08270aa227459cdc5357406b74014e3f4b552da4fffe5e6fdd4fc9a14bf95f4"
+    sha256 cellar: :any_skip_relocation, monterey:       "b08270aa227459cdc5357406b74014e3f4b552da4fffe5e6fdd4fc9a14bf95f4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9f9b20ffaa7a6d3e621c2b75eda7cfd94986513e3031ae28cf20294982c65cbf"
   end
 
   depends_on "certifi"
   depends_on "python@3.12"
 
   resource "argcomplete" do
-    url "https://files.pythonhosted.org/packages/3c/c0/031c507227ce3b715274c1cd1f3f9baf7a0f7cec075e22c7c8b5d4e468a9/argcomplete-3.2.3.tar.gz"
-    sha256 "bf7900329262e481be5a15f56f19736b376df6f82ed27576fa893652c5de6c23"
+    url "https://files.pythonhosted.org/packages/db/ca/45176b8362eb06b68f946c2bf1184b92fc98d739a3f8c790999a257db91f/argcomplete-3.4.0.tar.gz"
+    sha256 "c2abcdfe1be8ace47ba777d4fce319eb13bf8ad9dace8d085dcad6eded88057f"
   end
 
   resource "backoff" do
@@ -52,13 +52,13 @@ class Censys < Formula
   end
 
   resource "pygments" do
-    url "https://files.pythonhosted.org/packages/55/59/8bccf4157baf25e4aa5a0bb7fa3ba8600907de105ebc22b0c78cfbf6f565/pygments-2.17.2.tar.gz"
-    sha256 "da46cec9fd2de5be3a8a784f434e4c4ab670b4ff54d605c4c2717e9d49c4c367"
+    url "https://files.pythonhosted.org/packages/8e/62/8336eff65bcbc8e4cb5d05b55faf041285951b6e80f33e2bff2024788f31/pygments-2.18.0.tar.gz"
+    sha256 "786ff802f32e91311bff3889f6e9a86e81505fe99f2735bb6d60ae0c5004f199"
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/9d/be/10918a2eac4ae9f02f6cfe6414b7a155ccd8f7f9d4380d62fd5b955065c3/requests-2.31.0.tar.gz"
-    sha256 "942c5a758f98d790eaed1a29cb6eefc7ffb0d1cf7af05c3d2791656dbd6ad1e1"
+    url "https://files.pythonhosted.org/packages/63/70/2bf7780ad2d390a8d301ad0b550f1581eadbd9a20f896afe06353c2a2913/requests-2.32.3.tar.gz"
+    sha256 "55365417734eb18255590a9ff9eb97e9e1da868d4ccd6402399eaf68af20a760"
   end
 
   resource "rich" do
@@ -67,8 +67,8 @@ class Censys < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/7a/50/7fd50a27caa0652cd4caf224aa87741ea41d3265ad13f010886167cfcc79/urllib3-2.2.1.tar.gz"
-    sha256 "d0570876c61ab9e520d776c38acbbb5b05a776d3f9ff98a5c8fd5162a444cf19"
+    url "https://files.pythonhosted.org/packages/43/6d/fa469ae21497ddc8bc93e5877702dca7cb8f911e337aca7452b5724f1bb6/urllib3-2.2.2.tar.gz"
+    sha256 "dd505485549a7a552833da5e6063639d0d177c04f23bc3864e41e5dc5f612168"
   end
 
   def install

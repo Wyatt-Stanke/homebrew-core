@@ -6,17 +6,17 @@ class Flit < Formula
   url "https://files.pythonhosted.org/packages/b1/a6/e9227cbb501aee4fa4a52517d3868214036a7b085d96bd1e4bbfc67ad6c6/flit-3.9.0.tar.gz"
   sha256 "d75edf5eb324da20d53570a6a6f87f51e606eee8384925cd66a90611140844c7"
   license "BSD-3-Clause"
-  revision 4
+  revision 6
   head "https://github.com/pypa/flit.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "7684043a66cbdfa2def6fe59cbf54efddf090c7e626b06f8bf4f7397c1a29e17"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "7684043a66cbdfa2def6fe59cbf54efddf090c7e626b06f8bf4f7397c1a29e17"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "7684043a66cbdfa2def6fe59cbf54efddf090c7e626b06f8bf4f7397c1a29e17"
-    sha256 cellar: :any_skip_relocation, sonoma:         "7684043a66cbdfa2def6fe59cbf54efddf090c7e626b06f8bf4f7397c1a29e17"
-    sha256 cellar: :any_skip_relocation, ventura:        "7684043a66cbdfa2def6fe59cbf54efddf090c7e626b06f8bf4f7397c1a29e17"
-    sha256 cellar: :any_skip_relocation, monterey:       "7684043a66cbdfa2def6fe59cbf54efddf090c7e626b06f8bf4f7397c1a29e17"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cc985cb96aed9b2ce225c0dc42fbdf5b47d418fea0bf0de99983192701b07024"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "aba06431b18d8c79686ce64ec9bbc2fcbd7149458bddfada2c0727e3b5d1fe1d"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "aba06431b18d8c79686ce64ec9bbc2fcbd7149458bddfada2c0727e3b5d1fe1d"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "aba06431b18d8c79686ce64ec9bbc2fcbd7149458bddfada2c0727e3b5d1fe1d"
+    sha256 cellar: :any_skip_relocation, sonoma:         "ef4b0958248b87dff6e4f54f467514118d39d96f4a05b9bf22344960d2557f3a"
+    sha256 cellar: :any_skip_relocation, ventura:        "ef4b0958248b87dff6e4f54f467514118d39d96f4a05b9bf22344960d2557f3a"
+    sha256 cellar: :any_skip_relocation, monterey:       "aba06431b18d8c79686ce64ec9bbc2fcbd7149458bddfada2c0727e3b5d1fe1d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9d06f3ca05a6d51940e38b28f3a36c6a3e8f9dec69a75a2191d6457f0431b710"
   end
 
   depends_on "certifi"
@@ -28,8 +28,8 @@ class Flit < Formula
   end
 
   resource "docutils" do
-    url "https://files.pythonhosted.org/packages/21/ff/c495b797462434f0befcb598b51cde31c3ebdf8577c3fd9d9a8f5eeb844c/docutils-0.21.1.tar.gz"
-    sha256 "65249d8a5345bc95e0f40f280ba63c98eb24de35c6c8f5b662e3e8948adea83f"
+    url "https://files.pythonhosted.org/packages/ae/ed/aefcc8cd0ba62a0560c3c18c33925362d46c6075480bfa4df87b28e169a9/docutils-0.21.2.tar.gz"
+    sha256 "3a6b18732edf182daa3cd12775bbb338cf5691468f91eeeb109deff6ebfa986f"
   end
 
   resource "flit-core" do
@@ -43,8 +43,8 @@ class Flit < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/9d/be/10918a2eac4ae9f02f6cfe6414b7a155ccd8f7f9d4380d62fd5b955065c3/requests-2.31.0.tar.gz"
-    sha256 "942c5a758f98d790eaed1a29cb6eefc7ffb0d1cf7af05c3d2791656dbd6ad1e1"
+    url "https://files.pythonhosted.org/packages/63/70/2bf7780ad2d390a8d301ad0b550f1581eadbd9a20f896afe06353c2a2913/requests-2.32.3.tar.gz"
+    sha256 "55365417734eb18255590a9ff9eb97e9e1da868d4ccd6402399eaf68af20a760"
   end
 
   resource "tomli-w" do
@@ -53,8 +53,8 @@ class Flit < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/7a/50/7fd50a27caa0652cd4caf224aa87741ea41d3265ad13f010886167cfcc79/urllib3-2.2.1.tar.gz"
-    sha256 "d0570876c61ab9e520d776c38acbbb5b05a776d3f9ff98a5c8fd5162a444cf19"
+    url "https://files.pythonhosted.org/packages/43/6d/fa469ae21497ddc8bc93e5877702dca7cb8f911e337aca7452b5724f1bb6/urllib3-2.2.2.tar.gz"
+    sha256 "dd505485549a7a552833da5e6063639d0d177c04f23bc3864e41e5dc5f612168"
   end
 
   def install

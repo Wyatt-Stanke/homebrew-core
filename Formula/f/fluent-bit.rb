@@ -1,8 +1,8 @@
 class FluentBit < Formula
   desc "Fast and Lightweight Logs and Metrics processor"
   homepage "https://github.com/fluent/fluent-bit"
-  url "https://github.com/fluent/fluent-bit/archive/refs/tags/v3.0.3.tar.gz"
-  sha256 "2f3b82e8b7802fe92625009531592f12d500ff61a02ecf4cd27e0f138a6dc566"
+  url "https://github.com/fluent/fluent-bit/archive/refs/tags/v3.0.7.tar.gz"
+  sha256 "9c9b94bcdcf1cd0a899b24e1d3e18c6269227512661631814c2ac820683e2ec8"
   license "Apache-2.0"
   head "https://github.com/fluent/fluent-bit.git", branch: "master"
 
@@ -12,13 +12,13 @@ class FluentBit < Formula
   end
 
   bottle do
-    sha256                               arm64_sonoma:   "a3426a33e9598faa5f09faf3722723fc8b3e8d41c4b955e23be2c8c7d37f14fa"
-    sha256                               arm64_ventura:  "8859d5d23f42c8ae06b9e6348fc13736438ffbf70ecfec6cca34a1495b84b160"
-    sha256                               arm64_monterey: "9336feca26225a447e69ca42f771674773f08677dc4db8bf28aa6b7786473518"
-    sha256                               sonoma:         "2f6d863a0ef8f31b1adbb8310888343eab5e7dc72474c455fc2a2c530111860b"
-    sha256                               ventura:        "82bc34fadbe4bc9e443aef1b07e38c0e225666a0b6aee5895c46f866d7a043d1"
-    sha256                               monterey:       "0505f73a84efac43979c04a268e0c1810506253780b959e102d719e54e89fee7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "09660b080c3f171e3c58deb64b15f746fb41a672885a3197c6dce13e1e3b011a"
+    sha256                               arm64_sonoma:   "5f70653f3f52eee2e06583ae6c94f1513960a82de425459e1df9dbb5256b4334"
+    sha256                               arm64_ventura:  "8f41814eb28775d6c70d786576a89c897ce552d7cd2eeade5e6f916dde7be7bc"
+    sha256                               arm64_monterey: "cc2b19dd4ba3a5b5039ed520381cd069d6491fc24872b732edae36d21a213045"
+    sha256                               sonoma:         "9c2990b1e4bf9974589cddf265f1048d561516eea8f27c39ef457de110ed775d"
+    sha256                               ventura:        "a8b9692888b1742f9a013ff81d9b1b2efcbfcdd3ed6a18ba27277a6946ee9ae0"
+    sha256                               monterey:       "b60be490d338d5248687ece31ee3e383b4683bdbe61fe631845c895f8f216f63"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f150937225161029ed04a6c6490e7c8fbd579a9f856dea784125090c0d001c9a"
   end
 
   depends_on "bison" => :build

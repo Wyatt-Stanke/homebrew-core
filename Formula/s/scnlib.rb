@@ -1,29 +1,22 @@
 class Scnlib < Formula
   desc "Scanf for modern C++"
   homepage "https://scnlib.dev"
-  url "https://github.com/eliaskosunen/scnlib/archive/refs/tags/v2.0.2.tar.gz"
-  sha256 "a485076b8710576cf05fbc086d39499d16804575c0660b0dfaeeaf7823660a17"
+  url "https://github.com/eliaskosunen/scnlib/archive/refs/tags/v3.0.1.tar.gz"
+  sha256 "bc8a668873601d00cce6841c2d0f2c93f836f63f0fbc77997834dea12e951eb1"
   license "Apache-2.0"
-  revision 2
   head "https://github.com/eliaskosunen/scnlib.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_sonoma:   "93c95965d29ecff98696ef99bf03ecdd53ff2a73234dd4fadf51c8763d24653d"
-    sha256 cellar: :any, arm64_ventura:  "c8f4688c96805acce0e245cddf5428093b9af366aa36e2d96272f520a49c93b8"
-    sha256 cellar: :any, arm64_monterey: "338509c3f274d1661d89a8d052394ff214d181d021ce13441c59e6e004b9e814"
-    sha256 cellar: :any, sonoma:         "b03a81a3cd662b57324c5821632424b23c897279e4e4995cb72c50bfbe572baf"
-    sha256 cellar: :any, ventura:        "e50c784cbaf52a9f82e91aa37e44753fb24680bc0db7f22fb42c75eada075c9c"
-    sha256 cellar: :any, monterey:       "b843941c04a48fcf656b07fd6a2ec112dbb51283ae62fcd9c22b5b01ba7b6297"
+    sha256 cellar: :any, arm64_sonoma:   "def3883afe16f2e32c65d6f9331aa050124e602abdc35a20bd88d6beafb668c0"
+    sha256 cellar: :any, arm64_ventura:  "00ed2164ad8e23214486727d7fa9ef9cbe3bcaaa15f9c273df7b90e1be7fbed3"
+    sha256 cellar: :any, arm64_monterey: "121ad95a6e8d037dfb926d43ae88e5621592ca39a444dab497833e6535e4957f"
+    sha256 cellar: :any, sonoma:         "a1ae7d4535296341082febf3ccae1e3cff7f218687642428c2029e6ae06fcf97"
+    sha256 cellar: :any, ventura:        "91a8f6f2cad11299e504249add90dda7c3ee47f37b0fc07a769153e3a343e445"
+    sha256 cellar: :any, monterey:       "a8890b190420eb0ddfdf11b464719d5f51fff232b62c79060ce29b877e759af1"
   end
 
   depends_on "cmake" => :build
   depends_on "simdutf"
-
-  # patch to support simdutf 5.2.2, https://github.com/eliaskosunen/scnlib/pull/102
-  patch do
-    url "https://github.com/eliaskosunen/scnlib/commit/f958f10131434ea76775e068648f7d6dd2b94924.patch?full_index=1"
-    sha256 "d952732c35bb6e345179ec19a32e88edd5f840719b4d3a5bb77b0c84344cda6c"
-  end
 
   def install
     args = %w[

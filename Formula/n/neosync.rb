@@ -1,19 +1,19 @@
 class Neosync < Formula
   desc "CLI for interfacing with Neosync"
   homepage "https://www.neosync.dev/"
-  url "https://github.com/nucleuscloud/neosync/archive/refs/tags/v0.4.19.tar.gz"
-  sha256 "a1da4288c8437efadec2fbfe3c7d82ffc3672c08eb0dc357d0d38f6e7fbe2aa2"
+  url "https://github.com/nucleuscloud/neosync/archive/refs/tags/v0.4.40.tar.gz"
+  sha256 "181df76baa0211522af63cd93a4d974afec204eb8dc04bba1e3e8da21c9c605b"
   license "MIT"
   head "https://github.com/nucleuscloud/neosync.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "808bdd7fc443bbc6d5e341b82b6ee7e0ba5994b07d5b079d2e1bb82f737aff0b"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "52a486a4b630fcad558511a936d5e21bce33cef7c9edd3bfaa4f4efb30f66c25"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "97d99c342cd065febb761cefa9af9554cc6c8aef986153516f81173663bddbfb"
-    sha256 cellar: :any_skip_relocation, sonoma:         "2b6913dcaf9ce7f895507bac71442716ff02f0cd2ec87527d01aa77c9ea535fb"
-    sha256 cellar: :any_skip_relocation, ventura:        "702b1e8d871565ff995866280e38231458ac1b61de6c16aea1c269465ec550d3"
-    sha256 cellar: :any_skip_relocation, monterey:       "4d88fdd480559bd118c70973991e6558dc014724022dc63fc4560546314e32c1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6ed81e5d392b7c6a9dee7e33752d24f30f3cf5d03e4ef29a503292e311788d32"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "4c9feb5aeb940fc184c72c76805f1d050648dbf2140f568e5db7d9447e1e9b02"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "be9b748daef11ead2c5f9deeac89630bee9d5c4bdc065c4770a41116de0cd7e0"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "8f8ded9c0f22a218d86a00987c3866ab544e8ec8da5effa4f26be5748979f692"
+    sha256 cellar: :any_skip_relocation, sonoma:         "067cb61580dc933305e3e852b0ac6d704e5d3e80ed73b5d0e5430c5475f54334"
+    sha256 cellar: :any_skip_relocation, ventura:        "322283213555ad60302c7e23a3efd78c95b018fe22b2c5a98106bb4150650d61"
+    sha256 cellar: :any_skip_relocation, monterey:       "3fbb9b20881ccfb33833cf16d2c22d18cfe157582e7648e9bf0b155885cde40e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9f9f762e5f5d5e85476909dde816717e59e0b5644c9174dd6093b40faa0585d6"
   end
 
   depends_on "go" => :build
@@ -25,9 +25,7 @@ class Neosync < Formula
       -X github.com/nucleuscloud/neosync/cli/internal/version.gitCommit=#{tap.user}
       -X github.com/nucleuscloud/neosync/cli/internal/version.buildDate=#{time.iso8601}
     ]
-    cd "cli" do
-      system "go", "build", *std_go_args(ldflags:), "./cmd/neosync"
-    end
+    system "go", "build", *std_go_args(ldflags:), "./cli/cmd/neosync"
 
     generate_completions_from_executable(bin/"neosync", "completion")
   end

@@ -6,15 +6,16 @@ class Apprise < Formula
   url "https://files.pythonhosted.org/packages/69/4d/58246222a75eb06c22e3cf5bd2db1a7c07cb9fef6afc919b3f4d1d562a65/apprise-1.8.0.tar.gz"
   sha256 "e8f58cebfea1a34f569cb4c68809a3175be80ec06f0a2ec473522b92023212c5"
   license "BSD-3-Clause"
+  revision 2
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "e2349800e45344acbad323d38cf918e81697216f41cbddd2c1a35970630826de"
-    sha256 cellar: :any,                 arm64_ventura:  "2cbc05ed6d39927dcd22969ad8c0f70a8f52633ace05b2beb9409ff6744e2ca3"
-    sha256 cellar: :any,                 arm64_monterey: "018d9113bd634274a64b173b82310d9524637dc7d9a9c161364bb50f0d018d45"
-    sha256 cellar: :any,                 sonoma:         "2acc42396035f8e36a3720e671e28ceb2011ca76dde3a275f98fe7ae2328dbbc"
-    sha256 cellar: :any,                 ventura:        "b8132c141b92e33f4354c41eabc1418d478bb11c13ce60e24f394fda1d567041"
-    sha256 cellar: :any,                 monterey:       "aa42ea839e2e294ab731ff946c234e5a391c44ce297a4c1a4c700b2f7c72b413"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9cd5e7b2214e220a77c106fb10dfdbe12df0ba8ad231bbdc82654ef2ff12ba46"
+    sha256 cellar: :any,                 arm64_sonoma:   "15add4e46e4a00c5a3baa4ff92d19f31c97171a46ef64773e41720e6e22a7410"
+    sha256 cellar: :any,                 arm64_ventura:  "e767b344d1b6a671e6f9fa58eaa21f31a3f83f7d10f1c1c80a2cf35ce625e193"
+    sha256 cellar: :any,                 arm64_monterey: "3ef8cd21c18568018e0da51b37bb48b1bd90d65c25ec0648389ad1d670c4ae6c"
+    sha256 cellar: :any,                 sonoma:         "5bb2171a6e6105d916703910c71a39fd20bdfe1b7d345cf15a5bc3ef183ab1f7"
+    sha256 cellar: :any,                 ventura:        "2cda9322ad0f107523bd31f5bca21ec4243fcc3598b872f610b38046594afe55"
+    sha256 cellar: :any,                 monterey:       "2f666c6e5b90d45f2afcb95de34781216ffe7116bb6d3c24a69aab5d3a1049d2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "190153df23b46b41968752405e131d9a56f0e9050f18b9cd4dfa48ee903dba47"
   end
 
   depends_on "certifi"
@@ -52,8 +53,8 @@ class Apprise < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/9d/be/10918a2eac4ae9f02f6cfe6414b7a155ccd8f7f9d4380d62fd5b955065c3/requests-2.31.0.tar.gz"
-    sha256 "942c5a758f98d790eaed1a29cb6eefc7ffb0d1cf7af05c3d2791656dbd6ad1e1"
+    url "https://files.pythonhosted.org/packages/63/70/2bf7780ad2d390a8d301ad0b550f1581eadbd9a20f896afe06353c2a2913/requests-2.32.3.tar.gz"
+    sha256 "55365417734eb18255590a9ff9eb97e9e1da868d4ccd6402399eaf68af20a760"
   end
 
   resource "requests-oauthlib" do
@@ -62,8 +63,8 @@ class Apprise < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/7a/50/7fd50a27caa0652cd4caf224aa87741ea41d3265ad13f010886167cfcc79/urllib3-2.2.1.tar.gz"
-    sha256 "d0570876c61ab9e520d776c38acbbb5b05a776d3f9ff98a5c8fd5162a444cf19"
+    url "https://files.pythonhosted.org/packages/43/6d/fa469ae21497ddc8bc93e5877702dca7cb8f911e337aca7452b5724f1bb6/urllib3-2.2.2.tar.gz"
+    sha256 "dd505485549a7a552833da5e6063639d0d177c04f23bc3864e41e5dc5f612168"
   end
 
   def install

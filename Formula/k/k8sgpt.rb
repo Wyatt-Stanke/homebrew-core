@@ -1,28 +1,22 @@
 class K8sgpt < Formula
   desc "Scanning your k8s clusters, diagnosing, and triaging issues in simple English"
   homepage "https://k8sgpt.ai/"
-  url "https://github.com/k8sgpt-ai/k8sgpt/archive/refs/tags/v0.3.31.tar.gz"
-  sha256 "a76dded5c65c9694fabcc667be361c6961adcc5f12f9f37f665ca2bd08820eeb"
+  url "https://github.com/k8sgpt-ai/k8sgpt/archive/refs/tags/v0.3.37.tar.gz"
+  sha256 "30cf355e51c3baa2a62c690ff57eaf1ac4b88e1b6898626a4dd61670bc435822"
   license "Apache-2.0"
   head "https://github.com/k8sgpt-ai/k8sgpt.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "b8043e86eb7d36eb88502b00bd2660cc702cc556f04bda9dcb656d9d1f525202"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "6a328f6661b1c55c70ce7b127e15a00bd9f23a29c5406126b2ce94b1621adc5f"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b41a999bd6af05d96708df8e6d6d7d02c94730fcaef2714eb3b4659107f54b48"
-    sha256 cellar: :any_skip_relocation, sonoma:         "5d4f13020c147b1ef0e6f9db6607e4b8553b862c4c99d7e7af1a078cbe93d90c"
-    sha256 cellar: :any_skip_relocation, ventura:        "e9510b448b45e0979d09b9a91669671ab2214b45b80c882913d7e716479977bb"
-    sha256 cellar: :any_skip_relocation, monterey:       "a166520302fa94b62f26840099b39f0cf3d36413d27c3eb6a2520e686f306e50"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3e9502c6a8a33dd5d147bd35335b7996df8d15b9a79b339a9d7ef14c58ad27ad"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "cffa587565ea61a708176a72c3ddc66990e756d6c1984252ac27f0f4e2eaac12"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "149f308aaebcff1792d15c6afea14f695d6197a5ded068c36fa8bc8c3e2b7548"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "6c4b0d7b6403a0491ebcd3a5ff1e5e363a53f817e4b775e892d6f21730118461"
+    sha256 cellar: :any_skip_relocation, sonoma:         "33932061a8ebbfc8982ccfa455c87fa742090e4bd4611fadfdf99e80143b3096"
+    sha256 cellar: :any_skip_relocation, ventura:        "6547039d51c82c445d95da37cc7e6d35dd6a0efbd7afa290ff109a1fd841432f"
+    sha256 cellar: :any_skip_relocation, monterey:       "bad9eaf167c979f79c2a11797a03e9fd5fcc87568d30abb3c933a22b8dee0912"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4c6bd141b9ed7c35a22e0d8aa0d02a8123ed561250c94ef3ea90b76383f35569"
   end
 
   depends_on "go" => :build
-
-  # patch build, upstream pr ref, https://github.com/k8sgpt-ai/k8sgpt/pull/1115
-  patch do
-    url "https://github.com/k8sgpt-ai/k8sgpt/commit/1fb75a633c546bc6ada689e27d29c134d4cf8b5f.patch?full_index=1"
-    sha256 "9ca5985449b404e4d12db2c3ce8823a18dc29fa9f8b391eb48c0de22400fe292"
-  end
 
   def install
     ldflags = %W[

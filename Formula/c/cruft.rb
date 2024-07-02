@@ -6,17 +6,17 @@ class Cruft < Formula
   url "https://files.pythonhosted.org/packages/d8/59/bb9e052fba37972e4b27db74d0bc770bade501d48336dec3c89fe57e9513/cruft-2.15.0.tar.gz"
   sha256 "9802af66037418655e7e4b6f30b531591e0761939b3ff5dd45d27c3a3f588abe"
   license "MIT"
-  revision 8
+  revision 10
   head "https://github.com/cruft/cruft.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "aaf7489c66e0c5fc86fa64eb10f307df5edb0b792ddb02928d3fe82bb8b9d55d"
-    sha256 cellar: :any,                 arm64_ventura:  "95aa77b4df88bf2ec3ebb4135e03ca0119fd61f0a80b03a2f627b9d8aa64bd92"
-    sha256 cellar: :any,                 arm64_monterey: "ebae80feb90047202a18b163679038392ad60924456a96384e78e65bd2adb776"
-    sha256 cellar: :any,                 sonoma:         "36a3f5bcf6e4012f6760262c8dd9098313a2b654ad7009dc321b18a17873030b"
-    sha256 cellar: :any,                 ventura:        "723b8c3025444214a9453c4f3e21cd3e5b6265f900cec5f68a93274c9e5a5134"
-    sha256 cellar: :any,                 monterey:       "4be9bc58ad7a4fd03bb6973efdd323cc7cec13573d773feeaa3fd24553d58c51"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f78e9b156e5e3c76752d22c72eea4b5d2e2f8bc60850c534f871c66a98636ec0"
+    sha256 cellar: :any,                 arm64_sonoma:   "d5c040dcf8cc66e99a7bac8f76c3502564399f6a68bbe69d1a91e394f822e6a3"
+    sha256 cellar: :any,                 arm64_ventura:  "3aeaed4f8515b7aae2a3159b4ebad7c19034b09d4a12540f804ce062e645d773"
+    sha256 cellar: :any,                 arm64_monterey: "eee3d6d2de67e7e2658a0a9d9fcb193eaea83bb149a491fe6563eeda67b34797"
+    sha256 cellar: :any,                 sonoma:         "28cd4ec6b23f6f42a025a534271715e02e5eb6a6ad941c223753a8d0884c2f3c"
+    sha256 cellar: :any,                 ventura:        "46f121d734e63ae4dbe5390fdc57436399c9ede3f05cea6062237974010d35e4"
+    sha256 cellar: :any,                 monterey:       "20c7ce3be8f4cbcc5f32e193e5b05d514a66c61940e8d27bb57bd3ec4b15f971"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f74eed9481d9df39ca266de3cb38c41f54e8b50be6a41491d02eccf5a83a8b0e"
   end
 
   depends_on "certifi"
@@ -109,8 +109,8 @@ class Cruft < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/9d/be/10918a2eac4ae9f02f6cfe6414b7a155ccd8f7f9d4380d62fd5b955065c3/requests-2.31.0.tar.gz"
-    sha256 "942c5a758f98d790eaed1a29cb6eefc7ffb0d1cf7af05c3d2791656dbd6ad1e1"
+    url "https://files.pythonhosted.org/packages/63/70/2bf7780ad2d390a8d301ad0b550f1581eadbd9a20f896afe06353c2a2913/requests-2.32.3.tar.gz"
+    sha256 "55365417734eb18255590a9ff9eb97e9e1da868d4ccd6402399eaf68af20a760"
   end
 
   resource "rich" do
@@ -149,13 +149,13 @@ class Cruft < Formula
   end
 
   resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/f6/f3/b827b3ab53b4e3d8513914586dcca61c355fa2ce8252dea4da56e67bf8f2/typing_extensions-4.11.0.tar.gz"
-    sha256 "83f085bd5ca59c80295fc2a82ab5dac679cbe02b9f33f7d83af68e241bea51b0"
+    url "https://files.pythonhosted.org/packages/df/db/f35a00659bc03fec321ba8bce9420de607a1d37f8342eee1863174c69557/typing_extensions-4.12.2.tar.gz"
+    sha256 "1a7ead55c7e559dd4dee8856e3a88b41225abfe1ce8df57b7c13915fe121ffb8"
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/7a/50/7fd50a27caa0652cd4caf224aa87741ea41d3265ad13f010886167cfcc79/urllib3-2.2.1.tar.gz"
-    sha256 "d0570876c61ab9e520d776c38acbbb5b05a776d3f9ff98a5c8fd5162a444cf19"
+    url "https://files.pythonhosted.org/packages/43/6d/fa469ae21497ddc8bc93e5877702dca7cb8f911e337aca7452b5724f1bb6/urllib3-2.2.2.tar.gz"
+    sha256 "dd505485549a7a552833da5e6063639d0d177c04f23bc3864e41e5dc5f612168"
   end
 
   def install

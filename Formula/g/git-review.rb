@@ -6,21 +6,23 @@ class GitReview < Formula
   url "https://files.pythonhosted.org/packages/79/ae/1c161f8914731ca5a5b3ce0784f5bc47d9a68f4ce33123d431bf30fc90b6/git-review-2.4.0.tar.gz"
   sha256 "a350eaa9c269a1fe3177a5ffd4ae76f2b604e1af122eb0de08ab07252001722a"
   license "Apache-2.0"
-  revision 1
+  revision 3
   head "https://opendev.org/opendev/git-review.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "2ad6eb006c5c32abb9eb6ba8da2df4a04d46af23cb38879624ca6aa1368fa1b7"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "2ad6eb006c5c32abb9eb6ba8da2df4a04d46af23cb38879624ca6aa1368fa1b7"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "2ad6eb006c5c32abb9eb6ba8da2df4a04d46af23cb38879624ca6aa1368fa1b7"
-    sha256 cellar: :any_skip_relocation, sonoma:         "2ad6eb006c5c32abb9eb6ba8da2df4a04d46af23cb38879624ca6aa1368fa1b7"
-    sha256 cellar: :any_skip_relocation, ventura:        "2ad6eb006c5c32abb9eb6ba8da2df4a04d46af23cb38879624ca6aa1368fa1b7"
-    sha256 cellar: :any_skip_relocation, monterey:       "2ad6eb006c5c32abb9eb6ba8da2df4a04d46af23cb38879624ca6aa1368fa1b7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b010195b900eea4ea20d55cb30281dff703cb147cd4cd7659dcaa7c5f120ad97"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "0d319cfba612259e187ba7d3fc76b46f945212cf6472fdedfe5afe7610e28b7f"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "0d319cfba612259e187ba7d3fc76b46f945212cf6472fdedfe5afe7610e28b7f"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "0d319cfba612259e187ba7d3fc76b46f945212cf6472fdedfe5afe7610e28b7f"
+    sha256 cellar: :any_skip_relocation, sonoma:         "00a568c3b6096dab8773b8f7538a19b075bb644fa87de2359e146737f62df689"
+    sha256 cellar: :any_skip_relocation, ventura:        "00a568c3b6096dab8773b8f7538a19b075bb644fa87de2359e146737f62df689"
+    sha256 cellar: :any_skip_relocation, monterey:       "0d319cfba612259e187ba7d3fc76b46f945212cf6472fdedfe5afe7610e28b7f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fbaece9735f4e55c122a6426df7e87473cc213bedfe33645d06eaac079781a0a"
   end
 
   depends_on "certifi"
   depends_on "python@3.12"
+
+  conflicts_with "gerrit-tools", because: "both install `git-review` binaries"
 
   resource "charset-normalizer" do
     url "https://files.pythonhosted.org/packages/63/09/c1bc53dab74b1816a00d8d030de5bf98f724c52c1635e07681d312f20be8/charset-normalizer-3.3.2.tar.gz"
@@ -33,13 +35,13 @@ class GitReview < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/9d/be/10918a2eac4ae9f02f6cfe6414b7a155ccd8f7f9d4380d62fd5b955065c3/requests-2.31.0.tar.gz"
-    sha256 "942c5a758f98d790eaed1a29cb6eefc7ffb0d1cf7af05c3d2791656dbd6ad1e1"
+    url "https://files.pythonhosted.org/packages/63/70/2bf7780ad2d390a8d301ad0b550f1581eadbd9a20f896afe06353c2a2913/requests-2.32.3.tar.gz"
+    sha256 "55365417734eb18255590a9ff9eb97e9e1da868d4ccd6402399eaf68af20a760"
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/7a/50/7fd50a27caa0652cd4caf224aa87741ea41d3265ad13f010886167cfcc79/urllib3-2.2.1.tar.gz"
-    sha256 "d0570876c61ab9e520d776c38acbbb5b05a776d3f9ff98a5c8fd5162a444cf19"
+    url "https://files.pythonhosted.org/packages/43/6d/fa469ae21497ddc8bc93e5877702dca7cb8f911e337aca7452b5724f1bb6/urllib3-2.2.2.tar.gz"
+    sha256 "dd505485549a7a552833da5e6063639d0d177c04f23bc3864e41e5dc5f612168"
   end
 
   def install
