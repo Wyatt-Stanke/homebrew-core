@@ -4,8 +4,8 @@ class Semgrep < Formula
   desc "Easily detect and prevent bugs and anti-patterns in your codebase"
   homepage "https://semgrep.dev"
   url "https://github.com/semgrep/semgrep.git",
-      tag:      "v1.82.0",
-      revision: "992e4820e315854d89d16cc064c0ac753c858ca3"
+      tag:      "v1.84.1",
+      revision: "c1301d78be99d9ed42428144012f08e17021cbe2"
   license "LGPL-2.1-only"
   head "https://github.com/semgrep/semgrep.git", branch: "develop"
 
@@ -15,13 +15,13 @@ class Semgrep < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "7b20e9c290e8e58b6af19bd1c1d569d047b926b5d51b3ea8b34d7efa3050e799"
-    sha256 cellar: :any,                 arm64_ventura:  "4059a42336f3d9045c9422cf418cfea10104d5bf0fa9eaf06e6bb0a36b7d3d01"
-    sha256 cellar: :any,                 arm64_monterey: "09e75076f4a3ad8969454e2b5a54ab54692162bbfe7ef31c4a34d67052f80973"
-    sha256 cellar: :any,                 sonoma:         "b5674e8d2395999ef97752027d6289ffe471c20b5617373250bab77e9cbb554f"
-    sha256 cellar: :any,                 ventura:        "1be8f44716b7f9c266cf5ef83b26d9f877318056054834c267628a7e432a7a86"
-    sha256 cellar: :any,                 monterey:       "aa2acd9cc010cfdc217085139fbc8bf1e37931ca75aafec99ef6a710b87400f3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "665536715fcf92eb6b6d793dcf347da1c286d5d645ec11d1591a7ebaf8047b30"
+    sha256 cellar: :any,                 arm64_sonoma:   "f706ccaad157caa5a1560f3f83b3a9050392b7ddac1839ade85492cbceed399a"
+    sha256 cellar: :any,                 arm64_ventura:  "ef7b74c958c76e5c0eb97084f4434beb4afa47e07d1a128edf0875e709bc00d6"
+    sha256 cellar: :any,                 arm64_monterey: "9f92763d71362539e6b4947505e68d845c1605f0c6f768460c1d0d127dc0a1dd"
+    sha256 cellar: :any,                 sonoma:         "e1f40145bdfbda8b1c89f991aada3b2024520f7c849c98ae5b563d9da0944ba0"
+    sha256 cellar: :any,                 ventura:        "ce0de50528a30b926fb0abffea1f5597548dda657e00908e2e11245fa3b74253"
+    sha256 cellar: :any,                 monterey:       "e41d7de7225173b5018a88da0c4c68c7a85ddbca9c122e5eddb02d30aec281f7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a87a57428822ede03747bcb04a151471193a004d34cc652b82e2222302ca1969"
   end
 
   depends_on "autoconf" => :build
@@ -48,8 +48,8 @@ class Semgrep < Formula
   fails_with gcc: "5"
 
   resource "attrs" do
-    url "https://files.pythonhosted.org/packages/e3/fc/f800d51204003fa8ae392c4e8278f256206e7a919b708eef054f5f4b650d/attrs-23.2.0.tar.gz"
-    sha256 "935dc3b529c262f6cf76e50877d35a4bd3c1de194fd41f47a2b7ae8f19971f30"
+    url "https://files.pythonhosted.org/packages/fc/0f/aafca9af9315aee06a89ffde799a10a582fe8de76c563ee80bbcdc08b3fb/attrs-24.2.0.tar.gz"
+    sha256 "5cfb1b9148b5b086569baec03f20d7b6bf3bcacc9a42bebf87ffaaca362f6346"
   end
 
   resource "boltons" do
@@ -58,8 +58,8 @@ class Semgrep < Formula
   end
 
   resource "bracex" do
-    url "https://files.pythonhosted.org/packages/90/8b/34d174ce519f859af104c722fa30213103d34896a07a4f27bde6ac780633/bracex-2.4.tar.gz"
-    sha256 "a27eaf1df42cf561fed58b7a8f3fdf129d1ea16a81e1fadd1d17989bc6384beb"
+    url "https://files.pythonhosted.org/packages/ac/f1/ac657fd234f4ee61da9d90f2bae7d6078074de2f97cb911743faa8d10a91/bracex-2.5.tar.gz"
+    sha256 "0725da5045e8d37ea9592ab3614d8b561e22c3c5fde3964699be672e072ab611"
   end
 
   resource "charset-normalizer" do
@@ -223,8 +223,8 @@ class Semgrep < Formula
   end
 
   resource "rpds-py" do
-    url "https://files.pythonhosted.org/packages/2f/fe/5217efe981c2ae8647b503ba3b8f55efc837df62f63667572b4bb75b30bc/rpds_py-0.19.1.tar.gz"
-    sha256 "31dd5794837f00b46f4096aa8ccaa5972f73a938982e32ed817bb520c465e520"
+    url "https://files.pythonhosted.org/packages/55/64/b693f262791b818880d17268f3f8181ef799b0d187f6f731b1772e05a29a/rpds_py-0.20.0.tar.gz"
+    sha256 "d72a210824facfdaf8768cf2d7ca25a042c30320b3020de2fa04640920d4e121"
   end
 
   resource "ruamel-yaml" do

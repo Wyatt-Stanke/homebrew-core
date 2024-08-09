@@ -142,6 +142,7 @@ aws-iam-authenticator
 aws-nuke
 aws-rotate-key
 aws-sam-cli
+aws-sdk-cpp
 aws-sso-cli
 aws-sso-util
 awscli
@@ -193,6 +194,7 @@ bde
 beagle
 beakerlib
 beancount
+beancount-language-server
 bear
 bee
 bench
@@ -213,6 +215,7 @@ bindgen
 bingrep
 biodiff
 biome
+biosig
 bitrise
 bitwarden-cli
 bk
@@ -372,6 +375,7 @@ cherrytree
 chezmoi
 chibi-scheme
 chicken
+chisel-tunnel
 chkbit
 chkrootkit
 choose-rust
@@ -403,6 +407,7 @@ cliclick
 clifm
 clingo
 clipboard
+cloc
 clojure
 clojure-lsp
 clojurescript
@@ -422,6 +427,7 @@ clusterawsadm
 clusterctl
 clzip
 cmake-language-server
+cmark
 cmctl
 cmu-pocketsphinx
 cmus
@@ -562,6 +568,7 @@ debianutils
 define
 dehydrated
 delve
+demumble
 deno
 dep-tree
 dependency-check
@@ -640,6 +647,7 @@ dotnet
 dotslash
 dotter
 double-conversion
+dovi_tool
 doxygen
 dpkg
 dpp
@@ -801,6 +809,7 @@ fetchmail
 ffmpeg
 ffmpeg@4
 ffmpeg@5
+ffmpeg@6
 ffms2
 ffsend
 ffuf
@@ -1204,6 +1213,7 @@ ircd-hybrid
 iredis
 ispc
 istioctl
+isync
 itk
 ittapi
 ivy
@@ -1248,7 +1258,9 @@ jscpd
 jsdoc3
 json-fortran
 json2ts
+json2tsv
 jsonnet
+jsonrpc-glib
 jsontoolkit
 jsvc
 jtbl
@@ -1320,6 +1332,7 @@ kubeconform
 kubectl-cnpg
 kubectl-rook-ceph
 kubefirst
+kubehound
 kubekey
 kubelogin
 kubergrunt
@@ -1405,6 +1418,7 @@ libfabric
 libffi
 libfido2
 libfontenc
+libfs
 libgedit-gtksourceview
 libgeotiff
 libgetdata
@@ -1561,6 +1575,7 @@ lune
 lunzip
 luv
 lux
+lwtools
 lxc
 lychee
 lynis
@@ -1792,6 +1807,7 @@ nox
 npm-check-updates
 npth
 nq
+nrpe
 ns-3
 nsd
 nsq
@@ -1809,6 +1825,7 @@ nut
 nvc
 nvchecker
 nvimpager
+nvm
 nvtop
 nzbget
 oauth2_proxy
@@ -1841,6 +1858,7 @@ omega
 omniorb
 onednn
 onedrive
+onion-location
 onionprobe
 ooniprobe
 opa
@@ -2208,6 +2226,7 @@ rpki-client
 rpl
 rpmspectool
 rqlite
+rrdtool
 rswift
 rsyncy
 rsyslog
@@ -2491,6 +2510,7 @@ tcl-tk
 tcpreplay
 tcsh
 tctl
+tdb
 tealdeer
 tectonic
 teensy_loader_cli
@@ -2701,6 +2721,7 @@ vunnel
 vvdec
 vvenc
 wabt
+waffle
 wakatime-cli
 walk
 wallpaper

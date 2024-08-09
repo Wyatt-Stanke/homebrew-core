@@ -1,26 +1,24 @@
-require "language/node"
-
 class Vite < Formula
   desc "Next generation frontend tooling. It's fast!"
   homepage "https://vitejs.dev/"
-  url "https://registry.npmjs.org/vite/-/vite-5.3.5.tgz"
-  sha256 "999341bac8bd03bf2a27855116b870590faa9d2508425bbb316205d09e1f6c76"
+  url "https://registry.npmjs.org/vite/-/vite-5.4.0.tgz"
+  sha256 "53a66a1e228947413fc19f7f86c3e31a7755645d1573f41fc7aa8df93d6a7c03"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "a3420355f2c4b2794f5f0302d24e9bb8eb6ef180936c2c6c9eaea5239a75e4fb"
-    sha256 cellar: :any,                 arm64_ventura:  "a3420355f2c4b2794f5f0302d24e9bb8eb6ef180936c2c6c9eaea5239a75e4fb"
-    sha256 cellar: :any,                 arm64_monterey: "a3420355f2c4b2794f5f0302d24e9bb8eb6ef180936c2c6c9eaea5239a75e4fb"
-    sha256 cellar: :any,                 sonoma:         "7f867e3bfc0d1119a3b39e3a6a03e7214f4218c89609c0d04cc0196fe2d153fa"
-    sha256 cellar: :any,                 ventura:        "7f867e3bfc0d1119a3b39e3a6a03e7214f4218c89609c0d04cc0196fe2d153fa"
-    sha256 cellar: :any,                 monterey:       "7f867e3bfc0d1119a3b39e3a6a03e7214f4218c89609c0d04cc0196fe2d153fa"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7a534bd3322649959cda696743cdb842e11dc15b57fa09cc42baf2eaec76ad47"
+    sha256 cellar: :any,                 arm64_sonoma:   "155dfe1216d2f3ec8c08dd6a4cc39e90e668b59863eee5405b6082f397ea2938"
+    sha256 cellar: :any,                 arm64_ventura:  "155dfe1216d2f3ec8c08dd6a4cc39e90e668b59863eee5405b6082f397ea2938"
+    sha256 cellar: :any,                 arm64_monterey: "155dfe1216d2f3ec8c08dd6a4cc39e90e668b59863eee5405b6082f397ea2938"
+    sha256 cellar: :any,                 sonoma:         "c239932f3d00a032ccc5fb644105292a54603117600b6e0c1af3da588b71a4f3"
+    sha256 cellar: :any,                 ventura:        "c239932f3d00a032ccc5fb644105292a54603117600b6e0c1af3da588b71a4f3"
+    sha256 cellar: :any,                 monterey:       "c239932f3d00a032ccc5fb644105292a54603117600b6e0c1af3da588b71a4f3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "71788b82fd580981ae1e1cc40c4ba6ff86fd221d77001369b99c08dfb85dccb9"
   end
 
   depends_on "node"
 
   def install
-    system "npm", "install", *Language::Node.std_npm_install_args(libexec)
+    system "npm", "install", *std_npm_args
     bin.install_symlink Dir["#{libexec}/bin/*"]
   end
 

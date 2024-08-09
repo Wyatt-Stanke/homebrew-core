@@ -1,26 +1,24 @@
-require "language/node"
-
 class Mako < Formula
   desc "Production-grade web bundler based on Rust"
   homepage "https://makojs.dev"
-  url "https://registry.npmjs.org/@umijs/mako/-/mako-0.7.9.tgz"
-  sha256 "68e4f5e8dcf82ded63f6b193d1f602f7c7ec6f004a310d5f1c8588e267099b2d"
+  url "https://registry.npmjs.org/@umijs/mako/-/mako-0.8.0.tgz"
+  sha256 "d425408272a92f34a8c41c6ca41afad2ec37739244723e89a1d1c5f2caa8591f"
   license "MIT"
 
   bottle do
-    sha256                               arm64_sonoma:   "dc1939ed03b4b9b439021c0723bf20c8d2fb312a0a75ce0885685e943902895f"
-    sha256                               arm64_ventura:  "7e46f6175eab4e570e1e078ccc8097ea00bbd31938f5f10da96b38e05ff7c157"
-    sha256                               arm64_monterey: "63b2702699f127e502af841b279036b4579e255cb2579fc89417138c40edb75b"
-    sha256                               sonoma:         "cdfa008731d773036e54aec1b76b6ab74471cced935fe7a360b2514dc3cbb0c4"
-    sha256                               ventura:        "a5339b9f552cbe68838e9981dc28434a9a11c19a104fe1050f2458eabd50d8b7"
-    sha256                               monterey:       "ea285d2ef7540675fec0261aad211b48fef750c9328748105b44999f631a546b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e428961bc7907a8373eabee9a857f9df0044efe90060a7aadf5f5f4ac14d709a"
+    sha256                               arm64_sonoma:   "29796abe1fa7ff3b6be2a42f7d550887689cf2a0f1ecaa428285d8fe1099096e"
+    sha256                               arm64_ventura:  "78a6bd11a6e15939c7eadaae8e4a50a0ee5ec18796296dc9a5404f0c22b64322"
+    sha256                               arm64_monterey: "231bd0c41f31f1002140403b375071391e20e9ebfbf750af3f2914b3b49e8711"
+    sha256                               sonoma:         "230cfee0a3189b5845463f8531bcc270c2b97ca74d509e50aea4250b32b09a48"
+    sha256                               ventura:        "990c9f0546742bb06272fd270a07fcdd1a366a11c12def7dd868e33d580a40ad"
+    sha256                               monterey:       "c9e3b0bd1a07a0daa3ae9d242b52df9fdd0dec4ce75ca59fb8f3d2afff23f0db"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8c25fc5a4c2d6914862b6d8d033602fd88fd07dca9289641988fb7996af6c3bb"
   end
 
   depends_on "node"
 
   def install
-    system "npm", "install", *Language::Node.std_npm_install_args(libexec)
+    system "npm", "install", *std_npm_args
     bin.install_symlink Dir["#{libexec}/bin/*"]
 
     # Remove incompatible pre-built binaries

@@ -20,6 +20,7 @@ class Ppsspp < Formula
   depends_on "cmake" => :build
   depends_on "nasm" => :build
   depends_on "pkg-config" => :build
+
   depends_on "libzip"
   depends_on "miniupnpc"
   depends_on "sdl2"
@@ -35,6 +36,7 @@ class Ppsspp < Formula
 
   on_linux do
     depends_on "glew"
+    depends_on "mesa"
   end
 
   on_intel do
@@ -91,7 +93,7 @@ class Ppsspp < Formula
   end
 
   test do
-    system "#{bin}/ppsspp", "--version"
+    system bin/"ppsspp", "--version"
     if OS.mac?
       app_frameworks = prefix/"PPSSPPSDL.app/Contents/Frameworks"
       assert_predicate app_frameworks/"libMoltenVK.dylib", :exist?, "Broken linkage with `molten-vk`"

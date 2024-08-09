@@ -1,19 +1,18 @@
 class NpmCheckUpdates < Formula
   desc "Find newer versions of dependencies than what your package.json allows"
   homepage "https://github.com/raineorshine/npm-check-updates"
-  url "https://registry.npmjs.org/npm-check-updates/-/npm-check-updates-17.0.0.tgz"
-  sha256 "7465072fb47059068f862cb9210b206a43e294e6b3841d19bd1cee86b3270216"
+  url "https://registry.npmjs.org/npm-check-updates/-/npm-check-updates-17.0.6.tgz"
+  sha256 "125ead32a5b12f2bd38814b98e92b9bae1c0811a9c8ce5bc31a02fb306a194ab"
   license "Apache-2.0"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "5ba1d6d3d33b75f59c891adaca70f31f61976fc3528b17e1bc18b699ce058930"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "5ba1d6d3d33b75f59c891adaca70f31f61976fc3528b17e1bc18b699ce058930"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "5ba1d6d3d33b75f59c891adaca70f31f61976fc3528b17e1bc18b699ce058930"
-    sha256 cellar: :any_skip_relocation, sonoma:         "21fa8b29f3157b6fc360947d4c7e3c33691cb5d602423ec2fdd18c4851c7b67c"
-    sha256 cellar: :any_skip_relocation, ventura:        "21fa8b29f3157b6fc360947d4c7e3c33691cb5d602423ec2fdd18c4851c7b67c"
-    sha256 cellar: :any_skip_relocation, monterey:       "21fa8b29f3157b6fc360947d4c7e3c33691cb5d602423ec2fdd18c4851c7b67c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "008b77d2deac7f4ebedf7b76b2c83e7db29334c077de0fae4ab64811aa7ee2f3"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "587484937d9e77e3a0e315a0f4f2f4c3fce5158eaf55a871d4e26a892d58aff1"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "587484937d9e77e3a0e315a0f4f2f4c3fce5158eaf55a871d4e26a892d58aff1"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "587484937d9e77e3a0e315a0f4f2f4c3fce5158eaf55a871d4e26a892d58aff1"
+    sha256 cellar: :any_skip_relocation, sonoma:         "deb9fcf496473cae60dbb60d407d84f4159cfbf4338c2d6956c0c1320cd187a1"
+    sha256 cellar: :any_skip_relocation, ventura:        "deb9fcf496473cae60dbb60d407d84f4159cfbf4338c2d6956c0c1320cd187a1"
+    sha256 cellar: :any_skip_relocation, monterey:       "deb9fcf496473cae60dbb60d407d84f4159cfbf4338c2d6956c0c1320cd187a1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "587484937d9e77e3a0e315a0f4f2f4c3fce5158eaf55a871d4e26a892d58aff1"
   end
 
   depends_on "node"

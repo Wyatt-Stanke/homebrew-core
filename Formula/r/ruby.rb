@@ -51,7 +51,7 @@ class Ruby < Formula
   uses_from_macos "zlib"
 
   def determine_api_version
-    Utils.safe_popen_read("#{bin}/ruby", "-e", "print Gem.ruby_api_version")
+    Utils.safe_popen_read(bin/"ruby", "-e", "print Gem.ruby_api_version")
   end
 
   def api_version
@@ -126,7 +126,7 @@ class Ruby < Formula
     resource("rubygems").stage do
       ENV.prepend_path "PATH", bin
 
-      system "#{bin}/ruby", "setup.rb", "--prefix=#{buildpath}/vendor_gem"
+      system bin/"ruby", "setup.rb", "--prefix=#{buildpath}/vendor_gem"
       rg_in = lib/"ruby/#{api_version}"
       rg_gems_in = lib/"ruby/gems/#{api_version}"
 
@@ -156,7 +156,7 @@ class Ruby < Formula
     rm(%W[
       #{rubygems_bindir}/bundle
       #{rubygems_bindir}/bundler
-    ])
+    ].select { |file| File.exist?(file) })
     rm_r(Dir[HOMEBREW_PREFIX/"lib/ruby/gems/#{api_version}/gems/bundler-*"])
     rubygems_bindir.install_symlink Dir[libexec/"gembin/*"]
 
@@ -261,7 +261,7 @@ class Ruby < Formula
     assert_equal api_version, determine_api_version
 
     ENV["GEM_HOME"] = testpath
-    system "#{bin}/gem", "install", "json"
+    system bin/"gem", "install", "json"
 
     (testpath/"Gemfile").write <<~EOS
       source 'https://rubygems.org'

@@ -1,18 +1,12 @@
 class Whistle < Formula
   desc "HTTP, HTTP2, HTTPS, Websocket debugging proxy"
   homepage "https://github.com/avwo/whistle"
-  url "https://registry.npmjs.org/whistle/-/whistle-2.9.80.tgz"
-  sha256 "e75e9ceb73552095aea9a6a5d97451b12b496bc05fa8bbf737ef0672faf945e3"
+  url "https://registry.npmjs.org/whistle/-/whistle-2.9.82.tgz"
+  sha256 "9483c1b430e2dbb22754b1089f61e5aca50165744ef824037dd0bcf0e0d1a219"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "561d199f44ff5ce970c471f456c8f5399ba7e0f170fc7cd06e16b75649af15d0"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "561d199f44ff5ce970c471f456c8f5399ba7e0f170fc7cd06e16b75649af15d0"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "561d199f44ff5ce970c471f456c8f5399ba7e0f170fc7cd06e16b75649af15d0"
-    sha256 cellar: :any_skip_relocation, sonoma:         "8166a316153d7d41369705986d8deed80cc7c8f9578d9c5c3564532fce2604d8"
-    sha256 cellar: :any_skip_relocation, ventura:        "8166a316153d7d41369705986d8deed80cc7c8f9578d9c5c3564532fce2604d8"
-    sha256 cellar: :any_skip_relocation, monterey:       "561d199f44ff5ce970c471f456c8f5399ba7e0f170fc7cd06e16b75649af15d0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f5570f48796765e48e714f789c9e04783794a237e96b7c43aa181e15b07b1001"
+    sha256 cellar: :any_skip_relocation, all: "5ae1396bff8ecff8a1f60748521fe62dd8ec377e384612fae884fec2a64a022a"
   end
 
   depends_on "node"
