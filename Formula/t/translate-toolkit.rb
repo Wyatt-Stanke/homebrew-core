@@ -3,21 +3,22 @@ class TranslateToolkit < Formula
 
   desc "Toolkit for localization engineers"
   homepage "https://toolkit.translatehouse.org/"
-  url "https://files.pythonhosted.org/packages/7f/8a/353ec691a8873624995a75aad1b969a6209dcc2bccdfc3fabfdbf9166bd8/translate_toolkit-3.13.4.tar.gz"
-  sha256 "774ab8c69377ef178b4a640c06b0c66651a3023e211df91acc6507ce5f3d5072"
+  url "https://files.pythonhosted.org/packages/e0/62/e87ea8be9fb831ee79b4b75e50d1eeb5959fe094b2cbe80e80c59d477fda/translate_toolkit-3.13.5.tar.gz"
+  sha256 "53c59c919e52a9787c0d1d7ccd34df9508e9f58bb84d1d52d27a9bda5203d768"
   license "GPL-2.0-or-later"
   head "https://github.com/translate/translate.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "ab16e32c938c60bd395e838fbf566486cbf69d4dd2d8d2f65143a2b20201f462"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "eb42144ff0d8587e607a6331a627b375a3c36896f78708afc835ac5f5d373bd3"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "4a2167a1b85b1b5faedc05d6b360bba04c75673e9d351be418a883fe05a75ad1"
-    sha256 cellar: :any_skip_relocation, sonoma:        "386f2d2f0674d300be441e748b39f56560b7f50e2660611e0a6171db94443146"
-    sha256 cellar: :any_skip_relocation, ventura:       "bece606b3f29f5fbf63717de43ec794e2958d668ee00495299e99136f9349579"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b177f9a0ef137eafd8b89ca6e0459b2fd8f105a31bd8834fd4d4a02ded31ae54"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "8158f6b9e79369a0ff2646bda4268951ad8ee0decd19fc2ed1c324ff29e52ba3"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d723837180133bcb6edd6ded55ca241e5c4e31eebb5c1917b85349f2b162d364"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "5d7b4a7cf9797110dc8a89949a8f9ea2049b43f92cdd8baf8a7c75ca11224cfc"
+    sha256 cellar: :any_skip_relocation, sonoma:        "a3936de57f092ac713c95a81d1e78e1d130f610edc938994dc835fe5e4a63b6c"
+    sha256 cellar: :any_skip_relocation, ventura:       "64685641fb49c325f35c9f52bceadb0d839d8d75a7b2aead46615a30b6ba27ba"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "07767c77f113f9da262cfab5c43b64f045935720cb78781f650f42ccd43fdc98"
   end
 
-  depends_on "python@3.12"
+  depends_on "python@3.13"
 
   uses_from_macos "libxml2", since: :ventura
   uses_from_macos "libxslt"

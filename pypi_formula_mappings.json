@@ -79,7 +79,7 @@
   },
   "awscli": {
     "exclude_packages": ["cryptography"],
-    "extra_packages": ["flit-core", "setuptools", "wheel"]
+    "extra_packages": ["flit-core"]
   },
   "awscurl": {
     "exclude_packages": ["certifi", "cryptography"]
@@ -139,7 +139,7 @@
   },
   "cassandra": {
     "package_name": "",
-    "extra_packages": ["cassandra-driver"]
+    "extra_packages": ["cassandra-driver", "wcwidth"]
   },
   "cahute": {
     "package_name": "",
@@ -250,7 +250,7 @@
     "exclude_packages": ["certifi"]
   },
   "dnsviz": {
-    "extra_packages": ["dnspython", "m2crypto", "pygraphviz"]
+    "extra_packages": ["dnspython", "pygraphviz"]
   },
   "docker-squash": {
     "exclude_packages": ["certifi"]
@@ -365,6 +365,9 @@
   },
   "gptline": {
     "exclude_packages": ["certifi", "pillow"]
+  },
+  "gptme": {
+    "exclude_packages": ["certifi"]
   },
   "graph-tool": {
     "package_name": "",
@@ -553,10 +556,11 @@
   },
   "openstackclient": {
     "extra_packages": [
-      "osc-placement", "python-barbicanclient", "python-cloudkittyclient",
-      "python-designateclient", "python-glanceclient", "python-heatclient",
-      "python-ironicclient", "python-magnumclient", "python-manilaclient",
-      "python-mistralclient", "python-octaviaclient", "setuptools"
+      "keystoneauth-websso", "osc-placement", "python-barbicanclient",
+      "python-cloudkittyclient", "python-designateclient",
+      "python-glanceclient", "python-heatclient", "python-ironicclient",
+      "python-magnumclient", "python-manilaclient", "python-mistralclient",
+      "python-octaviaclient", "setuptools"
     ],
     "exclude_packages": ["certifi", "cryptography"]
   },
@@ -612,11 +616,11 @@
     "exclude_packages": ["certifi", "cryptography", "numpy"]
   },
   "pwntools": {
-    "exclude_packages": ["certifi", "cryptography"]
+    "exclude_packages": ["capstone", "certifi", "cryptography"]
   },
   "pydocstyle": "pydocstyle[toml]",
   "pygit2": {
-    "exclude_packages": ["cffi", "pycparser", "setuptools"]
+    "exclude_packages": ["cffi", "pycparser"]
   },
   "pyinstaller": {
     "extra_packages": ["macholib"]
@@ -665,6 +669,10 @@
     "package_name": "",
     "extra_packages": ["flit-core", "setuptools", "pip", "wheel"]
   },
+  "python@3.13": {
+    "package_name": "",
+    "extra_packages": ["flit-core", "setuptools", "pip", "wheel"]
+  },
   "python-lsp-server": {
     "package_name": "python-lsp-server[websockets]",
     "extra_packages": ["python-lsp-black", "pylsp-mypy", "python-lsp-ruff", "pylsp-rope"]
@@ -672,10 +680,12 @@
   "python-matplotlib": {
     "exclude_packages": ["numpy", "pillow"]
   },
-  "python-requests": {
-    "exclude_packages": ["certifi", "charset-normalizer", "idna", "urllib3"]
-  },
   "pythran": {
+    "exclude_packages": ["numpy"]
+  },
+  "pytorch": {
+    "package_name": "torch[opt-einsum]",
+    "extra_packages": ["pyyaml"],
     "exclude_packages": ["numpy"]
   },
   "raven": {

@@ -29,6 +29,7 @@ ain
 aiven-client
 akamai
 alda
+alembic
 algol68g
 aliddns
 aliyun-cli
@@ -41,6 +42,7 @@ alpscore
 alsa-lib
 amber
 ammonite-repl
+amp
 amqp-cpp
 amtterm
 ancient
@@ -183,6 +185,7 @@ bat
 bat-extras
 batik
 bats-core
+batt
 bazarr
 bazel
 bazel-diff
@@ -218,10 +221,12 @@ bind
 bindfs
 bindgen
 bingrep
+binsider
 biodiff
 biome
 biosig
 bitrise
+bittwist
 bitwarden-cli
 bk
 bkcrack
@@ -229,6 +234,7 @@ bkt
 black
 blast
 blis
+blisp
 blocky
 bluepill
 blueutil
@@ -247,6 +253,7 @@ bottom
 bounceback
 bowtie2
 box2d
+boxes
 bpftop
 breezy
 brev
@@ -297,6 +304,7 @@ calc
 calceph
 calcurse
 calicoctl
+camlp5
 canfigger
 capnp
 capstone
@@ -405,6 +413,7 @@ circleci
 circumflex
 citus
 cjson
+ckan
 clac
 clair
 clamav
@@ -556,6 +565,7 @@ cycode
 cyctl
 cyme
 cypher-shell
+cyphernetes
 cyrus-sasl
 cython
 czg
@@ -584,6 +594,7 @@ dcm2niix
 ddcutil
 ddns-go
 ddrescue
+deadfinder
 deark
 debianutils
 define
@@ -699,6 +710,7 @@ duck
 duckdb
 duckscript
 dufs
+dug
 dumpling
 dunamai
 dune
@@ -763,6 +775,7 @@ entr
 envchain
 envd
 envelope
+envio
 envoy
 enzyme
 epic5
@@ -774,6 +787,7 @@ erdtree
 erg
 erlang
 erlang@25
+erlang@26
 erlang_ls
 erofs-utils
 esbuild
@@ -800,6 +814,7 @@ f3d
 faas-cli
 fabric
 fabric-installer
+facad
 fail2ban
 faircamp
 faiss
@@ -816,6 +831,7 @@ fastlane
 fastnetmon
 fastp
 fastqc
+fatal
 faudio
 fauna-shell
 faust
@@ -1093,9 +1109,11 @@ govc
 govulncheck
 gowsdl
 gpac
+gperftools
 gpg-tui
 gprof2dot
 gpsim
+gptme
 gptscript
 gql
 gradle
@@ -1191,6 +1209,7 @@ hivex
 hledger
 hof
 homebank
+hopenpgp-tools
 hoverfly
 hpack
 hpp-fcl
@@ -1300,6 +1319,7 @@ jetty
 jetty-runner
 jfrog-cli
 jhipster
+jikken
 jimtcl
 jj
 jlog
@@ -1372,6 +1392,7 @@ kics
 killport
 kin
 kind
+kiota
 kitchen-sync
 kitex
 klee
@@ -1396,6 +1417,7 @@ ktor
 kty
 kube-linter
 kube-ps1
+kube-score
 kubeaudit
 kubebuilder
 kubecfg
@@ -1482,11 +1504,13 @@ libclc
 libcoap
 libcouchbase
 libcpuid
+libcss
 libcyaml
 libdap
 libdeflate
 libdivide
 libdnet
+libdom
 libdpp
 libdrm
 libedit
@@ -1512,6 +1536,7 @@ libgusb
 libgweather
 libhandy
 libheif
+libhubbub
 libical
 libidn2
 libimagequant
@@ -1526,12 +1551,14 @@ liblc3
 liblinear
 liblouis
 liblqr
+liblxi
 libmaa
 libmapper
 libmatio
 libmaxminddb
 libmicrohttpd
 libmobi
+libmonome
 libmxml
 libnetfilter_conntrack
 libnfs
@@ -1587,6 +1614,7 @@ libtiff
 libtirpc
 libtommath
 libtool
+libtorrent-rakshasa
 libtrace
 libtrng
 libucl
@@ -1598,6 +1626,7 @@ liburing
 libusbmuxd
 libuv
 libva
+libvatek
 libvirt
 libvirt-python
 libwbxml
@@ -1647,7 +1676,6 @@ livekit-cli
 llama.cpp
 llgo
 llm
-llvm
 lmdb
 lmod
 lnav
@@ -1712,6 +1740,7 @@ mariadb@11.2
 markdownlint-cli
 markdownlint-cli2
 marked
+marksman
 marp-cli
 massdriver
 matplotplusplus
@@ -1806,6 +1835,7 @@ monolith
 moon
 morpheus
 morse
+mosquitto
 moto
 mpc
 mpd
@@ -1849,6 +1879,7 @@ naabu
 nagios
 nagios-plugins
 nano
+nanobind
 nanoflann
 nanopb
 nasm
@@ -1859,6 +1890,7 @@ navidrome
 nbdime
 ncc
 ncdc
+ncdu
 ncnn
 nco
 ncspot
@@ -1941,6 +1973,7 @@ nvm
 nvtop
 nzbget
 oasdiff
+oath-toolkit
 oauth2_proxy
 oauth2c
 objfw
@@ -1982,11 +2015,13 @@ open-image-denoise
 open-mesh
 open-mpi
 open62541
+openapi-diff
 openbao
 openblas
 opencl-clhpp-headers
 opencl-headers
 opencl-icd-loader
+opencolorio
 opendetex
 opendht
 openexr
@@ -2036,7 +2071,6 @@ orgalorg
 orientdb
 ormolu
 orocos-kdl
-ortp
 osc
 osctrl-cli
 osi
@@ -2053,6 +2087,7 @@ overtls
 ox
 oxipng
 oxker
+oxlint
 p11-kit
 pacapt
 packetbeat
@@ -2134,10 +2169,12 @@ pip-audit
 pip-tools
 pipdeptree
 pipenv
+pipet
 pipgrip
 pipx
 pivit
 pixi
+pixie
 pkgconf
 pkl
 plantuml
@@ -2189,6 +2226,7 @@ prettierd
 primecount
 primesieve
 principalmapper
+probe-rs-tools
 procs
 proftpd
 proj
@@ -2250,6 +2288,7 @@ pypy3.10
 pyqt
 pyqt-builder
 pyright
+pyside
 pyside@2
 python-argcomplete
 python-build
@@ -2326,6 +2365,7 @@ repo
 reposurgeon
 reproc
 restic
+restview
 resvg
 retire
 revive
@@ -2352,15 +2392,18 @@ root
 rosa-cli
 rospo
 rover
+roxctl
 rpg-cli
 rpki-client
 rpl
 rpmspectool
 rqlite
 rrdtool
+rsgain
 rswift
 rsyncy
 rsyslog
+rtorrent
 rubberband
 ruby
 ruby@3.1
@@ -2368,6 +2411,7 @@ ruby@3.2
 ruff
 ruff-lsp
 rune
+runit
 rure
 rush
 rush-parallel
@@ -2402,6 +2446,7 @@ sc-im
 scala
 scala@2.12
 scala@2.13
+scala@3.3
 scalingo
 scamper
 scarb
@@ -2440,6 +2485,7 @@ semgrep
 sentencepiece
 seqkit
 ser2net
+serialosc
 serpl
 serverless
 service-weaver
@@ -2545,6 +2591,7 @@ spglib
 sphinx-doc
 spicetify-cli
 spidermonkey
+spidermonkey@115
 spirv-llvm-translator
 sponge
 spoofdpi
@@ -2654,9 +2701,11 @@ taplo
 tarantool
 tartufo
 task
+taskopen
 tbb
 tbls
 tbox
+tccutil
 tcl-tk
 tcpdump
 tcpreplay
@@ -2729,6 +2778,7 @@ tkey-ssh-agent
 tlsx
 tmpmail
 tmux-mem-cpu-load
+tmux-sessionizer
 tmux-xpanes
 tmuxp
 tmx
@@ -2791,6 +2841,7 @@ typstyle
 tz
 tzdiff
 u-boot-tools
+uade
 ucloud
 uffizzi
 uftrace
@@ -2804,6 +2855,7 @@ uni
 uni-algo
 uni2ascii
 unibilium
+unicorn
 unison
 unisonlang
 universal-ctags
@@ -2855,6 +2907,7 @@ vgmstream
 vgrep
 vhs
 victoriametrics
+viddy
 video-compare
 vim
 vineyard
@@ -2887,6 +2940,7 @@ vttest
 vue-cli
 vulkan-extensionlayer
 vulkan-volk
+vulsio-gost
 vultr
 vulture
 vunnel
@@ -2939,7 +2993,9 @@ woof-doom
 wpebackend-fdo
 wstunnel
 wtfis
+wthrr
 wumpus
+wush
 wxmaxima
 wxpython
 wxwidgets

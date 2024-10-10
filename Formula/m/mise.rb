@@ -1,8 +1,8 @@
 class Mise < Formula
   desc "Polyglot runtime manager (asdf rust clone)"
   homepage "https://mise.jdx.dev/"
-  url "https://github.com/jdx/mise/archive/refs/tags/v2024.9.9.tar.gz"
-  sha256 "fc368d904d92b83342032734d6548093973af7b8c5f9035473548cd745bcbff3"
+  url "https://github.com/jdx/mise/archive/refs/tags/v2024.10.1.tar.gz"
+  sha256 "cd6a558b514468aaaf2f878b9e99f4ce6421857f341d8c99a45b56f76e633709"
   license "MIT"
   head "https://github.com/jdx/mise.git", branch: "main"
 
@@ -12,12 +12,12 @@ class Mise < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "6e9b1faf6569a37ccf437ff41b33524d3e2e3c4bee3bf4c4bb9299c187459b91"
-    sha256 cellar: :any,                 arm64_sonoma:  "03460417079af7305076437f067854e48232fe93f31dc1f4fccbbaed4a2f5d17"
-    sha256 cellar: :any,                 arm64_ventura: "8ab5e4286905d2c4bab71352683b81177dab26bbb233f9e4f2321aad68d6e714"
-    sha256 cellar: :any,                 sonoma:        "b9e645ac0867f1bddae3372232305245c2f98b7888a24f391f9ccfdb16edb4a0"
-    sha256 cellar: :any,                 ventura:       "c036f41ad28e03cc894c570e60fb7bf291ff8f8bf76f75b8b32e53580178886c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e642672d9e5940173bd6d5470711b344a60815384707802c1626fc4cbec3ca7f"
+    sha256 cellar: :any,                 arm64_sequoia: "62c4bf676bae1a59f74cba8a70cf52d8b6c9752684e75f659ded3d94ca20b1c4"
+    sha256 cellar: :any,                 arm64_sonoma:  "1109f9069d3e49733785278eab657768ae306d970be2808895a97c8dbe0d9a65"
+    sha256 cellar: :any,                 arm64_ventura: "887c72b6dd7cc0be31afee1864dbedc48c3171976570342ebc18e14bc8347c04"
+    sha256 cellar: :any,                 sonoma:        "ff750d91907637801a8771ac87feb628f413672c316ace4d79150470f29e6bed"
+    sha256 cellar: :any,                 ventura:       "fb485a53c4a80e3d577a6aa46ed83bc9e755cc671190a7da0202c21fe7e0d039"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a783e9bbd4eadd83944c89c16655c29c8d7db9ac3a4f3f96ba1307ad55f1547a"
   end
 
   depends_on "pkg-config" => :build

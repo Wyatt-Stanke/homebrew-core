@@ -4,15 +4,15 @@ class EtcdCppApiv3 < Formula
   url "https://github.com/etcd-cpp-apiv3/etcd-cpp-apiv3/archive/refs/tags/v0.15.4.tar.gz"
   sha256 "4516ecfa420826088c187efd42dad249367ca94ea6cdfc24e3030c3cf47af7b4"
   license "BSD-3-Clause"
-  revision 13
+  revision 15
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "db4364829b5524b0c8185b61c817f218185ad7a62451ac11a01c37d30ed083a2"
-    sha256 cellar: :any,                 arm64_sonoma:  "257407348c7633437ce42f73f954fb78496ea661ed72ee14661b09c80bb19a0b"
-    sha256 cellar: :any,                 arm64_ventura: "b725a602642116027a4089c112ec6ddccc25ca286d584486accc6a5befdde676"
-    sha256 cellar: :any,                 sonoma:        "135cb3152bae82dcc00a7a25ecaa14dbfb886ae822a970d1540f5013c44a5cb5"
-    sha256 cellar: :any,                 ventura:       "aec9663a2f4624c76eb6c89769986ba2b554688f8166521522589c13235dde96"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c8525fc254709d4880181c5918e28584570f6516ef24658b1a98d5bfa2048e5a"
+    sha256 cellar: :any,                 arm64_sequoia: "cc3d08246d23f435864a7fed6348ab9d9de1cd4a49ee92dce37a170ac518da81"
+    sha256 cellar: :any,                 arm64_sonoma:  "96a813572656beecf15ce12e0cfd2c73b7fb70e85b88509a439420d6dc0708bc"
+    sha256 cellar: :any,                 arm64_ventura: "423c525648ffd1eb96c4f0e3c2dfc07511f99519801cec7915158bd302a1f57d"
+    sha256 cellar: :any,                 sonoma:        "0f10b3147b98ca0c317c3fb11ec3f82d3983bbc13b3881878947722ebf0a9dc7"
+    sha256 cellar: :any,                 ventura:       "b037857b7087508a30ee83fdf879fa7c4efab16ac6ddfb3ed617cc0e834a13b1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6b8f967612ef9394dfe2d6d07f0519b5a0948987603eed9fcec5c1759ee9d978"
   end
 
   depends_on "cmake" => [:build, :test]
@@ -28,6 +28,13 @@ class EtcdCppApiv3 < Formula
   depends_on "re2"
 
   fails_with gcc: "5"
+
+  # Fix for removal of GPR_ASSERT macro in grpc.
+  # https://github.com/etcd-cpp-apiv3/etcd-cpp-apiv3/pull/281
+  patch do
+    url "https://github.com/etcd-cpp-apiv3/etcd-cpp-apiv3/commit/ece56adf4d01658a5f0668a3618c97153665581c.patch?full_index=1"
+    sha256 "f3686647436045a9a53b05f81fae02d5a5a2025d5ce78a66aca0ade85c1a99c6"
+  end
 
   def install
     system "cmake", "-S", ".", "-B", "build",

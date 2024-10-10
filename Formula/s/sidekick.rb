@@ -1,23 +1,24 @@
 class Sidekick < Formula
   desc "Deploy applications to your VPS"
   homepage "https://github.com/MightyMoud/sidekick"
-  url "https://github.com/MightyMoud/sidekick/archive/refs/tags/v0.6.0.tar.gz"
-  sha256 "daaa4bd9492c0fff8803ec48b5664b436a1eacd3b925528636668bdeb0a5e42d"
+  url "https://github.com/MightyMoud/sidekick/archive/refs/tags/v0.6.3.tar.gz"
+  sha256 "15525dcd4cd2dca9bf109b93b6ad771ca51b7a88449d0fabf43dcd8dd3ed0bd1"
   license "GPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "12ebaeca180980c3ecc60500d5b95d4d87f6b664d08257ed7b2bdc20a1c001c5"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "12ebaeca180980c3ecc60500d5b95d4d87f6b664d08257ed7b2bdc20a1c001c5"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "12ebaeca180980c3ecc60500d5b95d4d87f6b664d08257ed7b2bdc20a1c001c5"
-    sha256 cellar: :any_skip_relocation, sonoma:        "921e014e8a8586088042a5b9c9f8023e65c788d9e732475b5b1448394911d010"
-    sha256 cellar: :any_skip_relocation, ventura:       "921e014e8a8586088042a5b9c9f8023e65c788d9e732475b5b1448394911d010"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c0aa9e0d6b5ea8cdceabd3a6f321f14630fc34835ca4cd7be175fbaa0fa6fc71"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "45adfa0f7640f06983f46e8a56599f58d347ade6c65e273bc1bb748d5c18c467"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "45adfa0f7640f06983f46e8a56599f58d347ade6c65e273bc1bb748d5c18c467"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "45adfa0f7640f06983f46e8a56599f58d347ade6c65e273bc1bb748d5c18c467"
+    sha256 cellar: :any_skip_relocation, sonoma:        "283ed8b1d05a515100fb1a2654698ed49bd860fb43ec0606ed0dd279fa1d0781"
+    sha256 cellar: :any_skip_relocation, ventura:       "283ed8b1d05a515100fb1a2654698ed49bd860fb43ec0606ed0dd279fa1d0781"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "366a5fd8e25c7fe85cfece626d62ccbb273254f1d9ee3c259796bd0980c42790"
   end
 
   depends_on "go" => :build
 
   def install
-    system "go", "build", *std_go_args(ldflags: "-s -w")
+    ldflags = "-s -w -X 'github.com/mightymoud/sidekick/cmd.version=v#{version}'"
+    system "go", "build", *std_go_args(ldflags:)
 
     generate_completions_from_executable(bin/"sidekick", "completion")
   end

@@ -6,16 +6,16 @@ class Vineyard < Formula
   url "https://github.com/v6d-io/v6d/releases/download/v0.23.2/v6d-0.23.2.tar.gz"
   sha256 "2a2788ed77b9459477b3e90767a910e77e2035a34f33c29c25b9876568683fd4"
   license "Apache-2.0"
-  revision 3
+  revision 5
 
   bottle do
     rebuild 1
-    sha256                               arm64_sequoia: "f443f244add2120f42c3ffe1177aaf0db6a0a12280ee39e890fa4e4edfe18808"
-    sha256                               arm64_sonoma:  "455f9c91e16b9f48a90386b646fd77e840ac8d4367b1a813484d2829f3e31596"
-    sha256                               arm64_ventura: "fdadc16b06ee0a61b136156b78caa0a86e6675f454f81b294d27de39116b9359"
-    sha256                               sonoma:        "4905ecd40b9494d664029463e97a78820ec5de1a6e43f4d59a8a4c8288fbb69e"
-    sha256                               ventura:       "486a2c285506dc241034b56d36b2bd88c5f6c69aea2bb2a489ac7728c6a92bde"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3e56a3247d661ce03e6cafb3b3bc144a4824e390b308fd6ccd26a2012a3bac08"
+    sha256                               arm64_sequoia: "e0b3bb0b7d5d1d05ae0209c60e848be0ed63d9fdc7db6ff9b7cc51ce62b864b0"
+    sha256                               arm64_sonoma:  "ab2d74aa237dffa7d8c3c6cfbcd3849644e1b2c202c0dc502e8ec4b929c1cd1f"
+    sha256                               arm64_ventura: "fd10aa8b7085f27018464b8bf91ac28d0f6b983d1e9c0ef32eb0435726245915"
+    sha256                               sonoma:        "5676475adc6e6b9b58ab403d418fd14423128887c0436f17cf7f863d8bd36044"
+    sha256                               ventura:       "ec2c89c0a1c723efc3ac0b21c58f83f1158f86c7a54d728107b83b0ca39cf9c4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "df83d67107663ce1c59b1f7c5ea63c1d4bab4608a6cce6a35ca48df509f85ac4"
   end
 
   depends_on "cmake" => [:build, :test]
@@ -28,7 +28,6 @@ class Vineyard < Formula
   depends_on "etcd-cpp-apiv3"
   depends_on "gflags"
   depends_on "glog"
-  depends_on "grpc"
   depends_on "hiredis"
   depends_on "libgrape-lite"
   depends_on "open-mpi"
@@ -80,6 +79,11 @@ class Vineyard < Formula
                     *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
+
+    # Replace `open-mpi` Cellar path that breaks on `open-mpi` version/revision bumps.
+    # CMake FindMPI uses REALPATH so there isn't a clean way to handle during generation.
+    openmpi = Formula["open-mpi"]
+    inreplace lib/"cmake/vineyard/vineyard-targets.cmake", openmpi.prefix.realpath, openmpi.opt_prefix
   end
 
   test do

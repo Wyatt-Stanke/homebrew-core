@@ -19,13 +19,16 @@ class SpidermonkeyAT91 < Formula
   end
 
   # Has been EOL since 2022-09-20
-  deprecate! date: "2024-02-22", because: :unsupported
+  disable! date: "2024-09-09", because: :unsupported
 
   depends_on "autoconf@2.13" => :build
   depends_on "pkg-config" => :build
   depends_on "python@3.9" => :build
   depends_on "rust" => :build
-  depends_on "icu4c"
+  # Can uncomment after https://github.com/Homebrew/homebrew-core/pull/192986
+  # as existing bottles are linked to ICU4C 74 like
+  # #{HOMEBREW_PREFIX}/opt/icu4c/lib/libicudata.74.dylib
+  # TODO: depends_on "icu4c@74"
   depends_on "nspr"
   depends_on "readline"
 

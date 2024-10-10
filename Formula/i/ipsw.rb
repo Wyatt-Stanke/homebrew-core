@@ -1,8 +1,8 @@
 class Ipsw < Formula
   desc "Research tool for iOS & macOS devices"
   homepage "https://blacktop.github.io/ipsw"
-  url "https://github.com/blacktop/ipsw/archive/refs/tags/v3.1.546.tar.gz"
-  sha256 "75e1942b9e6659a60d0ec938f93bf00d3d2bd92719c0d1b4897f2360e1c652a3"
+  url "https://github.com/blacktop/ipsw/archive/refs/tags/v3.1.549.tar.gz"
+  sha256 "036a2239d1f176852841208b312004e031bee4e90ad0d09976f1ba88ea2c5ea9"
   license "MIT"
   head "https://github.com/blacktop/ipsw.git", branch: "master"
 
@@ -12,12 +12,12 @@ class Ipsw < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "ec9d6b107151501c05aca630788cef9c435f2d4ebeff964ea5460e8b608a8f24"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "bd762c9343d65876a02a4d308db404f3f0b27285bbf71b2af5055fe4d0e66675"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "f019871ea62ce0a1aa100b0d13678902c838d4d3be453cdc8f31688e4df1ca1a"
-    sha256 cellar: :any_skip_relocation, sonoma:        "38a73db9e7558380abede45f3704e2a85f4bded336f9a20c095a2321da05068e"
-    sha256 cellar: :any_skip_relocation, ventura:       "84a669aea54656a6112b4cdca2930a75521695dbad65d4948f518c75d36f3f08"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8ef5dc27899b9815a8208cd95cf96a6572d91e5b99e889b943bdc8faef49e69b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "1863238e61580cd68de9a8e353b5cb01aa8367f60fa7cc8a701a58496d1fb10e"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "7a8328fecb4286fcf8c982793bf00d3919366e570ba3c749d7ad532fa3708e9f"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "a4b21c4e0950592cd5bfa31c1c4fc625b17556893282620d86ff00a3b191b78c"
+    sha256 cellar: :any_skip_relocation, sonoma:        "9a3e24143d10e2db379c948de7043ae82ace6cb718d1d7e8171b4b5e36d2614c"
+    sha256 cellar: :any_skip_relocation, ventura:       "6c3bda8ba5efecd8e1aafd0d66e771fa6a107dc81689e290f897213f917b58b2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e352871ce270167e9ab2401dbe648e2d2d5f895bc8eaa53f34140633ac8cfb7d"
   end
 
   depends_on "go" => :build

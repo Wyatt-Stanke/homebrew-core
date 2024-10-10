@@ -3,18 +3,18 @@ class Aider < Formula
 
   desc "AI pair programming in your terminal"
   homepage "https://aider.chat/"
-  url "https://files.pythonhosted.org/packages/24/fc/84a89d554551bb1ec3126cb61956c649673f618592d4e73c0193be0b2cd0/aider_chat-0.57.1.tar.gz"
-  sha256 "56ea3051a14a94d43a66907dfb931c2e7a9f42a0556c93b9bc9440dbe5d26f29"
+  url "https://files.pythonhosted.org/packages/94/61/f78dfd9f9f153cf2cffdc7cf3590c1d4e3bc9a79953dbccc30e7529ae63a/aider_chat-0.59.1.tar.gz"
+  sha256 "5e7ccb8c6b8054563d8c84a20f9d44dafd7f8f2e5fbb68275aa722386f2572f3"
   license "Apache-2.0"
   head "https://github.com/paul-gauthier/aider.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "969da533fc0d77c0da50ce518a8793fb4db2a9238aa503805ca6c7391f54ef65"
-    sha256 cellar: :any,                 arm64_sonoma:  "9c4bcea6e84bd870d382acd1aed96fbd1aa68d7e4fddac28ab4d4ffc362a0cfd"
-    sha256 cellar: :any,                 arm64_ventura: "80314bfdcccb18b39a8d4aff5cc215fa2b6ba5f30952d4dea34b1d77c4549769"
-    sha256 cellar: :any,                 sonoma:        "cde71a8b77a918db4c1c9a654c145ad0d3758c93a76a04369f97c0f9740d3898"
-    sha256 cellar: :any,                 ventura:       "ec274f9ab42040f973f33afaf4af96a7b88da305751464c01fc35b65b491f236"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "efdf8580f6422c90929c6459daa03855f8a855243b10f6048745d1976f9aac81"
+    sha256 cellar: :any,                 arm64_sequoia: "77863957bc70d3cac83dade12bfdc0b8ec84a66a86e94300a54d221e208c9387"
+    sha256 cellar: :any,                 arm64_sonoma:  "82046e2a7bc6f751196e32183be855f962fb00dbf7e1f88a05fd72b5af38242b"
+    sha256 cellar: :any,                 arm64_ventura: "5d74cd69104ce3559aad0a8a807aed77d53d4f6ee3b90098d17c95ac19b10a88"
+    sha256 cellar: :any,                 sonoma:        "f04562e9631a5ec8351a7c387d55b3657e83b2c2306f5a782993e0b819f11158"
+    sha256 cellar: :any,                 ventura:       "d05862dae7e3dea423968a2b19d151a8203e644326f2717f023bb0ab72675938"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c46b141231ef2fbd12e67fecf1ee63b906fdf2f5f891cdf1a0d394504717c1fd"
   end
 
   depends_on "cython" => :build # for tree-sitter-languages
@@ -283,6 +283,11 @@ class Aider < Formula
     sha256 "2584f7cf844ac4d970fba483a717dbe10c1c1c96a969bf65d61ffe94df1b2863"
   end
 
+  resource "pydub" do
+    url "https://files.pythonhosted.org/packages/fe/9a/e6bca0eed82db26562c73b5076539a4a08d3cffd19c3cc5913a3e61145fd/pydub-0.25.1.tar.gz"
+    sha256 "980a33ce9949cab2a569606b65674d748ecbca4f0796887fd6f46173a7b0d30f"
+  end
+
   resource "pyflakes" do
     url "https://files.pythonhosted.org/packages/57/f9/669d8c9c86613c9d568757c7f5824bd3197d7b1c6c27553bc5618a27cce2/pyflakes-3.2.0.tar.gz"
     sha256 "1c61603ff154621fb2a9172037d84dca3500def8c8b630657d1701f026f8af3f"
@@ -429,7 +434,7 @@ class Aider < Formula
   test do
     mkdir "tmptestdir" do
       assert_match version.to_s, shell_output("#{bin}/aider --version")
-      assert_match "OPENAI_API_KEY: ✗ Not set", shell_output("#{bin}/aider --yes --exit --no-check-update")
+      assert_match "OPENAI_API_KEY: Not set", shell_output("#{bin}/aider --yes --exit --no-check-update")
       ENV["OPENAI_API_KEY"] = "invalid"
       output = shell_output("#{bin}/aider --yes --exit --message=test --no-check-update 2>&1")
       assert_match "Incorrect API key", output

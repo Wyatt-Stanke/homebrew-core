@@ -1,18 +1,18 @@
 class Glasskube < Formula
   desc "Missing Package Manager for Kubernetes"
   homepage "https://glasskube.dev/"
-  url "https://github.com/glasskube/glasskube/archive/refs/tags/v0.22.0.tar.gz"
-  sha256 "1b8a2861f9892930b31d695bfe6a8897a30858bb0ae6496382abe1896c79697e"
+  url "https://github.com/glasskube/glasskube/archive/refs/tags/v0.24.0.tar.gz"
+  sha256 "2a3c30777dc21333d07f4cb2b0882823bad99b5142dc13d32f7b700b00abb3f3"
   license "Apache-2.0"
   head "https://github.com/glasskube/glasskube.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "d07158d5252c737b7ef083750c08207490ed24c0ef3994be643a318681775e08"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d07158d5252c737b7ef083750c08207490ed24c0ef3994be643a318681775e08"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "d07158d5252c737b7ef083750c08207490ed24c0ef3994be643a318681775e08"
-    sha256 cellar: :any_skip_relocation, sonoma:        "ecf1f84a86babc9278b9147907dda1a548fbf993176ebbd334f5a86f95ed273b"
-    sha256 cellar: :any_skip_relocation, ventura:       "ecf1f84a86babc9278b9147907dda1a548fbf993176ebbd334f5a86f95ed273b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4d486bdf794105596a3b9110cc9ededc3570ef080329d5aac33a8badc9465d4b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "bed4bac71a05c4bed2274ba076130e7d95de294b499a73d6cc2ac1d9a0637708"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "bed4bac71a05c4bed2274ba076130e7d95de294b499a73d6cc2ac1d9a0637708"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "bed4bac71a05c4bed2274ba076130e7d95de294b499a73d6cc2ac1d9a0637708"
+    sha256 cellar: :any_skip_relocation, sonoma:        "d50dfc262768fd3fed1dec5727c4f65f1f049eab58d32db1e03bc2a86510075e"
+    sha256 cellar: :any_skip_relocation, ventura:       "d50dfc262768fd3fed1dec5727c4f65f1f049eab58d32db1e03bc2a86510075e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8b52491b8e7f9352eee1e1643b087c1e938e831b2066b13c7e255a05fba195dd"
   end
 
   depends_on "go" => :build
