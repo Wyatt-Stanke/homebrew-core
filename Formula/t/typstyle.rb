@@ -1,18 +1,18 @@
 class Typstyle < Formula
   desc "Beautiful and reliable typst code formatter"
   homepage "https://enter-tainer.github.io/typstyle/"
-  url "https://github.com/Enter-tainer/typstyle/archive/refs/tags/v0.12.4.tar.gz"
-  sha256 "c25a89e15d3c3b5cd4e1e0a5c416796fc5408f8c47508e36b2c3676486a23d4a"
+  url "https://github.com/Enter-tainer/typstyle/archive/refs/tags/v0.12.6.tar.gz"
+  sha256 "b04a77a9f75dda3a9513088ee3cd28f0a093ff6a977f38186427bbb0e03ce66b"
   license "Apache-2.0"
   head "https://github.com/Enter-tainer/typstyle.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "f20e9b1d9026c2011395fa49d4e835f66674f1c9547b9f8fe13d67d3dec556d8"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "0ed585ff47dd30a2f3720467a60ba579a7faa7a7e0b3190373746bf435b0206b"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "e5b30d69c0fd9dd937c305f35df804e3288b3674b5796d13c4d09a4ebdf1545a"
-    sha256 cellar: :any_skip_relocation, sonoma:        "c814f6bd6c1d1c6109f0eb30328e5d7202e59e999fc8d4c9adb0da5aace1c928"
-    sha256 cellar: :any_skip_relocation, ventura:       "2750a35d0df4652d92bd4edef53694c97b429ce124a2dbd26f3823e71719e13b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9a53858c72fe8010529ca2f665690578a6f336e4d98d8b85ceb2a4ce453c8278"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "ee6f99d3419fd96ad4823c93f938fa865986b9a6c097989625904ccecfa2b45d"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "b132ffe9982efe18c35d463cf7993ea3dfb03c4d94d43120561a189d31de402d"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "8b4cce56c2894f4121f0fa7a1f2512b2b55369d68764e791b7eef2de6eee10dc"
+    sha256 cellar: :any_skip_relocation, sonoma:        "55c243e3832a497054e96f7cb6474bab56115ef340bd51015bf007bd68a5fd3a"
+    sha256 cellar: :any_skip_relocation, ventura:       "360fd791ead5a1022344fc539f53c5ab4fa7bcd7bba0fc0cc104a0d3ea793c56"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e00796746724f4c52866cad49d140e2903858677562053600625290758475eb6"
   end
 
   depends_on "rust" => :build
