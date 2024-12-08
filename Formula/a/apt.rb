@@ -1,8 +1,8 @@
 class Apt < Formula
   desc "Advanced Package Tool"
   homepage "https://wiki.debian.org/Apt"
-  url "https://deb.debian.org/debian/pool/main/a/apt/apt_2.9.15.tar.xz"
-  sha256 "01ddc6b682dec792e860c961603eb980324e1c6bd74ce68c45a7c225eca06ce1"
+  url "https://deb.debian.org/debian/pool/main/a/apt/apt_2.9.17.tar.xz"
+  sha256 "30a0f5bb66e50e66355eaa810097192f977dfeb5c2aa57b9c4f59870be7b0d04"
   license "GPL-2.0-or-later"
 
   livecheck do
@@ -11,7 +11,7 @@ class Apt < Formula
   end
 
   bottle do
-    sha256 x86_64_linux: "af5408cbf9f873f7f264206d87f8d21a2f19ed89c61c8de23ef6c490cc9aa341"
+    sha256 x86_64_linux: "d65206c059ed439ebd9cebd584647274be2b687d3b1671efaba6c4a5aa0b422c"
   end
 
   keg_only "not linked to prevent conflicts with system apt"
