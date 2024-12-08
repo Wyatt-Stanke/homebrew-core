@@ -115,6 +115,7 @@ asciidoctorj
 asdf
 asio
 ask-cli
+asm6809
 asn
 asnmap
 aspell
@@ -130,6 +131,7 @@ asymptote
 asyncapi
 asyncplusplus
 at-spi2-core
+atf
 atlantis
 atlas
 atomicparsley
@@ -150,7 +152,19 @@ avrdude
 awk
 aws-amplify
 aws-auth
+aws-c-auth
+aws-c-cal
+aws-c-common
+aws-c-compression
+aws-c-event-stream
+aws-c-http
+aws-c-io
+aws-c-mqtt
+aws-c-s3
+aws-c-sdkutils
 aws-cdk
+aws-checksums
+aws-crt-cpp
 aws-elasticbeanstalk
 aws-es-proxy
 aws-iam-authenticator
@@ -167,6 +181,7 @@ awsdac
 awslogs
 axel
 azcopy
+azure-core-cpp
 b2-tools
 babel
 babl
@@ -334,6 +349,7 @@ cargo-binstall
 cargo-bloat
 cargo-bundle
 cargo-c
+cargo-chef
 cargo-crev
 cargo-deny
 cargo-depgraph
@@ -452,6 +468,7 @@ cli11
 cli53
 clib
 clickhouse-cpp
+clickhouse-sql-parser
 cliclick
 clifm
 cling
@@ -499,7 +516,6 @@ code-cli
 code-minimap
 code-server
 codec2
-codecov-cli
 codelimit
 coder
 codespell
@@ -551,6 +567,7 @@ cpi
 cpm
 cpp-gsl
 cpp-httplib
+cpp-peglib
 cppad
 cppcheck
 cppinsights
@@ -752,6 +769,7 @@ dua-cli
 dub
 duck
 duckdb
+ducker
 duckscript
 dufs
 dug
@@ -764,6 +782,7 @@ duplicity
 duply
 dust
 dvc
+dwarfs
 dwarfutils
 dwm
 dxpy
@@ -1088,6 +1107,7 @@ gitql
 gitsign
 gittuf
 gitu
+giza
 gjs
 glances
 glassfish
@@ -1324,6 +1344,7 @@ imapsync
 imath
 imessage-exporter
 imgdiet
+imgp
 imgproxy
 immich-cli
 immortal
@@ -1716,6 +1737,7 @@ libtrng
 libucl
 libultrahdr
 libunibreak
+libunicode
 libuninameslist
 libunistring
 libunwind
@@ -1802,10 +1824,12 @@ lucky-commit
 luit
 lune
 lunzip
+lutok
 luv
 lux
 lwtools
 lxc
+lxi-tools
 lychee
 lynis
 lz4
@@ -1876,6 +1900,7 @@ meli
 melody
 memcached
 memray
+memtester
 menhir
 mercurial
 mergiraf
@@ -2098,6 +2123,7 @@ oasdiff
 oath-toolkit
 oauth2_proxy
 oauth2c
+oauth2l
 objfw
 ocaml-findlib
 ocaml-zarith
@@ -2124,6 +2150,7 @@ okta-awscli
 okteto
 ol
 ollama
+omake
 omega
 omniorb
 onednn
@@ -2311,6 +2338,7 @@ pivit
 pixi
 pixie
 pixman
+pjproject
 pkg-config-wrapper
 pkgconf
 pkl
@@ -2343,11 +2371,13 @@ ponyc
 popeye
 portablegl
 porter
+poselib
 postgis
 postgresql@13
 postgresql@14
 postgresql@15
 postgresql@16
+postgresql@17
 postgrest
 poutine
 powerline-go
@@ -2426,6 +2456,7 @@ pyqt-builder
 pyright
 pyside
 pyside@2
+pytest
 python-argcomplete
 python-build
 python-launcher
@@ -2485,7 +2516,6 @@ rav1e
 raven
 raxml-ng
 raylib
-rbtools
 rbw
 rclone
 rcs
@@ -2625,6 +2655,7 @@ scotch
 scrapy
 scrcpy
 screen
+screenfetch
 scriptisto
 scs
 scummvm
@@ -2692,6 +2723,7 @@ sip
 sipp
 siril
 sispmctl
+six
 sjk
 sk
 skaffold
@@ -3134,6 +3166,7 @@ wakatime-cli
 walk
 wallpaper
 wartremover
+wasm-component-ld
 wasm-micro-runtime
 wasm-pack
 wasm-tools
@@ -3148,6 +3181,7 @@ wazero
 wcslib
 wcurl
 weasyprint
+weaviate-cli
 web-ext
 webdis
 webhook
@@ -3267,6 +3301,7 @@ zellij
 zenith
 zenity
 zeromq
+zet
 zf
 zfind
 zig
