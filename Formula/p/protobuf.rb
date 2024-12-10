@@ -1,8 +1,8 @@
 class Protobuf < Formula
   desc "Protocol buffers (Google's data interchange format)"
   homepage "https://protobuf.dev/"
-  url "https://github.com/protocolbuffers/protobuf/releases/download/v28.3/protobuf-28.3.tar.gz"
-  sha256 "7c3ebd7aaedd86fa5dc479a0fda803f602caaf78d8aff7ce83b89e1b8ae7442a"
+  url "https://github.com/protocolbuffers/protobuf/releases/download/v29.1/protobuf-29.1.tar.gz"
+  sha256 "3d32940e975c4ad9b8ba69640e78f5527075bae33ca2890275bf26b853c0962c"
   license "BSD-3-Clause"
 
   livecheck do
@@ -11,13 +11,12 @@ class Protobuf < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_sequoia: "8ceae6e5b43b79768459fb4ee294e679c859870a57f07473d64bf21f9421164e"
-    sha256 cellar: :any,                 arm64_sonoma:  "3f1d2e9a5444837d57464166b68f4d9e164411763a6d48f30f19344caf4fface"
-    sha256 cellar: :any,                 arm64_ventura: "5004354186c681c9403615a8cc9d4bea6a9f8d85c6981df1de15fd077b5653af"
-    sha256 cellar: :any,                 sonoma:        "ec104e9d24c9c765a5785a8de48d4c0352d0e7534f73a6fad7cc6305007430df"
-    sha256 cellar: :any,                 ventura:       "66110b5d997d3d696f8d02c21696dbeb5afef5d8acf14833fdf08e632f8f1fb4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1fcce74a9846b8dc0f02db2e0d6315deb9d540260e94c261de7558c5a5202408"
+    sha256 cellar: :any,                 arm64_sequoia: "f195f72fabe5f1daa8351ff6aab65a8c804a3dbb92fcfaf8d1232b4ebf25a66a"
+    sha256 cellar: :any,                 arm64_sonoma:  "5e9a5397b8ab7cd8ac4e7481c1af5d64241df86f4205bc477fb8d366e004da5e"
+    sha256 cellar: :any,                 arm64_ventura: "4d68c9a70abedef5e23774faa6a421588067794c02bd3892e0b57a9338c899b9"
+    sha256 cellar: :any,                 sonoma:        "cf40b8edaaf2df31d1724f470604faad18345b2c74515b970b755fc0f186697a"
+    sha256 cellar: :any,                 ventura:       "82758d30260da4dbc686ec09e14dc747f45559119ee5a29e9e69a95db3584bb9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1b1b7c978bdf5e8f0b50089df1d1b24e5f2448e6aeb59250c6b38dcef351e97f"
   end
 
   depends_on "cmake" => :build
@@ -30,11 +29,6 @@ class Protobuf < Formula
     depends_on "googletest" => :build
   end
 
-  patch do
-    url "https://github.com/protocolbuffers/protobuf/commit/e490bff517916495ed3a900aa85791be01f674f5.patch?full_index=1"
-    sha256 "7e89d0c379d89b24cb6fe795cd9d68e72f0b83fcc95dd91af721d670ad466022"
-  end
-
   # Backport to expose java-related symbols
   patch do
     url "https://github.com/protocolbuffers/protobuf/commit/9dc5aaa1e99f16065e25be4b9aab0a19bfb65ea2.patch?full_index=1"
@@ -45,6 +39,7 @@ class Protobuf < Formula
     # Keep `CMAKE_CXX_STANDARD` in sync with the same variable in `abseil.rb`.
     abseil_cxx_standard = 17
     cmake_args = %W[
+      -DCMAKE_CXX_STANDARD=#{abseil_cxx_standard}
       -DBUILD_SHARED_LIBS=ON
       -Dprotobuf_BUILD_LIBPROTOC=ON
       -Dprotobuf_BUILD_SHARED_LIBS=ON
@@ -54,7 +49,6 @@ class Protobuf < Formula
       -Dprotobuf_ABSL_PROVIDER=package
       -Dprotobuf_JSONCPP_PROVIDER=package
     ]
-    cmake_args << "-DCMAKE_CXX_STANDARD=#{abseil_cxx_standard}"
 
     system "cmake", "-S", ".", "-B", "build", *cmake_args, *std_cmake_args
     system "cmake", "--build", "build"
@@ -66,7 +60,7 @@ class Protobuf < Formula
   end
 
   test do
-    testdata = <<~EOS
+    (testpath/"test.proto").write <<~PROTO
       syntax = "proto3";
       package test;
       message TestCase {
@@ -75,8 +69,7 @@ class Protobuf < Formula
       message Test {
         repeated TestCase case = 1;
       }
-    EOS
-    (testpath/"test.proto").write testdata
+    PROTO
     system bin/"protoc", "test.proto", "--cpp_out=."
   end
 end
