@@ -1,8 +1,8 @@
 class Cloudquery < Formula
   desc "Data movement tool to sync data from any source to any destination"
   homepage "https://www.cloudquery.io"
-  url "https://github.com/cloudquery/cloudquery/archive/refs/tags/cli-v6.12.1.tar.gz"
-  sha256 "3fc269fda9b26208cd862e5ec532e2a95862d93fb343953b7845724ba9425333"
+  url "https://github.com/cloudquery/cloudquery/archive/refs/tags/cli-v6.12.7.tar.gz"
+  sha256 "bbf105e6ab00f2657918fbf3dcfa3ae1acc335fde44e8834c2e57a67cab2ca19"
   license "MPL-2.0"
   head "https://github.com/cloudquery/cloudquery.git", branch: "main"
 
@@ -12,19 +12,21 @@ class Cloudquery < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "19f726f04b56c713027d99f17f4bbb509b3d20c9631206fb652c654a953b9c47"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "19f726f04b56c713027d99f17f4bbb509b3d20c9631206fb652c654a953b9c47"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "19f726f04b56c713027d99f17f4bbb509b3d20c9631206fb652c654a953b9c47"
-    sha256 cellar: :any_skip_relocation, sonoma:        "6757c17c412979380a056fb39a66e0bac65e4a57274efdcb8f15d8e0c134bb06"
-    sha256 cellar: :any_skip_relocation, ventura:       "6757c17c412979380a056fb39a66e0bac65e4a57274efdcb8f15d8e0c134bb06"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a12f39a96162dc442e9c5e9ae27a4ffbdbf94a4c761f4c76e448d52be6995d2e"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "4a3a825fd6fe3f35877aa8ffe0df59aa4060bfcf80997479e5252b36a201b451"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "4a3a825fd6fe3f35877aa8ffe0df59aa4060bfcf80997479e5252b36a201b451"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "4a3a825fd6fe3f35877aa8ffe0df59aa4060bfcf80997479e5252b36a201b451"
+    sha256 cellar: :any_skip_relocation, sonoma:        "79e00be3674df00d94486f23609d1319992a3601bd02cbcec8625deec277325d"
+    sha256 cellar: :any_skip_relocation, ventura:       "79e00be3674df00d94486f23609d1319992a3601bd02cbcec8625deec277325d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a9f8f8bed57074a2d4a8601b0be23e03d3586654fa06c1f64c3f5520f2743cc6"
   end
 
   depends_on "go" => :build
 
   def install
-    ldflags = "-s -w -X github.com/cloudquery/cloudquery/cli/cmd.Version=#{version}"
-    system "go", "build", *std_go_args(ldflags:)
+    cd "cli" do
+      ldflags = "-s -w -X github.com/cloudquery/cloudquery/cli/v6/cmd.Version=#{version}"
+      system "go", "build", *std_go_args(ldflags:)
+    end
   end
 
   test do

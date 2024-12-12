@@ -1,19 +1,20 @@
 class Lla < Formula
   desc "High-performance, extensible alternative to ls"
   homepage "https://github.com/triyanox/lla"
-  url "https://github.com/triyanox/lla/archive/refs/tags/v0.2.9.tar.gz"
-  sha256 "e21cba33f4f2da83c4a58d799b5b36cca0bce1946231e611cceacf681584a67a"
+  url "https://github.com/triyanox/lla/archive/refs/tags/v0.3.1.tar.gz"
+  sha256 "5d23054eb83ddd725441586114ceed9cf26ba6becf78b7b3393c2980f67b5c41"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "e3ae1d1272bf0986f14b3b0e3b59eca7ebd29d41c83bac402c946a708709429a"
-    sha256 cellar: :any,                 arm64_sonoma:  "c9bdd32ccd66cc3169d8097580545ff3d398a3204ca9feb0746b88510a76f743"
-    sha256 cellar: :any,                 arm64_ventura: "46bea68ecfeebac773b8299fe44b7da3e063490886ff96b7c14f6972efcdcd63"
-    sha256 cellar: :any,                 sonoma:        "469bc5757d83a6eb98ec7cb69f49f69b60cee95c1569adf9f204334fd58beb3b"
-    sha256 cellar: :any,                 ventura:       "28b96efbf8dddb237e90f40a042c004a0679ee71a6c224478fddcc8284fa5c32"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "53b347ae2ff74facbeda40012390f7b36f4fb3600c9098d21f424f2cd961aa24"
+    sha256 cellar: :any,                 arm64_sequoia: "45d6e9ca977c48ae137b349bd42e2d8a0caf878884e5a75839f72c70f1bde4de"
+    sha256 cellar: :any,                 arm64_sonoma:  "02242f3c08f8dda0b0eac3a876acc7c8aedb028917397627eb3510a304feaabb"
+    sha256 cellar: :any,                 arm64_ventura: "030d1a6297c8599e9de1828e343cb792f304e938b4e261bfcb154f6dd8cd7f3c"
+    sha256 cellar: :any,                 sonoma:        "4c5be9f37e5eb657e16bf9054906eb59fac5b0946fba9784bcce94a504accb4b"
+    sha256 cellar: :any,                 ventura:       "dba5cea0b6eecb3e28a27bb019a29aa4dc6547ddaf3b32d07eb0486c9c58249c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e6859f5598b2cbd26a33b84881b20bcaa4f703b5ed8d9a2872fa1b010249c585"
   end
 
+  depends_on "protobuf" => :build
   depends_on "rust" => :build
 
   def install

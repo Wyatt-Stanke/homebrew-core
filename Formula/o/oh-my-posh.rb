@@ -1,8 +1,8 @@
 class OhMyPosh < Formula
   desc "Prompt theme engine for any shell"
   homepage "https://ohmyposh.dev"
-  url "https://github.com/JanDeDobbeleer/oh-my-posh/archive/refs/tags/v24.11.0.tar.gz"
-  sha256 "e645fb1064ae6065bd0be3ec7673d1db7c64bf5c0c5ee65d24f38d90772013f0"
+  url "https://github.com/JanDeDobbeleer/oh-my-posh/archive/refs/tags/v24.12.0.tar.gz"
+  sha256 "188b5060de286f798e518ff1c45846c8ba6878540c5ec2aca7bbe586c3e105fc"
   license "MIT"
   head "https://github.com/JanDeDobbeleer/oh-my-posh.git", branch: "main"
 
@@ -15,12 +15,12 @@ class OhMyPosh < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "639e7eee1e24b559c66e5c6aaaf7e8c09a186174f6ea30b5c71cce4ae622e982"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "40b9f8274e464837b507f74e4ab30f22e9aaf10c9ac2b9d834d7f8b58d991a45"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "159c4b8b4b7369a86c602362af48f0213d0723bba6ea268b729f1c533375567e"
-    sha256 cellar: :any_skip_relocation, sonoma:        "68655b4b618cea505490072e507967ea2d68c9b3ba5933b21337c0546a7cd55f"
-    sha256 cellar: :any_skip_relocation, ventura:       "467eef42a568a412696820683ba5bc6ac3177a87a440e97efffec9b2b0ca8363"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3382302e955ca05c84e6e6463d740eccdb260d915507286b85271b1319667694"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "429ecff16a8f96983eed46650d96b28cf244eb7401c28fef43938ab5956a8422"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "a111962864fcbfff2c7cc04da0a21e65cc0dfe0776057f58dd60bd6e30a2b283"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "71d3962ed8dff3bbe1f5a53710610fd80493f1cc6f69ba193d737e1acd288d77"
+    sha256 cellar: :any_skip_relocation, sonoma:        "49ea0492962af22fe9df26b7ee0bf814c53255bbea523f6fbaeaf3a4b7c01f76"
+    sha256 cellar: :any_skip_relocation, ventura:       "4539c95427c71615850cc8288f450a17427bfdcc747e1cbc6933a843568225e6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d97bb398484d0cd1273878d9646a0885111378e2a7a894be079692ac88735d71"
   end
 
   depends_on "go" => :build
@@ -31,10 +31,12 @@ class OhMyPosh < Formula
       -X github.com/jandedobbeleer/oh-my-posh/src/build.Version=#{version}
       -X github.com/jandedobbeleer/oh-my-posh/src/build.Date=#{time.iso8601}
     ]
+
     cd "src" do
       system "go", "build", *std_go_args(ldflags:)
     end
 
+    generate_completions_from_executable(bin/"oh-my-posh", "completion")
     prefix.install "themes"
     pkgshare.install_symlink prefix/"themes"
   end
