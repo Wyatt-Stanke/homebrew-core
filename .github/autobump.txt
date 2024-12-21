@@ -371,6 +371,7 @@ cargo-outdated
 cargo-public-api
 cargo-release
 cargo-run-bin
+cargo-shuttle
 cargo-udeps
 cargo-watch
 cargo-zigbuild
@@ -1586,6 +1587,7 @@ lacework-cli
 lando-cli
 langgraph-cli
 languagetool
+languagetool-rust
 lanraragi
 lastpass-cli
 lastz
@@ -1607,6 +1609,7 @@ leaf-proxy
 leakcanary-shark
 lean-cli
 leapp-cli
+leetcode-cli
 leetup
 legba
 legitify
@@ -2742,6 +2745,7 @@ selenium-server
 semgrep
 sendme
 sentencepiece
+sentry-cli
 seqkit
 sequin
 sequoia-sq
@@ -2935,6 +2939,7 @@ suite-sparse
 sundials
 superfile
 superlu
+surfer
 suricata
 svgbob
 svgo
@@ -3124,6 +3129,7 @@ txr
 tygo
 typescript
 typescript-language-server
+typeshare
 typewritten
 typical
 typos-cli
