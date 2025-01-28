@@ -5,6 +5,7 @@ abseil
 abyss
 ack
 acl2
+acme.sh
 acronym
 act
 action-validator
@@ -34,6 +35,7 @@ aiven-client
 akamai
 alda
 alembic
+algernon
 algol68g
 aliae
 aliddns
@@ -262,6 +264,7 @@ bind
 bindfs
 bindgen
 bingrep
+binocle
 binsider
 biodiff
 biome
@@ -334,6 +337,7 @@ c-ares
 c-blosc
 c-blosc2
 c2048
+c2patool
 c2rust
 c3c
 c4core
@@ -365,12 +369,14 @@ cargo-binstall
 cargo-bloat
 cargo-bundle
 cargo-c
+cargo-cache
 cargo-chef
 cargo-crev
 cargo-cyclonedx
 cargo-deny
 cargo-depgraph
 cargo-dist
+cargo-edit
 cargo-expand
 cargo-flamegraph
 cargo-generate
@@ -464,6 +470,7 @@ chezmoi
 chezscheme
 chibi-scheme
 chicken
+chiko
 chisel-tunnel
 chkbit
 chkrootkit
@@ -549,7 +556,6 @@ code-minimap
 code-server
 codeberg-cli
 codec2
-codecov-cli
 codelimit
 coder
 codesnap
@@ -685,6 +691,7 @@ dbml-cli
 dbus
 dcd
 dcm2niix
+ddclient
 ddcutil
 ddns-go
 ddrescue
@@ -939,6 +946,7 @@ fantom
 fanyi
 fast_float
 fastapi
+fastd
 fastfec
 fastfetch
 fastlane
@@ -1036,6 +1044,7 @@ fossil
 fourmolu
 fourstore
 fox
+fpart
 fping
 fplll
 fq
@@ -1150,6 +1159,7 @@ git-xargs
 gitbackup
 gitbucket
 gitea
+github-keygen
 github-markdown-toc
 gitlab-ci-local
 gitlab-gem
@@ -1188,6 +1198,7 @@ gnu-apl
 gnu-getopt
 gnu-typist
 gnu-units
+gnu-which
 gnumeric
 gnunet
 gnupg
@@ -1443,6 +1454,7 @@ inxi
 ioctl
 ios-webkit-debug-proxy
 iowow
+ipatool
 iperf
 iperf3
 ipfs
@@ -1462,6 +1474,7 @@ iredis
 isa-l
 isl
 iso-codes
+isort
 ispc
 istioctl
 isync
@@ -1520,6 +1533,7 @@ jsdoc3
 jsign
 json-fortran
 json-glib
+json2hcl
 json2ts
 json2tsv
 jsoncpp
@@ -1792,6 +1806,7 @@ libp11
 libpaho-mqtt
 libpanel
 libpano
+libpaper
 libpcap
 libpeas
 libphonenumber
@@ -1811,12 +1826,14 @@ libre
 librealsense
 librespot
 libressl
+librime
 librist
 librsvg
 librtlsdr
 libsail
 libsais
 libscfg
+libseccomp
 libsecret
 libserialport
 libshumate
@@ -1895,6 +1912,7 @@ libzzip
 license-eye
 licensed
 licensefinder
+licenseplist
 lightgbm
 lighthouse
 lightning
@@ -1917,6 +1935,7 @@ litmusctl
 little-cms2
 livekit
 livekit-cli
+lizard
 lla
 llama.cpp
 lldpd
@@ -2020,6 +2039,7 @@ md4c
 mdbook
 mdbtools
 mdcat
+mdds
 mdless
 mdsh
 mdz
@@ -2053,6 +2073,7 @@ micronaut
 microplane
 micropython
 microsocks
+midnight-commander
 mighttpd2
 mihomo
 mikmod
@@ -2156,6 +2177,7 @@ mycli
 mycorrhiza
 mydumper
 mypy
+mysql-connector-c++
 mysqltuner
 n
 naabu
@@ -2190,6 +2212,7 @@ neon
 neonctl
 neosync
 neovide
+neovim-qt
 nerdctl
 nerdfetch
 nerdfix
@@ -2402,6 +2425,7 @@ oxlint
 p11-kit
 p7zip
 pacapt
+packcc
 packetbeat
 packetq
 packmol
@@ -2561,6 +2585,7 @@ powerman
 powerman-dockerize
 pqiv
 pre-commit
+precious
 presenterm
 prestd
 prestodb
@@ -2614,6 +2639,7 @@ purescript-language-server
 pushpin
 putty
 pv
+pwned
 pwntools
 py-spy
 py3cairo
@@ -2782,6 +2808,7 @@ rqlite
 rrdtool
 rsgain
 rshijack
+rsnapshot
 rswift
 rsync
 rsyncy
@@ -2832,6 +2859,7 @@ scala
 scala@2.12
 scala@2.13
 scala@3.3
+scalapack
 scalingo
 scamper
 scarb
@@ -2919,6 +2947,7 @@ sigma-cli
 signal-cli
 signmykey
 sigstore
+sigsum-go
 sile
 silicon
 silk
@@ -2964,6 +2993,7 @@ snakeviz
 snap
 snapcast
 snapcraft
+snapraid
 sng
 sngrep
 sniffer
@@ -2994,6 +3024,7 @@ sound-touch
 source-to-image
 sourcekitten
 sourcery
+spacer
 spack
 spades
 spatialindex
@@ -3004,6 +3035,7 @@ sphinx-doc
 spicetify-cli
 spidermonkey
 spidermonkey@115
+spiped
 spirv-llvm-translator
 sponge
 spoofdpi
@@ -3035,6 +3067,7 @@ srt
 srtp
 sse2neon
 ssh-audit
+ssh-mitm
 sshs
 ssldump
 sslh
@@ -3295,6 +3328,7 @@ tzdb
 tzdiff
 u-boot-tools
 uade
+ubi
 ucloud
 uffizzi
 uftrace
@@ -3403,6 +3437,7 @@ vte3
 vtk
 vue-language-server
 vulkan-extensionlayer
+vulkan-profiles
 vulkan-validationlayers
 vulkan-volk
 vulsio-gost
