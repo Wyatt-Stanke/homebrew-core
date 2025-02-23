@@ -1,17 +1,17 @@
 class VercelCli < Formula
   desc "Command-line interface for Vercel"
   homepage "https://vercel.com/home"
-  url "https://registry.npmjs.org/vercel/-/vercel-41.1.1.tgz"
-  sha256 "e626ae1752ce96e9725c064b7965a107b1f57d22bbb5cc3add57b59a52d5385a"
+  url "https://registry.npmjs.org/vercel/-/vercel-41.2.0.tgz"
+  sha256 "96bcf59dcd13fc7f2337b7b8e1f5e60b83122fb6372ff3a641a17b5c326989cf"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "29899522df15d22945ca4a100e03217c10bf1d45ca311ab75eabe4411afa5b5a"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "29899522df15d22945ca4a100e03217c10bf1d45ca311ab75eabe4411afa5b5a"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "29899522df15d22945ca4a100e03217c10bf1d45ca311ab75eabe4411afa5b5a"
-    sha256 cellar: :any_skip_relocation, sonoma:        "0ee5db560dc50ed954b860037e77ac5b1343bfb950e6badba518d48fd4277bec"
-    sha256 cellar: :any_skip_relocation, ventura:       "0ee5db560dc50ed954b860037e77ac5b1343bfb950e6badba518d48fd4277bec"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "001e595aab633e796590cecc2c2388a379086822c9a0617314c5be9cc965065a"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "23f6a460881524e73dd0fa692ed5c23b8654eaba22e9522394d8069d8ba437c5"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "23f6a460881524e73dd0fa692ed5c23b8654eaba22e9522394d8069d8ba437c5"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "23f6a460881524e73dd0fa692ed5c23b8654eaba22e9522394d8069d8ba437c5"
+    sha256 cellar: :any_skip_relocation, sonoma:        "999bc8d4f79b5846cacd191dc523198e67607e7e489200f2cf61bf9b1c7cbdb7"
+    sha256 cellar: :any_skip_relocation, ventura:       "999bc8d4f79b5846cacd191dc523198e67607e7e489200f2cf61bf9b1c7cbdb7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "00bddc99026240246900f66d9c20c873ba22a8fa61c15ac22aebaa595f624727"
   end
 
   depends_on "node"
@@ -32,7 +32,7 @@ class VercelCli < Formula
 
   test do
     system bin/"vercel", "init", "jekyll"
-    assert_predicate testpath/"jekyll/_config.yml", :exist?, "_config.yml must exist"
-    assert_predicate testpath/"jekyll/README.md", :exist?, "README.md must exist"
+    assert_path_exists testpath/"jekyll/_config.yml", "_config.yml must exist"
+    assert_path_exists testpath/"jekyll/README.md", "README.md must exist"
   end
 end
