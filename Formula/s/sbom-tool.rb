@@ -1,8 +1,8 @@
 class SbomTool < Formula
   desc "Scalable and enterprise ready tool to create SBOMs for any variety of artifacts"
   homepage "https://github.com/microsoft/sbom-tool"
-  url "https://github.com/microsoft/sbom-tool/archive/refs/tags/v3.1.0.tar.gz"
-  sha256 "3e31ffe0d7bfe26ecfc59772b8e828f08ac8c39a3ddfdc0a24d7d603afa7e45b"
+  url "https://github.com/microsoft/sbom-tool/archive/refs/tags/v4.0.3.tar.gz"
+  sha256 "5395100f4516eb7c02a7833fcb3683a2d14282ac4eaa4d04b59482d8717a82b8"
   license "MIT"
   head "https://github.com/microsoft/sbom-tool.git", branch: "main"
 
@@ -15,12 +15,12 @@ class SbomTool < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "ff8fbdbfb4a321fc72980e047cf8326fa745ab20d22da59152c3239fd9e58e85"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "c0d387409a55a1965c920dc52033028049ae4bedeb759b054a4e716074763000"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "5022471bef61a6cf96c9172c925baf519ac0349f3a9d1e2ea9ebab8ffed1315d"
-    sha256 cellar: :any_skip_relocation, ventura:       "f4d9fc9f31e1bdbacc85656dd6811bb3dc77e7792cf27bd306f534721df57136"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "a5a92f21640ecabfe329c5b39570ae95c343eb311471bec87fb63958b7bb5b0b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4c87d83bc21c734cb7cd9355da63ba7b4b592c8996a26629c391b37acdf42615"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "091a534b4ace588d7398271aa41dada17d506a72171978000890b2a8ed195019"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "e4040221ef75fde3146d997bb4d83f3b809ae5b4aa55edd490e74e7329f7ca30"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "f12c0fc73af505c4b63b02f53e95ad916aa88e9983762866fdc018640d987ab4"
+    sha256 cellar: :any_skip_relocation, ventura:       "6a3f293f560fdf2d611c34675ae4b723c711174509a46f0912fea345f56dbeb0"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "cb0265f4fae02ca7955842636cb893d224c4fed84002866c4dd8a83ea1c5cde7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "645ef4079653a651249ed7be05ba7fc7c3946ac41245c98c0badbfbf35693dca"
   end
 
   depends_on "dotnet@8"

@@ -272,12 +272,14 @@ bear
 beautysh
 bed
 bee
+behaviortree.cpp
 bench
 bender
 benthos
 berglas
 bettercap
 bfs
+bgpq3
 bgpq4
 biber
 bibtex-tidy
@@ -344,6 +346,7 @@ broot
 brotli
 brpc
 bruno-cli
+btfs
 btop
 btrfs-progs
 bubblewrap
@@ -498,6 +501,7 @@ chaoskube
 charm-tools
 charmcraft
 chars
+chart-releaser
 chart-testing
 chatblade
 chdig
@@ -540,9 +544,11 @@ clang-build-analyzer
 clang-format
 clang-uml
 clangql
+clarinet
 claws-mail
 clazy
 clblast
+clearlooks-phenix
 clhep
 cli11
 cli53
@@ -555,6 +561,7 @@ clinfo
 cling
 clingo
 clipboard
+clive
 cljfmt
 cloc
 clojure
@@ -623,6 +630,7 @@ comtrya
 conan
 conan@1
 concurrencykit
+conda-lock
 conda-zsh-completion
 conduit
 conftest
@@ -633,6 +641,7 @@ contentful-cli
 convco
 convmv
 convox
+cookcli
 cookiecutter
 copa
 copier
@@ -915,6 +924,7 @@ dynare
 dynein
 dysk
 dzr
+e2b
 e2fsprogs
 e2tools
 earthly
@@ -943,6 +953,7 @@ ejabberd
 ejdb
 eksctl
 elan-init
+eleventy
 elfutils
 elfx86exts
 elixir
@@ -1182,6 +1193,7 @@ gabo
 gallery-dl
 gama
 gambit
+gamdl
 game-music-emu
 gammaray
 garble
@@ -1241,6 +1253,7 @@ ginac
 gismo
 git-absorb
 git-annex
+git-bug
 git-cinnabar
 git-cliff
 git-codereview
@@ -1685,6 +1698,7 @@ joker
 jolie
 joplin-cli
 jose
+jove
 jp2a
 jpeg-turbo
 jpeg-xl
@@ -1755,6 +1769,7 @@ keploy
 kepubify
 kerl
 kew
+keychain
 keydb
 keyring
 kfr
@@ -1794,6 +1809,7 @@ ksh93
 ksops
 ktexttemplate
 ktfmt
+ktoblzcheck
 ktor
 kty
 kube-bench
@@ -1817,6 +1833,7 @@ kubergrunt
 kubernetes-cli
 kubernetes-cli@1.30
 kubernetes-cli@1.31
+kubernetes-cli@1.32
 kubescape
 kubeseal
 kubeshark
@@ -1868,6 +1885,7 @@ leaf-proxy
 leakcanary-shark
 lean-cli
 leapp-cli
+ledit
 leetcode-cli
 leetgo
 leetup
@@ -2191,6 +2209,7 @@ lucky-commit
 ludusavi
 luit
 lume
+lunar-date
 lune
 lunzip
 lutok
@@ -2205,6 +2224,7 @@ lz4
 lzip
 lziprecover
 lzlib
+m4
 m68k-elf-gcc
 macchina
 mackup
@@ -2244,6 +2264,7 @@ mariadb@10.11
 mariadb@10.5
 mariadb@10.6
 mariadb@11.4
+marisa
 markdown-oxide
 markdownlint-cli
 markdownlint-cli2
@@ -2350,6 +2371,7 @@ mmctl
 mmdbctl
 mmseqs2
 mmv
+moarvm
 mockery
 mockolo
 mockserver
@@ -2406,6 +2428,8 @@ multi-gitter
 multitail
 muon
 muparser
+mupdf
+mupdf-tools
 murex
 musikcube
 mutt
@@ -2454,6 +2478,7 @@ ne
 neatvi
 nebula
 needle
+nelm
 neo4j
 neocmakelsp
 neomutt
@@ -2527,6 +2552,7 @@ nping
 npm-check-updates
 npth
 nq
+nqp
 nrm
 nrpe
 ns-3
@@ -2559,6 +2585,7 @@ oauth2_proxy
 oauth2c
 oauth2l
 objfw
+observerward
 ocaml-findlib
 ocaml-zarith
 ocamlbuild
@@ -2786,6 +2813,7 @@ php@8.1
 php@8.2
 php@8.3
 phpmyadmin
+phpstan
 phpunit
 phylum-cli
 pianobar
@@ -2894,6 +2922,7 @@ procps
 procs
 profanity
 proftpd
+prog8
 proj
 projectable
 prometheus
@@ -3022,6 +3051,7 @@ rage
 railway
 rain
 rainfrog
+rakudo
 rakudo-star
 ramalama
 rancher-cli
@@ -3092,6 +3122,7 @@ riemann
 riemann-client
 rio
 rip2
+ripgrep-all
 ripsecrets
 riscv64-elf-gcc
 risor
@@ -3620,6 +3651,7 @@ tika
 tile38
 timewarrior
 timg
+timoni
 tin
 tintin
 tiny
@@ -3731,6 +3763,7 @@ umka-lang
 unar
 unbound
 uncover
+uncrustify
 undercutf1
 ungit
 uni
@@ -3779,6 +3812,7 @@ vapoursynth
 varnish
 vault-cli
 vc
+vcftools
 vcluster
 vcsh
 vdirsyncer
