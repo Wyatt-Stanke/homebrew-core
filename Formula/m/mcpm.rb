@@ -3,18 +3,18 @@ class Mcpm < Formula
 
   desc "Open source, community-driven MCP server and client manager"
   homepage "https://mcpm.sh/"
-  url "https://files.pythonhosted.org/packages/44/f7/b7fff1838c836868e3d6e0c14b4eaa992341f428a8683fc7e5f9dee592d6/mcpm-1.9.0.tar.gz"
-  sha256 "97c112cb6d40e9bbcb4091c1db79da4eeda256bfa48083fa1f3abb260b814686"
+  url "https://files.pythonhosted.org/packages/8b/02/f32c6cd5412adcb028de835f1af9a3560980458e21092e16baf56ae6d060/mcpm-1.12.0.tar.gz"
+  sha256 "e9d2b852b90d7fd62dede584f035dd6b2b3d068d233e96b82aead835f81a911a"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "a2d1b48851c8c5d53a633576144a3c232ba93598b4e0950acc386168ece69f35"
-    sha256 cellar: :any,                 arm64_sonoma:  "a1a8656c41f4e64b82840dd1937794e698502b22711f2b0c8ae0b1324c7d927d"
-    sha256 cellar: :any,                 arm64_ventura: "9620316e14d29ba623d1f3b0d4e8bde669e1a6b32dd03a156f7e0385c95c009a"
-    sha256 cellar: :any,                 sonoma:        "5dcbb1d28ad74746efbf07b159525723c44dc872b3c0e0716908a23c9739ac7d"
-    sha256 cellar: :any,                 ventura:       "bb357a039ff5f7f1c403b04606578103caac9dd4f9a67267dae739193b0e874e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "08166d02dce45aed09214e3d346832964fc4286fa3f30d07cdea933a7cc4bc06"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c97ef95cafdc146db09cc0ae3462c19f11a3139056c479f16ac03c683a2fb5d9"
+    sha256 cellar: :any,                 arm64_sequoia: "ae761808d18c686e332d07c75d7e0c3c334ad6baed3e64df00847c3686e6420c"
+    sha256 cellar: :any,                 arm64_sonoma:  "f48a963580c488ec0741a5e533b28289a9501ec89f37e182817b8bc7b7d4a7a9"
+    sha256 cellar: :any,                 arm64_ventura: "40348a8ca9d201597a66b4d21360d83a021b9b6c0209602ed7d3d19d8b81d4dc"
+    sha256 cellar: :any,                 sonoma:        "34c6985becfd722649d7e8e0dd3b94204dbb2367d5f2123298d3d21eef5f81ad"
+    sha256 cellar: :any,                 ventura:       "9bb6b6a8bcc55baf30552139c344cbc4903bd44ba9a60e984d5a5d81f74cf470"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "fa28bef272a6590f87c38c0b8d57e76931f9aeece9906e31c56dc40bf20092b7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9c50930c19edd0c0d400c4ff1d978e82c815b38b27f8657826e74308232c940d"
   end
 
   depends_on "rust" => :build
@@ -41,8 +41,8 @@ class Mcpm < Formula
   end
 
   resource "click" do
-    url "https://files.pythonhosted.org/packages/b9/2e/0090cbf739cee7d23781ad4b89a9894a41538e4fcf4c31dcdd705b78eb8b/click-8.1.8.tar.gz"
-    sha256 "ed53c9d8990d83c2a27deae68e4ee337473f6330c040a31d4225c9574d16096a"
+    url "https://files.pythonhosted.org/packages/cd/0f/62ca20172d4f87d93cf89665fbaedcd560ac48b465bd1d92bfc7ea6b0a41/click-8.2.0.tar.gz"
+    sha256 "f5452aeddd9988eefa20f90f05ab66f17fce1ee2a36907fd30b05bbb5953814d"
   end
 
   resource "duckdb" do
@@ -81,8 +81,8 @@ class Mcpm < Formula
   end
 
   resource "mcp" do
-    url "https://files.pythonhosted.org/packages/25/ae/588691c45b38f4fbac07fa3d6d50cea44cc6b35d16ddfdf26e17a0467ab2/mcp-1.7.1.tar.gz"
-    sha256 "eb4f1f53bd717f75dda8a1416e00804b831a8f3c331e23447a03b78f04b43a6e"
+    url "https://files.pythonhosted.org/packages/bc/8d/0f4468582e9e97b0a24604b585c651dfd2144300ecffd1c06a680f5c8861/mcp-1.9.0.tar.gz"
+    sha256 "905d8d208baf7e3e71d70c82803b89112e321581bcd2530f9de0fe4103d28749"
   end
 
   resource "mdurl" do
@@ -151,8 +151,8 @@ class Mcpm < Formula
   end
 
   resource "sse-starlette" do
-    url "https://files.pythonhosted.org/packages/43/be/7e776a29b5f712b5bd13c571256a2470fcf345c562c7b2359f2ee15d9355/sse_starlette-2.3.4.tar.gz"
-    sha256 "0ffd6bed217cdbb74a84816437c609278003998b4991cd2e6872d0b35130e4d5"
+    url "https://files.pythonhosted.org/packages/10/5f/28f45b1ff14bee871bacafd0a97213f7ec70e389939a80c60c0fb72a9fc9/sse_starlette-2.3.5.tar.gz"
+    sha256 "228357b6e42dcc73a427990e2b4a03c023e2495ecee82e14f07ba15077e334b2"
   end
 
   resource "starlette" do

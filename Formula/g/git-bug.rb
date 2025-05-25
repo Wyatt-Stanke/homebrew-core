@@ -1,26 +1,32 @@
 class GitBug < Formula
   desc "Distributed, offline-first bug tracker embedded in git, with bridges"
   homepage "https://github.com/git-bug/git-bug"
-  url "https://github.com/git-bug/git-bug.git",
-      tag:      "v0.8.1",
-      revision: "96c7a111a3cb075b5ce485f709c3eb82da121a50"
+  url "https://github.com/git-bug/git-bug/archive/refs/tags/v0.10.1.tar.gz"
+  sha256 "1b5cafa3d9918ce18c4674c93b83359e211def83e716d5841fa93c77b457e6c2"
   license "GPL-3.0-or-later"
   head "https://github.com/git-bug/git-bug.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "aace4173880bff60e66e06833fcb5acbe4e4c1d8f86051ff89fb9566cb6b4a65"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "33fe5500a265b98d4af1445c3e428c15b7a61a206d707a109a3610b3e169a850"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "a15b100034db1c38161c6b02a7cfc3fc38b6f680ef4aacd1468031bc28c286d6"
-    sha256 cellar: :any_skip_relocation, sonoma:        "444acfa855ed5379698bfeb4b99075b564b173ec5f1bc3fa141abe0a144858a6"
-    sha256 cellar: :any_skip_relocation, ventura:       "ab1f4c9cd703a55094d10b36c038f95c289de4c30ffb66fb5a18ddb18f2bd04f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "636b5364c54e97dec3062870c780f54b2ffed5a4dc9c3e9c880e98191de502d7"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "46a716e687114907ed936a8c22b5fa1ca9658eecb26a0537ec894f97ae2c4ca9"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "5744168a1453fba21ab2782333d4015f9cd9c1b9497ebc909d350af435da737c"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "a271df2167a6a767e15beb87eea6eed4245f09db052f3f61b1cd5136349709de"
+    sha256 cellar: :any_skip_relocation, sonoma:        "d5bb614c77aca72bf32c5d2809befa82500f59fc5b603366d261cd83ac7f5762"
+    sha256 cellar: :any_skip_relocation, ventura:       "8721018faf434cc44ecad8440923d69c41886c780e8e10ac73942d8532696de1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c614beca0af4af926599abdd8959820da8cb6621c7c4451ffaaef8cc00a9c268"
   end
 
   depends_on "go" => :build
 
   def install
     ENV["GOBIN"] = bin
-    system "make", "install"
+    ldflags = %W[
+      -s -w
+      -X github.com/git-bug/git-bug/commands.GitCommit="v#{tap.user}"
+      -X github.com/git-bug/git-bug/commands.GitLastTag="v#{version}"
+      -X github.com/git-bug/git-bug/commands.GitExactTag="v#{version}"
+    ]
+    system "go", "generate"
+    system "go", "build", *std_go_args(ldflags:)
 
     man1.install Dir["doc/man/*.1"]
     doc.install Dir["doc/md/*.md"]

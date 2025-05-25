@@ -1,18 +1,18 @@
 class Nerdlog < Formula
   desc "TUI log viewer with timeline histogram and no central server"
   homepage "https://dmitryfrank.com/projects/nerdlog/article"
-  url "https://github.com/dimonomid/nerdlog/archive/refs/tags/v1.6.0.tar.gz"
-  sha256 "bc1c6ed6faf38de98c94c3cb321bcfa3b369c759cb8708ac08ab4ef4178ff762"
+  url "https://github.com/dimonomid/nerdlog/archive/refs/tags/v1.8.1.tar.gz"
+  sha256 "3cc38db15e57e8106f1d2da571136b0ea4dab74a351f577a3ce8d63a16900fa1"
   license "BSD-2-Clause"
   head "https://github.com/dimonomid/nerdlog.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "ec219169ed96ac12fc190b65bf8daee3a155e560c8294614c513e7dc1f1a58d6"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "10e835b240c0168ce54b9f5a80f1efc13c5db04f6c88a5b6ac8b0b90f8204ee2"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "5ea1b53bd7572f06e77db17c8fe095fba4b170d07594fd1e793b554d3447a69a"
-    sha256 cellar: :any_skip_relocation, sonoma:        "78fb88a50c663341fd0d2f5f3ea960e3abc9de83922e373d30efd795aeb4b3bb"
-    sha256 cellar: :any_skip_relocation, ventura:       "da7186e9791489f57b740e10a7ecf5fc6f99536ac77ffc046590b0309541444d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "66a4ada6105c759e7f43ebe5d221c82aab4e2c26257147490c495d989df91326"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "19ce16332ba95b53dff502a55254fdc1b8597fe9c5b02a0b448998facb81a046"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "337c1837add4345d9c457973e5f26407d8e31eadda0e459db693f2214ba25bd2"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "f04ede4740804afd7b9415d4725603de3719725c5c1148193c351daa0e1d1398"
+    sha256 cellar: :any_skip_relocation, sonoma:        "630d6b2df2ccb39f9d15eea9dbc2504d93e776c70a40c92f87ca9bc29b56c1eb"
+    sha256 cellar: :any_skip_relocation, ventura:       "6300d792dce668f5ce0bc3b650c4bca92fe2c86933e728a1184c94d527e9456b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "bd2e107f598b62223a713d32c3de80a4fdc8e31d139e88f13db5642d319078b5"
   end
 
   depends_on "go" => :build
