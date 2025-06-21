@@ -1,8 +1,8 @@
 class CargoBinstall < Formula
   desc "Binary installation for rust projects"
   homepage "https://github.com/cargo-bins/cargo-binstall"
-  url "https://github.com/cargo-bins/cargo-binstall/archive/refs/tags/v1.12.6.tar.gz"
-  sha256 "3980b886bb2d7cc7fa3fd59111538af4ede130d41f58dceb50faa00d065c521b"
+  url "https://github.com/cargo-bins/cargo-binstall/archive/refs/tags/v1.14.0.tar.gz"
+  sha256 "0bf1a100cdbce8fc80bd524ad305c698143a81135ab62570918ac997a1ae21e9"
   license "GPL-3.0-only"
   head "https://github.com/cargo-bins/cargo-binstall.git", branch: "main"
 
@@ -15,13 +15,13 @@ class CargoBinstall < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "5860a3db624f3f2c2619498ed85f0da7d0c280dc83cd65cf95d566ebaba7a0d9"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "8144abd09add935d93063769d78d178416c4c1c2a320447e44610db4d55c3fc4"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "251d65bc670309277fe51abcf4d35010fe40080302034e8c91c6e26eeea90937"
-    sha256 cellar: :any_skip_relocation, sonoma:        "4ce423686adb6a7ac91bdee2564a5cb41863a4f5b518bd2b8f113bdfbbf280d6"
-    sha256 cellar: :any_skip_relocation, ventura:       "4223ddd3f40a11768e8c10ed553ac352178ce2a3d214cfc0d27b3001d3b780ed"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "e3b5e60f387ffc75b90a10dc8d4a38c59bc421270e0ce2f6140460df2142f9ee"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "35673fe55ff1af9f5eeb722f7b9d038a6d05fad75791b12543bd5fcf5c2b943f"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "750c1b9f287fbdce9054cb8fd9b1d9f5d18a94a78abc364af885082c861b0c84"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f42dca0ab273e03f1fe0882a3e88899c95ae1854edf73c718198208c02982b9a"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "3389655928f5f496f5df20df026dd9b08b3ac99360de0ccb76de73aca1ef85f7"
+    sha256 cellar: :any_skip_relocation, sonoma:        "f2239f04ea9171f60f11d18d64eccf96c7662272f25fe1a8dd13aecefd590a42"
+    sha256 cellar: :any_skip_relocation, ventura:       "f8bfd995895758003ceb6cbbe8b364f9fc01659ef47752ebf027813e3e2c63df"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "551e14cd052f0fdf9bd5eb89a829d49eab436e9c65a18b8002cb7e22b7195ad7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "bab9b22b9f4f9ac05a5087d426124669897cdd42839728eae49f94d28223f90f"
   end
 
   depends_on "rust" => :build

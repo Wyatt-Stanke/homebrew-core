@@ -1,18 +1,18 @@
 class Nx < Formula
   desc "Smart, Fast and Extensible Build System"
   homepage "https://nx.dev"
-  url "https://registry.npmjs.org/nx/-/nx-21.1.2.tgz"
-  sha256 "f0c866819641ac6aebf96a3370cfe726f97016c749db1f530c66dda0abd61ed7"
+  url "https://registry.npmjs.org/nx/-/nx-21.2.1.tgz"
+  sha256 "6b07809bf959112ad9c6764e6366a8d13bb445dc7674239381249cd2fd6901d1"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "64826a6e28d4d5717bda79628fbfbfa39c708aea0e337752d889b88b5d727a47"
-    sha256 cellar: :any,                 arm64_sonoma:  "64826a6e28d4d5717bda79628fbfbfa39c708aea0e337752d889b88b5d727a47"
-    sha256 cellar: :any,                 arm64_ventura: "64826a6e28d4d5717bda79628fbfbfa39c708aea0e337752d889b88b5d727a47"
-    sha256 cellar: :any,                 sonoma:        "62ec9edb941f52075abde7d51323b1f6b720bf2573ed3819ff15e2e6f3213544"
-    sha256 cellar: :any,                 ventura:       "62ec9edb941f52075abde7d51323b1f6b720bf2573ed3819ff15e2e6f3213544"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "565d28ed59e23306f557eb4406ef7040999e45f1fe911281e5355a5fb4fd089b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ebd4cba813beec1ec8525be1b6e69a98b612b0a045a5fa2ca29a69794f8b1b8c"
+    sha256 cellar: :any,                 arm64_sequoia: "5ee808b274ad9c6e4d2fa86b869545f8eaca244b16556de2399f8242fcfcb39a"
+    sha256 cellar: :any,                 arm64_sonoma:  "5ee808b274ad9c6e4d2fa86b869545f8eaca244b16556de2399f8242fcfcb39a"
+    sha256 cellar: :any,                 arm64_ventura: "5ee808b274ad9c6e4d2fa86b869545f8eaca244b16556de2399f8242fcfcb39a"
+    sha256 cellar: :any,                 sonoma:        "73bde5e8b63ba4b0e004671ba4b3b515d2411d8f77b6b75e447075a58ed06d9f"
+    sha256 cellar: :any,                 ventura:       "73bde5e8b63ba4b0e004671ba4b3b515d2411d8f77b6b75e447075a58ed06d9f"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "945da8762e3d96981d02702670a789cf0dcf348373fa18cc3a2ebb39d2f00067"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "28a5c7bdd42cb657036d16aa9d577a197e07d3f1eb6e5d4b803e5127b77b89f9"
   end
 
   depends_on "node"
