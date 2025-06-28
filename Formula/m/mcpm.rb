@@ -3,18 +3,18 @@ class Mcpm < Formula
 
   desc "Open source, community-driven MCP server and client manager"
   homepage "https://mcpm.sh/"
-  url "https://files.pythonhosted.org/packages/33/43/304cd6c1b93e855606654e376be3e616ef382a0e43e5a81391866e03ae51/mcpm-1.13.1.tar.gz"
-  sha256 "921891abff2312cd9214aa79de3bd44d928929521085468ccd570ac78d2fda2d"
+  url "https://files.pythonhosted.org/packages/26/c5/c628d3480806599787451cded2b38b592f24178e5e178d026852315d34ea/mcpm-1.14.0.tar.gz"
+  sha256 "c533237300b27d322d73ada988fc6daabfd2705c4d24b092a832ce641255fe11"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "88ea359cd3a4145598b527a1f1a77e57c7e4770add8642eb3db19e923b82d6da"
-    sha256 cellar: :any,                 arm64_sonoma:  "e09752658f9296631a7605a4d9958aabc87812b98bc4198167218e193996f5cd"
-    sha256 cellar: :any,                 arm64_ventura: "fa5b8558113b435130995bbe3604458a6a1723f164b1ae2d951af38ce3030075"
-    sha256 cellar: :any,                 sonoma:        "d453dbdc469e72cc41727df5d533f4c27d2889aaf0ea81b8fbdff55adc4a18df"
-    sha256 cellar: :any,                 ventura:       "60a3f8f1daea875262d077330d727db644e95a220f3139c5fb6823b749835fa9"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "00807dcb8282f27ce0b90696f05e2cba814e7aa50abf6379a0d3e755642fdc7a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f8e0aeabf9de233eb2c464b7d6108dbc1c7a3dd0fd32a403192a8879dffc6962"
+    sha256 cellar: :any,                 arm64_sequoia: "1299894c705154f1992a0145a6dfe7f6a066796f1377561a4a3f9a0f664fd8cb"
+    sha256 cellar: :any,                 arm64_sonoma:  "2e88d794c3909d64d98b04e564affde31736c66269e53ae833bad7eee22783ea"
+    sha256 cellar: :any,                 arm64_ventura: "64f337a19463911f4ba17d9dcc82827989aaa62e632d2fa6244b058aa79066ea"
+    sha256 cellar: :any,                 sonoma:        "5c2d3f4208e5f513014a5f816f9aaf98b4c138f776bdbfa279a9b29338094510"
+    sha256 cellar: :any,                 ventura:       "86c37b5e5e777558f7ba08fee0a86bb30c27398498834746434f70b4d9ab911b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "104dc88d99e667fb6dfc956d0d74de2efe9dd9235df97726508243074f148d89"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c99c5645781b750a160ae4b86dcdbae40435325153d7e13d5a99ec056c3ab96e"
   end
 
   depends_on "rust" => :build
@@ -31,8 +31,8 @@ class Mcpm < Formula
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/e8/9e/c05b3920a3b7d20d3d3310465f50348e5b3694f4f88c6daf736eef3024c4/certifi-2025.4.26.tar.gz"
-    sha256 "0a816057ea3cdefcef70270d2c515e4506bbc954f417fa5ade2021213bb8f0c6"
+    url "https://files.pythonhosted.org/packages/73/f7/f14b46d4bcd21092d7d3ccef689615220d8a08fb25e564b65d20738e672e/certifi-2025.6.15.tar.gz"
+    sha256 "d747aa5a8b9bbbb1bb8c22bb13e22bd1f18e9796defa16bab421f7f7a317323b"
   end
 
   resource "charset-normalizer" do
@@ -51,8 +51,8 @@ class Mcpm < Formula
   end
 
   resource "duckdb" do
-    url "https://files.pythonhosted.org/packages/3e/82/680b108da1870e48d98464ddcf03820f983421b5bbd8dd8beff98d583db7/duckdb-1.3.0.tar.gz"
-    sha256 "09aaa4b1dca24f4d1f231e7ae66b6413e317b7e04e2753541d42df6c8113fac7"
+    url "https://files.pythonhosted.org/packages/35/ab/d89a4dd14311d5a0081711bc66db3fad73f7645fa7eb3844c423d2fa0a17/duckdb-1.3.1.tar.gz"
+    sha256 "8e101990a879533b1d33f003df2eb2a3c4bc7bdf976bd7ef7c32342047935327"
   end
 
   resource "h11" do
@@ -86,8 +86,8 @@ class Mcpm < Formula
   end
 
   resource "mcp" do
-    url "https://files.pythonhosted.org/packages/e7/bc/54aec2c334698cc575ca3b3481eed627125fb66544152fa1af927b1a495c/mcp-1.9.1.tar.gz"
-    sha256 "19879cd6dde3d763297617242888c2f695a95dfa854386a6a68676a646ce75e4"
+    url "https://files.pythonhosted.org/packages/06/f2/dc2450e566eeccf92d89a00c3e813234ad58e2ba1e31d11467a09ac4f3b9/mcp-1.9.4.tar.gz"
+    sha256 "cfb0bcd1a9535b42edaef89947b9e18a8feb49362e1cc059d6e7fc636f2cb09f"
   end
 
   resource "mdurl" do
@@ -106,8 +106,8 @@ class Mcpm < Formula
   end
 
   resource "pydantic" do
-    url "https://files.pythonhosted.org/packages/f0/86/8ce9040065e8f924d642c58e4a344e33163a07f6b57f836d0d734e0ad3fb/pydantic-2.11.5.tar.gz"
-    sha256 "7f853db3d0ce78ce8bbb148c401c2cdd6431b3473c0cdff2755c7690952a7b7a"
+    url "https://files.pythonhosted.org/packages/00/dd/4325abf92c39ba8623b5af936ddb36ffcfe0beae70405d456ab1fb2f5b8c/pydantic-2.11.7.tar.gz"
+    sha256 "d989c3c6cb79469287b1569f7447a17848c998458d49ebe294e975b9baf0f0db"
   end
 
   resource "pydantic-core" do
@@ -116,18 +116,18 @@ class Mcpm < Formula
   end
 
   resource "pydantic-settings" do
-    url "https://files.pythonhosted.org/packages/67/1d/42628a2c33e93f8e9acbde0d5d735fa0850f3e6a2f8cb1eb6c40b9a732ac/pydantic_settings-2.9.1.tar.gz"
-    sha256 "c509bf79d27563add44e8446233359004ed85066cd096d8b510f715e6ef5d268"
+    url "https://files.pythonhosted.org/packages/c2/ef/3d61472b7801c896f9efd9bb8750977d9577098b05224c5c41820690155e/pydantic_settings-2.10.0.tar.gz"
+    sha256 "7a12e0767ba283954f3fd3fefdd0df3af21b28aa849c40c35811d52d682fa876"
   end
 
   resource "pygments" do
-    url "https://files.pythonhosted.org/packages/7c/2d/c3338d48ea6cc0feb8446d8e6937e1408088a72a39937982cc6111d17f84/pygments-2.19.1.tar.gz"
-    sha256 "61c16d2a8576dc0649d9f39e089b5f02bcd27fba10d8fb4dcc28173f7a45151f"
+    url "https://files.pythonhosted.org/packages/b0/77/a5b8c569bf593b0140bde72ea885a803b82086995367bf2037de0159d924/pygments-2.19.2.tar.gz"
+    sha256 "636cb2477cec7f8952536970bc533bc43743542f70392ae026374600add5b887"
   end
 
   resource "python-dotenv" do
-    url "https://files.pythonhosted.org/packages/88/2c/7bb1416c5620485aa793f2de31d3df393d3686aa8a8506d11e10e13c5baf/python_dotenv-1.1.0.tar.gz"
-    sha256 "41f90bc6f5f177fb41f53e87666db362025010eb28f60a01c9143bfa33a2b2d5"
+    url "https://files.pythonhosted.org/packages/f6/b0/4bc07ccd3572a2f9df7e6782f52b0c6c90dcbb803ac4a167702d7d0dfe1e/python_dotenv-1.1.1.tar.gz"
+    sha256 "a8a6399716257f45be6a007360200409fce5cda2661e3dec71d23dc15f6189ab"
   end
 
   resource "python-multipart" do
@@ -136,8 +136,8 @@ class Mcpm < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/63/70/2bf7780ad2d390a8d301ad0b550f1581eadbd9a20f896afe06353c2a2913/requests-2.32.3.tar.gz"
-    sha256 "55365417734eb18255590a9ff9eb97e9e1da868d4ccd6402399eaf68af20a760"
+    url "https://files.pythonhosted.org/packages/e1/0a/929373653770d8a0d7ea76c37de6e41f11eb07559b103b1c02cafb3f7cf8/requests-2.32.4.tar.gz"
+    sha256 "27d0316682c8a29834d3264820024b62a36942083d52caf2f14c0591336d3422"
   end
 
   resource "rich" do
@@ -146,8 +146,8 @@ class Mcpm < Formula
   end
 
   resource "ruamel-yaml" do
-    url "https://files.pythonhosted.org/packages/9d/8f/dfbab2d5ec83da0605ab935fb43ffa8ab5828455e2c910b7314fdd18e0b8/ruamel.yaml-0.18.11.tar.gz"
-    sha256 "b586a3416676566ed45bf679a0909719f7ea7b58c03a9b6e03f905a1e2cd5076"
+    url "https://files.pythonhosted.org/packages/39/87/6da0df742a4684263261c253f00edd5829e6aca970fff69e75028cccc547/ruamel.yaml-0.18.14.tar.gz"
+    sha256 "7227b76aaec364df15936730efbf7d72b30c0b79b1d578bbb8e3dcb2d81f52b7"
   end
 
   resource "ruamel-yaml-clib" do
@@ -161,18 +161,18 @@ class Mcpm < Formula
   end
 
   resource "sse-starlette" do
-    url "https://files.pythonhosted.org/packages/10/5f/28f45b1ff14bee871bacafd0a97213f7ec70e389939a80c60c0fb72a9fc9/sse_starlette-2.3.5.tar.gz"
-    sha256 "228357b6e42dcc73a427990e2b4a03c023e2495ecee82e14f07ba15077e334b2"
+    url "https://files.pythonhosted.org/packages/8c/f4/989bc70cb8091eda43a9034ef969b25145291f3601703b82766e5172dfed/sse_starlette-2.3.6.tar.gz"
+    sha256 "0382336f7d4ec30160cf9ca0518962905e1b69b72d6c1c995131e0a703b436e3"
   end
 
   resource "starlette" do
-    url "https://files.pythonhosted.org/packages/ce/20/08dfcd9c983f6a6f4a1000d934b9e6d626cff8d2eeb77a89a68eef20a2b7/starlette-0.46.2.tar.gz"
-    sha256 "7f7361f34eed179294600af672f565727419830b54b7b084efe44bb82d2fccd5"
+    url "https://files.pythonhosted.org/packages/0a/69/662169fdb92fb96ec3eaee218cf540a629d629c86d7993d9651226a6789b/starlette-0.47.1.tar.gz"
+    sha256 "aef012dd2b6be325ffa16698f9dc533614fb1cebd593a906b90dc1025529a79b"
   end
 
   resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/f6/37/23083fcd6e35492953e8d2aaaa68b860eb422b34627b13f2ce3eb6106061/typing_extensions-4.13.2.tar.gz"
-    sha256 "e6c81219bd689f51865d9e372991c540bda33a0379d5573cddb9a3a23f7caaef"
+    url "https://files.pythonhosted.org/packages/d1/bc/51647cd02527e87d05cb083ccc402f93e441606ff1f01739a62c8ad09ba5/typing_extensions-4.14.0.tar.gz"
+    sha256 "8676b788e32f02ab42d9e7c61324048ae4c6d844a399eebace3d4979d75ceef4"
   end
 
   resource "typing-inspection" do
@@ -181,18 +181,18 @@ class Mcpm < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/8a/78/16493d9c386d8e60e442a35feac5e00f0913c0f4b7c217c11e8ec2ff53e0/urllib3-2.4.0.tar.gz"
-    sha256 "414bc6535b787febd7567804cc015fee39daab8ad86268f1310a9250697de466"
+    url "https://files.pythonhosted.org/packages/15/22/9ee70a2574a4f4599c47dd506532914ce044817c7752a79b6a51286319bc/urllib3-2.5.0.tar.gz"
+    sha256 "3fc47733c7e419d4bc3f6b3dc2b4f890bb743906a30d56ba4a5bfa4bbff92760"
   end
 
   resource "uvicorn" do
-    url "https://files.pythonhosted.org/packages/a6/ae/9bbb19b9e1c450cf9ecaef06463e40234d98d95bf572fab11b4f19ae5ded/uvicorn-0.34.2.tar.gz"
-    sha256 "0e929828f6186353a80b58ea719861d2629d766293b6d19baf086ba31d4f3328"
+    url "https://files.pythonhosted.org/packages/de/ad/713be230bcda622eaa35c28f0d328c3675c371238470abdea52417f17a8e/uvicorn-0.34.3.tar.gz"
+    sha256 "35919a9a979d7a59334b6b10e05d77c1d0d574c50e0fc98b8b1a0f165708b55a"
   end
 
   resource "watchfiles" do
-    url "https://files.pythonhosted.org/packages/03/e2/8ed598c42057de7aa5d97c472254af4906ff0a59a66699d426fc9ef795d7/watchfiles-1.0.5.tar.gz"
-    sha256 "b7529b5dcc114679d43827d8c35a07c493ad6f083633d573d81c660abc5979e9"
+    url "https://files.pythonhosted.org/packages/2a/9a/d451fcc97d029f5812e898fd30a53fd8c15c7bbd058fd75cfc6beb9bd761/watchfiles-1.1.0.tar.gz"
+    sha256 "693ed7ec72cbfcee399e92c895362b6e66d63dac6b91e2c11ae03d10d503e575"
   end
 
   resource "wcwidth" do
