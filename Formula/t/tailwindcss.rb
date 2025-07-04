@@ -1,8 +1,8 @@
 class Tailwindcss < Formula
   desc "Utility-first CSS framework"
   homepage "https://tailwindcss.com"
-  url "https://registry.npmjs.org/@tailwindcss/cli/-/cli-4.1.8.tgz"
-  sha256 "07daf2d661f86898cbe951f07190cd7c5b267e1b2dde720057f536a61ff52c78"
+  url "https://registry.npmjs.org/@tailwindcss/cli/-/cli-4.1.11.tgz"
+  sha256 "d26ab44103a28804e1d1f4c280d8abaf6db7234c8d9eb940ec7dc435c5ad80df"
   license "MIT"
   head "https://github.com/tailwindlabs/tailwindcss.git", branch: "next"
 
@@ -15,13 +15,13 @@ class Tailwindcss < Formula
   end
 
   bottle do
-    sha256                               arm64_sequoia: "f95e3a6b6ff98e3f6ea1211b5f5f4126ec69acd33d4e16fa652f22504c74ebb1"
-    sha256                               arm64_sonoma:  "bcdef0aa81276063ecbeeed7763bdc0993e909261b6c51e1754ab31dfc9be1a7"
-    sha256                               arm64_ventura: "f3f0151c2a4159304f88113f97e23b4d17374174222c0bfd8d1de36876e840bc"
-    sha256                               sonoma:        "c14f9b89582c282a3007b0e30f186f14c0f63df7947f69fdc002e5ca336c8297"
-    sha256                               ventura:       "0a9051bf782ad976700e56b275f22fdbefbfc21a7d44a1e3a91da9c832e26002"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "577000ce50e6c322eb03c29edc3586f1016c1e77cf64fd70d6903207d0e11aa8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1ac1a40228b10a730891a51b25145f1ec71d8e38e7145dba0d7b8ce91b2cc9d5"
+    sha256                               arm64_sequoia: "2ccebd4786671ae09609ae61072d792ea9fb4f94540af032b2cf36e53de42d08"
+    sha256                               arm64_sonoma:  "81b52e5df136097b7cccb4c3d65cfcc17542dbece003c6aaa62d84102c09d4c0"
+    sha256                               arm64_ventura: "9f1770823cf7bd9e692c795bdfab79c0ed4639dfa0987a60b1795345895d8d3c"
+    sha256                               sonoma:        "43017fc345cd06e72ad007a7ddfbaf7b4d82721c47ba0efdd83360307549f84a"
+    sha256                               ventura:       "19c3bbcd7e9c85bfc9670e756c1e58a0586c2cbcc4825439f04080efa99586f3"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "f64042694901449e5baef9e43fc824a47d0a5b7311db4478470c4127c20b5de2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "bfe605ba512197f80afff1110f7e8e17b79d5592b0aa25494e06f9eafafa33fa"
   end
 
   depends_on "node"

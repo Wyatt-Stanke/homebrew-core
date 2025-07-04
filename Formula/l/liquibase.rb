@@ -6,9 +6,11 @@ class Liquibase < Formula
   license "Apache-2.0"
 
   livecheck do
-    url "https://www.liquibase.com/download"
-    regex(/href=.*?liquibase[._-]v?(\d+(?:\.\d+)+)\.t/i)
+    url :stable
+    strategy :github_latest
   end
+
+  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "41c94aa6826f3ffb843e01817c8b60b79ea54e9c61536539524b8611254d2a66"

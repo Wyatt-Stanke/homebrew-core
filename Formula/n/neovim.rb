@@ -37,7 +37,7 @@ class Neovim < Formula
     end
 
     resource "tree-sitter-query" do
-      url "https://github.com/nvim-treesitter/tree-sitter-query/archive/refs/tags/v0.5.1.tar.gz"
+      url "https://github.com/tree-sitter-grammars/tree-sitter-query/archive/refs/tags/v0.5.1.tar.gz"
       sha256 "fe8c712880a529d454347cd4c58336ac2db22243bae5055bdb5844fb3ea56192"
     end
 
@@ -51,6 +51,8 @@ class Neovim < Formula
     url :stable
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 arm64_sequoia: "4daf9a69527c6243feaf66c3ce0d01f5fc6f6ff962988a561663ddb01a3c36cf"
