@@ -25,6 +25,7 @@ class Lbzip2 < Formula
   end
 
   deprecate! date: "2024-07-03", because: :unmaintained
+  disable! date: "2025-07-07", because: :unmaintained
 
   # Fix crash on macOS >= 10.13.
   patch :p0 do

@@ -1,19 +1,17 @@
 class Bento < Formula
   desc "Fancy stream processing made operationally mundane"
   homepage "https://warpstreamlabs.github.io/bento/"
-  url "https://github.com/warpstreamlabs/bento/archive/refs/tags/v1.7.1.tar.gz"
-  sha256 "0b8eb6e4695a3f716e392e93d21f91e98c439ea2c257596e22e42c620f690011"
+  url "https://github.com/warpstreamlabs/bento/archive/refs/tags/v1.9.0.tar.gz"
+  sha256 "d00a575d90e038d696dfd6140d542f25e760982a239aaefb63265be9930ae1d5"
   license "MIT"
 
-  no_autobump! because: :requires_manual_review
-
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "feea11f28ae911337a3ff0713d84c29ebc5fdbe23dca0df36cf983d57ebb6fa3"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "46ebbae99da9d29c2bf8899f4ec218beeab12f9ceac8a878d791a8e8a2d9dad7"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "ad7393aebb6f15304929e1182cc95732e45a330dfc10e5025ab3acd1ccaa532f"
-    sha256 cellar: :any_skip_relocation, sonoma:        "ac95ae1d71f4fcc432d41779e9ef87d21819cfd21135b9ed51938b48e920c1b6"
-    sha256 cellar: :any_skip_relocation, ventura:       "b8e7176ad43b21fad767d3ec23629a6734504b046b31aa9f3bf03a6f18a1e3a5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7a6d018079116e10230582e43feb86c6e3bfa375a8d88796720a754a1f032cdc"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "e3dbf6e2217dc4dd2b6990fc351858bfa68ed775378016184394faa8e6fdaac3"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "c6101a4553f0b19b0b6b9246a17755862956d32616d71a46e98aa26f272f143a"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "a034afaded59464827d9fac60edde5dc0789caa866d5e0df5769bfe05a6fe569"
+    sha256 cellar: :any_skip_relocation, sonoma:        "d376ece5a610b7e7a7086694bc6296b1076345db21edad7ad1c8f3fa3e5a9188"
+    sha256 cellar: :any_skip_relocation, ventura:       "1adc56a81509575e66b0728335c5a1648d2712e07ea0cb639adff184b5b7530b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "167604f5541969b510a4a2e2d7d51fc4269e32cd8706e731a47b4150f5648c9c"
   end
 
   depends_on "go" => :build

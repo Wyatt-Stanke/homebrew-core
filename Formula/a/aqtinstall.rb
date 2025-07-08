@@ -6,15 +6,16 @@ class Aqtinstall < Formula
   url "https://files.pythonhosted.org/packages/76/19/24a588de6c25d43169d172dab47e63a63cd0d8f90e98cf86487acbf00ac7/aqtinstall-3.3.0.tar.gz"
   sha256 "9c7d85fbe7258be2d7d23fda33f8aff2e8b7536817255eaeaaf4226da8546a31"
   license "MIT"
+  revision 2
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "d9c9dd5e40d7bd533d8da2bb74d7315449731b18f7bb700a744070cd7d00c02c"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "be17bb4b99450b17dc24764ae573bdc60efff0eb47a74264980c605ffafa175e"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "01ae5a1db0def636b7a76062c68a9a147e2376abb916ec899b96e411ca4dc647"
-    sha256 cellar: :any_skip_relocation, sonoma:        "a4e8a129ef5f6c66f9d7891e0bd803059b60e66e3763b96c97043267c79b085a"
-    sha256 cellar: :any_skip_relocation, ventura:       "a2a5b8af8f1f847dd0b6cf7f07d3d99b752ce7775f58e59e7410dbd8da15d1b7"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "fe5793553ea949f4aab1c7fa0da26925a6e285b08f5c4cb88c0ae3b82437644d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1ed0671250344889120e275dd0e377d74e3276dbd4b3387a68f4cc0e87568829"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "d607df4d563b4832c9543c3b857326d1c1f6aefa08f5d4b7832545c1dad463bf"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "84379db7347c71f2dfce9c28fd417c94af3dbc7054d7c5b5ae29cb56b3817120"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "c3e05c8ae9d66a3230add1eaffab7c7b1f35482910b86e5e8f45c7e0d960a8e8"
+    sha256 cellar: :any_skip_relocation, sonoma:        "12fd27eb1bbfaf24af4d9568bb6469765ed1a0bc250631fbffe1c90357ea338c"
+    sha256 cellar: :any_skip_relocation, ventura:       "c28fe34be333e0146003283deb7665df49c46c417b07c0aa0806a425b19a7f4f"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "06bad6f0be45f822558d0322cc1fc16ed27f9435914d0d0abf3643f517ea179d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "65edf6bbb4646c2c54f254e8889c3fbaf7ccb889e84699f5292f14b0edf867c9"
   end
 
   depends_on "python@3.13"
@@ -35,8 +36,8 @@ class Aqtinstall < Formula
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/e8/9e/c05b3920a3b7d20d3d3310465f50348e5b3694f4f88c6daf736eef3024c4/certifi-2025.4.26.tar.gz"
-    sha256 "0a816057ea3cdefcef70270d2c515e4506bbc954f417fa5ade2021213bb8f0c6"
+    url "https://files.pythonhosted.org/packages/73/f7/f14b46d4bcd21092d7d3ccef689615220d8a08fb25e564b65d20738e672e/certifi-2025.6.15.tar.gz"
+    sha256 "d747aa5a8b9bbbb1bb8c22bb13e22bd1f18e9796defa16bab421f7f7a317323b"
   end
 
   resource "charset-normalizer" do
@@ -105,8 +106,8 @@ class Aqtinstall < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/63/70/2bf7780ad2d390a8d301ad0b550f1581eadbd9a20f896afe06353c2a2913/requests-2.32.3.tar.gz"
-    sha256 "55365417734eb18255590a9ff9eb97e9e1da868d4ccd6402399eaf68af20a760"
+    url "https://files.pythonhosted.org/packages/e1/0a/929373653770d8a0d7ea76c37de6e41f11eb07559b103b1c02cafb3f7cf8/requests-2.32.4.tar.gz"
+    sha256 "27d0316682c8a29834d3264820024b62a36942083d52caf2f14c0591336d3422"
   end
 
   resource "semantic-version" do
@@ -125,13 +126,13 @@ class Aqtinstall < Formula
   end
 
   resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/f6/37/23083fcd6e35492953e8d2aaaa68b860eb422b34627b13f2ce3eb6106061/typing_extensions-4.13.2.tar.gz"
-    sha256 "e6c81219bd689f51865d9e372991c540bda33a0379d5573cddb9a3a23f7caaef"
+    url "https://files.pythonhosted.org/packages/d1/bc/51647cd02527e87d05cb083ccc402f93e441606ff1f01739a62c8ad09ba5/typing_extensions-4.14.0.tar.gz"
+    sha256 "8676b788e32f02ab42d9e7c61324048ae4c6d844a399eebace3d4979d75ceef4"
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/8a/78/16493d9c386d8e60e442a35feac5e00f0913c0f4b7c217c11e8ec2ff53e0/urllib3-2.4.0.tar.gz"
-    sha256 "414bc6535b787febd7567804cc015fee39daab8ad86268f1310a9250697de466"
+    url "https://files.pythonhosted.org/packages/15/22/9ee70a2574a4f4599c47dd506532914ce044817c7752a79b6a51286319bc/urllib3-2.5.0.tar.gz"
+    sha256 "3fc47733c7e419d4bc3f6b3dc2b4f890bb743906a30d56ba4a5bfa4bbff92760"
   end
 
   def install

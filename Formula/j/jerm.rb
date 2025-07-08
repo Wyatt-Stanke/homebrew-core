@@ -27,6 +27,7 @@ class Jerm < Formula
   end
 
   deprecate! date: "2024-07-03", because: :repo_removed
+  disable! date: "2025-07-07", because: :repo_removed
 
   def install
     system "make", "all"

@@ -1,8 +1,8 @@
 class Gdal < Formula
   desc "Geospatial Data Abstraction Library"
   homepage "https://gdal.org/en/stable/"
-  url "https://github.com/OSGeo/gdal/releases/download/v3.11.0/gdal-3.11.0.tar.gz"
-  sha256 "723d7b04e0f094be2636128d15165b45059ac5e53f143cbbd93280af0b347abd"
+  url "https://github.com/OSGeo/gdal/releases/download/v3.11.1/gdal-3.11.1.tar.gz"
+  sha256 "21f1806070ccff697946ba5df5a0ec9ee9ecfcbb7e7e6163f2c61466883e23f8"
   license "MIT"
   revision 1
 
@@ -12,13 +12,13 @@ class Gdal < Formula
   end
 
   bottle do
-    sha256 arm64_sequoia: "dc9531c2c4651779da397d6879de980e11bc2347a733da358c1a8ebd5b62c1b3"
-    sha256 arm64_sonoma:  "029f81257ef1aca8dbcfb95460f28ac9b2ab177f07413722780f73e9af03038a"
-    sha256 arm64_ventura: "ad3bcf7f00b055a56f68f69a34a080bf7140feabcea9bbfe4c7591d6cdd9bc82"
-    sha256 sonoma:        "9055ffe82344e6868b240491f83c04771eed3bf4451f0ed7389a4a3c45dc0385"
-    sha256 ventura:       "82e51de2a112724da2454c936411650696bad1fdbd40216b9010ff7c9a74a622"
-    sha256 arm64_linux:   "11605d04eecf4643997a3fd17d1cbbfe31b35067517da7acf448f6e678d1040f"
-    sha256 x86_64_linux:  "ea01fe64a6646be61ff4609eec8485622c297d1e5a1d985533bd82998811d801"
+    sha256 arm64_sequoia: "209088a61ad9e241ccf2961adf274fded9cbba16810348a54526e8572cc0dad7"
+    sha256 arm64_sonoma:  "7aa877875053b9882846e5e4b3dfb605bef58b5a130fa83aead125c41c9b5f88"
+    sha256 arm64_ventura: "305d71c54286b91ddbc92d24f1c2d6c0c154d536b702a2576058cc0b8d3bd449"
+    sha256 sonoma:        "852c47a38ceebe6108989be5b45f76080eaa0aea3588cd8933baa6a904280925"
+    sha256 ventura:       "82811a203288e3597bc35bc622a65abf0cd1a643cef33dd480d850846890df4f"
+    sha256 arm64_linux:   "26914bc309862b928f5c37b53a0273be314d325bbff7058c89ea83de8ec9e47c"
+    sha256 x86_64_linux:  "c6d777985c870dfcdcdba5c6462cc933e209f18a9538f685a0f103e84aab1c70"
   end
 
   head do

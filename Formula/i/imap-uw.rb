@@ -28,6 +28,7 @@ class ImapUw < Formula
   end
 
   deprecate! date: "2024-07-03", because: :unmaintained
+  disable! date: "2025-07-07", because: :unmaintained
 
   depends_on "openssl@3"
 

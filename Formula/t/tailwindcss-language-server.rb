@@ -1,8 +1,8 @@
 class TailwindcssLanguageServer < Formula
   desc "LSP for TailwindCSS"
   homepage "https://github.com/tailwindlabs/tailwindcss-intellisense/tree/HEAD/packages/tailwindcss-language-server"
-  url "https://github.com/tailwindlabs/tailwindcss-intellisense/archive/refs/tags/v0.14.20.tar.gz"
-  sha256 "05191814cb93831952971193bcee8ff281625bafc0f1655c353de83bbddfba6a"
+  url "https://github.com/tailwindlabs/tailwindcss-intellisense/archive/refs/tags/v0.14.24.tar.gz"
+  sha256 "050a94e72ee374a301af534d382148ae24a6af8018f831059bf988178e248c32"
   license "MIT"
 
   livecheck do
@@ -13,13 +13,13 @@ class TailwindcssLanguageServer < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "42ab4ae8ed875d500c37ec5fd80148854fd763456f95ac6404579749b37c336a"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "42ab4ae8ed875d500c37ec5fd80148854fd763456f95ac6404579749b37c336a"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "42ab4ae8ed875d500c37ec5fd80148854fd763456f95ac6404579749b37c336a"
-    sha256 cellar: :any_skip_relocation, sonoma:        "42ab4ae8ed875d500c37ec5fd80148854fd763456f95ac6404579749b37c336a"
-    sha256 cellar: :any_skip_relocation, ventura:       "42ab4ae8ed875d500c37ec5fd80148854fd763456f95ac6404579749b37c336a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "8d7a33b3d93ffafd7ddc6223609f43d7b8fb49aa74a56ee1a54f38a1aa55f721"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8d7a33b3d93ffafd7ddc6223609f43d7b8fb49aa74a56ee1a54f38a1aa55f721"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "5a819ff124d05c1cd96aa2307d07fb3559e7170b417e8d3a94def2e2fc900cd1"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "5a819ff124d05c1cd96aa2307d07fb3559e7170b417e8d3a94def2e2fc900cd1"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "5a819ff124d05c1cd96aa2307d07fb3559e7170b417e8d3a94def2e2fc900cd1"
+    sha256 cellar: :any_skip_relocation, sonoma:        "5a819ff124d05c1cd96aa2307d07fb3559e7170b417e8d3a94def2e2fc900cd1"
+    sha256 cellar: :any_skip_relocation, ventura:       "5a819ff124d05c1cd96aa2307d07fb3559e7170b417e8d3a94def2e2fc900cd1"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "158ba553ff3bbdcab693865410f17ad341432a76efc1f295623a7205eeb3cf9a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "158ba553ff3bbdcab693865410f17ad341432a76efc1f295623a7205eeb3cf9a"
   end
 
   depends_on "pnpm@9" => :build

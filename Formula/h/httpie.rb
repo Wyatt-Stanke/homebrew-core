@@ -6,17 +6,17 @@ class Httpie < Formula
   url "https://github.com/httpie/cli/archive/refs/tags/3.2.4.tar.gz"
   sha256 "b185cd8d81325f97c773582e50f1c5e047c2d8575b53d676469c9daf2a52f341"
   license "BSD-3-Clause"
-  revision 1
+  revision 4
   head "https://github.com/httpie/cli.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "a451ae630be688ea83dfd2cd2030873bbdb7b13fc2d2b77048d091d58a27beac"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "7acdfde3fc34526a586f1df5077e9c722d85c46b88dd583d5d3feccb6aa94cbc"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "a8d43ba63c0924a439c81387b6a7432703e00daae965173912618be026a203e1"
-    sha256 cellar: :any_skip_relocation, sonoma:        "e994062c42733f358a4752ec41c205526a4934e4d132d6f0ce4005677677dbdc"
-    sha256 cellar: :any_skip_relocation, ventura:       "eab041f8bebb9f83a3b81e25b6b1a7654659951a80563d39356be37402f35c77"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "996b86869f1524e55deb98f33bbc0484e87877ad3f22ceb7ba219b0fa40663ed"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "95f70667f58908f43f116c1773d04821163a4638e79aad8a2f68358aebd0adbb"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "fbda2c1ab0caf612205ab7af6653a21a8dadcdb4109e5905fc28a16e34b3ed73"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "c0055b5be143a4e97d1be67b9b193763e93e5eedb98551e78476ded275f7ef99"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "8bb20fe439b3c2e0dc5c5cb532a386d8fb6472312e39b4f198868ae5b8d454ed"
+    sha256 cellar: :any_skip_relocation, sonoma:        "b2322111f5e6ab3012f33114b67caed2755918ecc0dd2e5f3309091d5174cdeb"
+    sha256 cellar: :any_skip_relocation, ventura:       "36d37512343ad7d18f23256f0e8a72ddcd96aad7421f2cfd8e0f60ad1ccd64c2"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "ac7e30c0b40817c5fd95fbf1cf83c75b621049873ca27b673c245c6abdbd7481"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "070ba5a53bc32fb3667c76e4011b04a807ff7423103a5039ac4a27f8d8a49ed6"
   end
 
   depends_on "certifi"
@@ -48,13 +48,13 @@ class Httpie < Formula
   end
 
   resource "multidict" do
-    url "https://files.pythonhosted.org/packages/91/2f/a3470242707058fe856fe59241eee5635d79087100b7042a867368863a27/multidict-6.4.4.tar.gz"
-    sha256 "69ee9e6ba214b5245031b76233dd95408a0fd57fdb019ddcc1ead4790932a8e8"
+    url "https://files.pythonhosted.org/packages/3d/2c/5dad12e82fbdf7470f29bff2171484bf07cb3b16ada60a6589af8f376440/multidict-6.6.3.tar.gz"
+    sha256 "798a9eb12dab0a6c2e29c1de6f3468af5cb2da6053a20dfa3344907eed0937cc"
   end
 
   resource "pygments" do
-    url "https://files.pythonhosted.org/packages/7c/2d/c3338d48ea6cc0feb8446d8e6937e1408088a72a39937982cc6111d17f84/pygments-2.19.1.tar.gz"
-    sha256 "61c16d2a8576dc0649d9f39e089b5f02bcd27fba10d8fb4dcc28173f7a45151f"
+    url "https://files.pythonhosted.org/packages/b0/77/a5b8c569bf593b0140bde72ea885a803b82086995367bf2037de0159d924/pygments-2.19.2.tar.gz"
+    sha256 "636cb2477cec7f8952536970bc533bc43743542f70392ae026374600add5b887"
   end
 
   resource "pysocks" do
@@ -63,8 +63,8 @@ class Httpie < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/63/70/2bf7780ad2d390a8d301ad0b550f1581eadbd9a20f896afe06353c2a2913/requests-2.32.3.tar.gz"
-    sha256 "55365417734eb18255590a9ff9eb97e9e1da868d4ccd6402399eaf68af20a760"
+    url "https://files.pythonhosted.org/packages/e1/0a/929373653770d8a0d7ea76c37de6e41f11eb07559b103b1c02cafb3f7cf8/requests-2.32.4.tar.gz"
+    sha256 "27d0316682c8a29834d3264820024b62a36942083d52caf2f14c0591336d3422"
   end
 
   resource "requests-toolbelt" do
@@ -78,13 +78,13 @@ class Httpie < Formula
   end
 
   resource "setuptools" do
-    url "https://files.pythonhosted.org/packages/9e/8b/dc1773e8e5d07fd27c1632c45c1de856ac3dbf09c0147f782ca6d990cf15/setuptools-80.7.1.tar.gz"
-    sha256 "f6ffc5f0142b1bd8d0ca94ee91b30c0ca862ffd50826da1ea85258a06fd94552"
+    url "https://files.pythonhosted.org/packages/18/5d/3bf57dcd21979b887f014ea83c24ae194cfcd12b9e0fda66b957c69d1fca/setuptools-80.9.0.tar.gz"
+    sha256 "f36b47402ecde768dbfafc46e8e4207b4360c654f1f3bb84475f0a28628fb19c"
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/8a/78/16493d9c386d8e60e442a35feac5e00f0913c0f4b7c217c11e8ec2ff53e0/urllib3-2.4.0.tar.gz"
-    sha256 "414bc6535b787febd7567804cc015fee39daab8ad86268f1310a9250697de466"
+    url "https://files.pythonhosted.org/packages/15/22/9ee70a2574a4f4599c47dd506532914ce044817c7752a79b6a51286319bc/urllib3-2.5.0.tar.gz"
+    sha256 "3fc47733c7e419d4bc3f6b3dc2b4f890bb743906a30d56ba4a5bfa4bbff92760"
   end
 
   def install
