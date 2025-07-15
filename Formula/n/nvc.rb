@@ -1,18 +1,18 @@
 class Nvc < Formula
   desc "VHDL compiler and simulator"
   homepage "https://www.nickg.me.uk/nvc/"
-  url "https://github.com/nickg/nvc/releases/download/r1.16.1/nvc-1.16.1.tar.gz"
-  sha256 "47e5a62bf5919829075a18b86d0506b5329d049709bd2e939a7b2814b36b9cce"
+  url "https://github.com/nickg/nvc/releases/download/r1.17.0/nvc-1.17.0.tar.gz"
+  sha256 "8c551c15f283c6a47570883e41b7c3846a4af93e08e6dc82e96dcaf9010c2305"
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 arm64_sequoia: "f212f790b7773755f193f24309fc295d5fcee3dc5e7d322a02dd2a9cc512b688"
-    sha256 arm64_sonoma:  "58b27a43bf6abf5bca361454b7acacc98d692f589417903460fae04518a0ba22"
-    sha256 arm64_ventura: "5af45da380fc4ad9fef063638679e6734cd5b8ba0616921d1575d20072aa194c"
-    sha256 sonoma:        "29f01531b9fc6f54fe496b6c39670adc5f8e1e3d8ea20941d35b44ca97fba775"
-    sha256 ventura:       "a152b8ae5366828795c883149cbb26f9b5e72302a7aef6d52cc6937b8e63d32d"
-    sha256 arm64_linux:   "75f2f85a60c9f5019228e0819269ad752416a05bdc10096a6f5e6369a38e6aac"
-    sha256 x86_64_linux:  "efb90d8fb00572e94e752e2d257bd11bf99e337bb053fccb2bcdee2187bcade7"
+    sha256 arm64_sequoia: "337d3ca644c4da8458130b82711cb8671cfac3c61ae0c524ae1bc7a332ffb43d"
+    sha256 arm64_sonoma:  "713c88274d51e83bb3d309757022a1ef9f6b2baef48fa4ec16c987fbd7cf262f"
+    sha256 arm64_ventura: "4844507aa80fc1d05a4676c18c5c45b623258a89adf0892e076651f5dba51f4f"
+    sha256 sonoma:        "c53bda7c74b6a9da84d5bafa7bbcde3f586972a497be85eda737eb4260a19881"
+    sha256 ventura:       "8b4ff4db08adfc24cabe4ba0b694aaa46c3036025e063456fe5849d847c9fdc4"
+    sha256 arm64_linux:   "307551f1b411d98d35c06025cfcd01d6c8565ae4fcb81963adc2bd745c029b27"
+    sha256 x86_64_linux:  "0181713313d8c60d0d8fc9fd77b55e9bd306496c1db1354a3c88cea484da6d4b"
   end
 
   head do
@@ -33,6 +33,12 @@ class Nvc < Formula
 
   on_linux do
     depends_on "elfutils"
+  end
+
+  # Fix to arm build error, remove in next release
+  patch do
+    url "https://github.com/nickg/nvc/commit/4a94efdb8f314732d59368ade364d2e03b424e14.patch?full_index=1"
+    sha256 "714b54403a494ec85c340bdf9b371957288c43f3b49dcf4fb5817dcd6d6a581a"
   end
 
   def install

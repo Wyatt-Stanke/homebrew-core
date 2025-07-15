@@ -10,6 +10,8 @@ class Sloccount < Formula
     regex(/href=.*?sloccount[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   bottle do
     rebuild 1
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "3243d86a2a6a558e56911fe743461644ff484b699d962c7afcb17ffed89b7706"
@@ -41,7 +43,7 @@ class Sloccount < Formula
     rm "makefile.orig" # Delete makefile.orig or patch falls over
     bin.mkpath # Create the install dir or install falls over
     system "make", "install", "PREFIX=#{prefix}"
-    (bin+"erlang_count").write "#!/bin/sh\ngeneric_count '%' $@"
+    (bin/"erlang_count").write "#!/bin/sh\ngeneric_count '%' $@"
   end
 
   test do

@@ -6,23 +6,28 @@ class EvernoteBackup < Formula
   url "https://files.pythonhosted.org/packages/77/09/021f30d5e05df5587f0621b4144b687d94af331fefa54f5a14b7cd2d80d1/evernote_backup-1.13.1.tar.gz"
   sha256 "564c39cd92633e9e9492346363bd3f85175c15a9f73d5c34d35835a2ef05e197"
   license "MIT"
+  revision 2
+
+  no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "bf2e5bf18ebe4af610081206fb38e9124cadf4e596df687b90924480b91f8dc9"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f9b31ec399d7dde71784ee3d71c605d0041260f865f41057d3349cae3c494a20"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "4ea61ddd13136e0e3814e757789fbeb9f8dbd85468c3c4c4cc78e4f4e6ea58c5"
-    sha256 cellar: :any_skip_relocation, sonoma:        "a86e54cdb8638d4f64ada56815fdd09cd4168c00384aae450d555cf9ad563d3f"
-    sha256 cellar: :any_skip_relocation, ventura:       "8e6562bba45f91be1b194675431bc1cba3fa404aa420fbb4908d2d1fd4e753fa"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "c6f025f8f554c38e73546c8e8db3c44aeb9c56408787efa33df5720bd2a1fa43"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "042e87c2d48e0f702ad7fdd6169178d5a6cc483773c626f4bab90546785e3380"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "5516573e372818809c0f505eeb99fdebfc673a40b5740d9819a0def6c432c8e1"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "ec2b17250613406e1e86b86a30db2fb096988e13b04ecc59b8081cc925565a12"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "acc09d3d8a6f9c64f39e867a9ca41924542b052345edfecc1132266cc9350c18"
+    sha256 cellar: :any_skip_relocation, sequoia:       "9a9b855906d0055d09b6a0f3400173ffab60be8bfd89c1bd7eb407b134678c3d"
+    sha256 cellar: :any_skip_relocation, sonoma:        "e264b9089a95e9cf4ea2cf9422354ae480dc9894de0e9c1c631878ee02254c63"
+    sha256 cellar: :any_skip_relocation, ventura:       "2f50ec167567b5969f2f5dcf144fbc4620d3f8cb86bcab2e0b6441c3ac48f9d2"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "130cca0b9f6b743f96969187ff43f3144d22912425f79bd8dd0c02ae2c6f4246"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "80aef7476652cfb176c34cd7fd9ad27ee3ce482812cb3e80c5b0cc13b4bdc8a9"
   end
 
   depends_on "certifi"
   depends_on "python@3.13"
 
   resource "charset-normalizer" do
-    url "https://files.pythonhosted.org/packages/16/b0/572805e227f01586461c80e0fd25d65a2115599cc9dad142fee4b747c357/charset_normalizer-3.4.1.tar.gz"
-    sha256 "44251f18cd68a75b56585dd00dae26183e102cd5e0f9f1466e6df5da2ed64ea3"
+    url "https://files.pythonhosted.org/packages/e4/33/89c2ced2b67d1c2a61c19c6751aa8902d46ce3dacb23600a283619f5a12d/charset_normalizer-3.4.2.tar.gz"
+    sha256 "5baececa9ecba31eff645232d59845c07aa030f0c81ee70184a90d35099a0e63"
   end
 
   resource "click" do
@@ -46,13 +51,13 @@ class EvernoteBackup < Formula
   end
 
   resource "oauthlib" do
-    url "https://files.pythonhosted.org/packages/6d/fa/fbf4001037904031639e6bfbfc02badfc7e12f137a8afa254df6c4c8a670/oauthlib-3.2.2.tar.gz"
-    sha256 "9859c40929662bec5d64f34d01c99e093149682a3f38915dc0655d5a633dd918"
+    url "https://files.pythonhosted.org/packages/98/8a/6ea75ff7acf89f43afb157604429af4661a9840b1f2cece602b6a13c1893/oauthlib-3.3.0.tar.gz"
+    sha256 "4e707cf88d7dfc22a8cce22ca736a2eef9967c1dd3845efc0703fc922353eeb2"
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/63/70/2bf7780ad2d390a8d301ad0b550f1581eadbd9a20f896afe06353c2a2913/requests-2.32.3.tar.gz"
-    sha256 "55365417734eb18255590a9ff9eb97e9e1da868d4ccd6402399eaf68af20a760"
+    url "https://files.pythonhosted.org/packages/e1/0a/929373653770d8a0d7ea76c37de6e41f11eb07559b103b1c02cafb3f7cf8/requests-2.32.4.tar.gz"
+    sha256 "27d0316682c8a29834d3264820024b62a36942083d52caf2f14c0591336d3422"
   end
 
   resource "requests-oauthlib" do
@@ -76,8 +81,8 @@ class EvernoteBackup < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/8a/78/16493d9c386d8e60e442a35feac5e00f0913c0f4b7c217c11e8ec2ff53e0/urllib3-2.4.0.tar.gz"
-    sha256 "414bc6535b787febd7567804cc015fee39daab8ad86268f1310a9250697de466"
+    url "https://files.pythonhosted.org/packages/15/22/9ee70a2574a4f4599c47dd506532914ce044817c7752a79b6a51286319bc/urllib3-2.5.0.tar.gz"
+    sha256 "3fc47733c7e419d4bc3f6b3dc2b4f890bb743906a30d56ba4a5bfa4bbff92760"
   end
 
   resource "xmltodict" do
@@ -88,7 +93,8 @@ class EvernoteBackup < Formula
   def install
     virtualenv_install_with_resources
 
-    generate_completions_from_executable(bin/"evernote-backup", shells: [:fish, :zsh], shell_parameter_format: :click)
+    generate_completions_from_executable(bin/"evernote-backup",
+                                         shells: [:bash, :fish, :zsh], shell_parameter_format: :click)
   end
 
   test do

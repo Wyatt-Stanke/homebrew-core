@@ -6,17 +6,20 @@ class HttpPrompt < Formula
   url "https://files.pythonhosted.org/packages/bf/e2/bc5b0df107afcac65fde7015df48cbe9b4d877d1d0818203544ed1a41d4c/http-prompt-2.1.0.tar.gz"
   sha256 "eee71a00fed0b8a2a35bb338b269be7a20e8a1a6f6465a65561d76a21521e7f3"
   license "MIT"
-  revision 11
+  revision 13
   head "https://github.com/httpie/http-prompt.git", branch: "master"
 
+  no_autobump! because: :requires_manual_review
+
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "fd295f3f14ca5b3d24e898df9a74df05c1af6a0de036ff3fdf980bedbef23b97"
-    sha256 cellar: :any,                 arm64_sonoma:  "89411f03cdec958f4a7a236e46e3b3053a478d5b5cbeddc9c10984ff14fa534f"
-    sha256 cellar: :any,                 arm64_ventura: "aee5fbb79424b195520ed856fb47d7bbc17dd0c325b78a606a94e848300b81a6"
-    sha256 cellar: :any,                 sonoma:        "cd3306efda78d3dced41c5588729a5c58ddcb9566a93cde6e076fa1b47eb339f"
-    sha256 cellar: :any,                 ventura:       "8688f75cb0fcaaa93757888726dd8292555bca09bd4fdd8475cf9c71b8143185"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "eb1877919f314c291146702e149dcb1a24fa9353f6dde77f0d5e172c122dac71"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "09dd6eaef91d26e1e22121a84d930854cca79626f22505fb13714058e90ed76a"
+    rebuild 2
+    sha256 cellar: :any,                 arm64_sequoia: "8fb96b2aaf910e390ac7e12f7268f8679311a7782648ddcb066322eccfa43ef5"
+    sha256 cellar: :any,                 arm64_sonoma:  "ad2764c7662bfbc1f34e93161f87981ad2ff41166f75b9c244704d9bb7598264"
+    sha256 cellar: :any,                 arm64_ventura: "0532a8228129394bf13ee6f053858ffd7954404bd53dbb5b7da5da0274f10a6a"
+    sha256 cellar: :any,                 sonoma:        "dacf348561198beea4d248bd7a9d816a30399f707d08ec4fec8342db6fc05f28"
+    sha256 cellar: :any,                 ventura:       "9e0a279b469685fc81daaaa65b61b25d0869e797fc161972152529a585260b5b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "64128e8649f032b5515f1692641730b1a18b01c8f8526e7ec7f71df02ca2fb6b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "16bd9aa4d0b7cbaa76f7a09fd2ab89e5d5d61aa7529175ac213e592a1d8d1970"
   end
 
   depends_on "certifi"
@@ -29,8 +32,8 @@ class HttpPrompt < Formula
   end
 
   resource "click" do
-    url "https://files.pythonhosted.org/packages/cd/0f/62ca20172d4f87d93cf89665fbaedcd560ac48b465bd1d92bfc7ea6b0a41/click-8.2.0.tar.gz"
-    sha256 "f5452aeddd9988eefa20f90f05ab66f17fce1ee2a36907fd30b05bbb5953814d"
+    url "https://files.pythonhosted.org/packages/60/6c/8ca2efa64cf75a977a0d7fac081354553ebe483345c734fb6b6515d96bbc/click-8.2.1.tar.gz"
+    sha256 "27c491cc05d968d271d5a1db13e3b5a184636d9d930f148c50b038f0d0646202"
   end
 
   resource "defusedxml" do
@@ -59,8 +62,8 @@ class HttpPrompt < Formula
   end
 
   resource "multidict" do
-    url "https://files.pythonhosted.org/packages/91/2f/a3470242707058fe856fe59241eee5635d79087100b7042a867368863a27/multidict-6.4.4.tar.gz"
-    sha256 "69ee9e6ba214b5245031b76233dd95408a0fd57fdb019ddcc1ead4790932a8e8"
+    url "https://files.pythonhosted.org/packages/3d/2c/5dad12e82fbdf7470f29bff2171484bf07cb3b16ada60a6589af8f376440/multidict-6.6.3.tar.gz"
+    sha256 "798a9eb12dab0a6c2e29c1de6f3468af5cb2da6053a20dfa3344907eed0937cc"
   end
 
   resource "parsimonious" do
@@ -74,8 +77,8 @@ class HttpPrompt < Formula
   end
 
   resource "pygments" do
-    url "https://files.pythonhosted.org/packages/7c/2d/c3338d48ea6cc0feb8446d8e6937e1408088a72a39937982cc6111d17f84/pygments-2.19.1.tar.gz"
-    sha256 "61c16d2a8576dc0649d9f39e089b5f02bcd27fba10d8fb4dcc28173f7a45151f"
+    url "https://files.pythonhosted.org/packages/b0/77/a5b8c569bf593b0140bde72ea885a803b82086995367bf2037de0159d924/pygments-2.19.2.tar.gz"
+    sha256 "636cb2477cec7f8952536970bc533bc43743542f70392ae026374600add5b887"
   end
 
   resource "pysocks" do
@@ -94,8 +97,8 @@ class HttpPrompt < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/63/70/2bf7780ad2d390a8d301ad0b550f1581eadbd9a20f896afe06353c2a2913/requests-2.32.3.tar.gz"
-    sha256 "55365417734eb18255590a9ff9eb97e9e1da868d4ccd6402399eaf68af20a760"
+    url "https://files.pythonhosted.org/packages/e1/0a/929373653770d8a0d7ea76c37de6e41f11eb07559b103b1c02cafb3f7cf8/requests-2.32.4.tar.gz"
+    sha256 "27d0316682c8a29834d3264820024b62a36942083d52caf2f14c0591336d3422"
   end
 
   resource "requests-toolbelt" do
@@ -109,8 +112,8 @@ class HttpPrompt < Formula
   end
 
   resource "setuptools" do
-    url "https://files.pythonhosted.org/packages/9e/8b/dc1773e8e5d07fd27c1632c45c1de856ac3dbf09c0147f782ca6d990cf15/setuptools-80.7.1.tar.gz"
-    sha256 "f6ffc5f0142b1bd8d0ca94ee91b30c0ca862ffd50826da1ea85258a06fd94552"
+    url "https://files.pythonhosted.org/packages/18/5d/3bf57dcd21979b887f014ea83c24ae194cfcd12b9e0fda66b957c69d1fca/setuptools-80.9.0.tar.gz"
+    sha256 "f36b47402ecde768dbfafc46e8e4207b4360c654f1f3bb84475f0a28628fb19c"
   end
 
   resource "six" do
@@ -119,8 +122,8 @@ class HttpPrompt < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/8a/78/16493d9c386d8e60e442a35feac5e00f0913c0f4b7c217c11e8ec2ff53e0/urllib3-2.4.0.tar.gz"
-    sha256 "414bc6535b787febd7567804cc015fee39daab8ad86268f1310a9250697de466"
+    url "https://files.pythonhosted.org/packages/15/22/9ee70a2574a4f4599c47dd506532914ce044817c7752a79b6a51286319bc/urllib3-2.5.0.tar.gz"
+    sha256 "3fc47733c7e419d4bc3f6b3dc2b4f890bb743906a30d56ba4a5bfa4bbff92760"
   end
 
   resource "wcwidth" do
@@ -131,7 +134,8 @@ class HttpPrompt < Formula
   def install
     virtualenv_install_with_resources
 
-    generate_completions_from_executable(bin/"http-prompt", shells: [:fish, :zsh], shell_parameter_format: :click)
+    generate_completions_from_executable(bin/"http-prompt",
+                                         shells: [:bash, :fish, :zsh], shell_parameter_format: :click)
   end
 
   test do

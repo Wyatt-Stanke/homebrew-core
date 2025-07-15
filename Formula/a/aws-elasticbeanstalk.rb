@@ -3,18 +3,18 @@ class AwsElasticbeanstalk < Formula
 
   desc "Client for Amazon Elastic Beanstalk web service"
   homepage "https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb-cli3.html"
-  url "https://files.pythonhosted.org/packages/d8/70/e6910c4d2e18e39b577219533fd25941ce34aea64845c9df5cea6955e8fb/awsebcli-3.24.1.tar.gz"
-  sha256 "72242ff65890d8193483c24463430ed05137f88cd597d5ab302d16c32958deaf"
+  url "https://files.pythonhosted.org/packages/ed/3f/c69437e5335ec4ecc4bc72c145f10c0f1516b606c67d12f401eca6237366/awsebcli-3.25.tar.gz"
+  sha256 "6b7bc86779f8f047a70c8996bfd3864073c89f04253a7c50cdab5b9a0d1a648b"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "9cd1c6543a333094de24bc9860f0f0ea01b3d75ce016356d01bf3255179c2e14"
-    sha256 cellar: :any,                 arm64_sonoma:  "7e0ba2e0554ea54275b91da71c798feedb55d4198e7619ff1cea1f39d70f4523"
-    sha256 cellar: :any,                 arm64_ventura: "e60885264763af055818e3cc14fd3a3caa057c1e7f2be0464649504a917c3512"
-    sha256 cellar: :any,                 sonoma:        "c07ba7380d5da7a0d4cde291d55af9cf2926d4f3beed84bc9f12f9b3ae7b9b57"
-    sha256 cellar: :any,                 ventura:       "94d7a0742d967305372c2584323f4a65d8a484aa79928c185a916214b0f3c009"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "6c02efed3c333c14fc1a2a8f5d1c5fc92daf80ce0010feee6dc1fe97ef7294de"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b06abba5fb89b47af3a2ee4268c514573cddf8fb19c6c6754d3e7f66690bc36e"
+    sha256 cellar: :any,                 arm64_sequoia: "1467f44503e1cbdeb45bdfa30986e4605d29a176397a7b7baa632e204549d459"
+    sha256 cellar: :any,                 arm64_sonoma:  "4700bd1649fc43a655ed6cacd9e1b5186a8340327947ca9f0df949a866e33b10"
+    sha256 cellar: :any,                 arm64_ventura: "9715efd654b45a42ab2e99f12de02f1b69d22d1dd320b2a2e660fb2c19ea16c9"
+    sha256 cellar: :any,                 sonoma:        "edd2f318c749a1f202a04cb75a04ab273f3dd5f0e797384a7cf39e8331c0d721"
+    sha256 cellar: :any,                 ventura:       "ffdba781cfee548d0eaa709656d55be8aa360570e7cb0e480a4bad6409d6d904"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "4ae1e1c013019e904ecd75e9777bd4346460700f4766fc1f1894a3a4c92b9d41"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d46fa988dc9d1cce8545953fc0238f12cde92bcf6c9513d41f58313a9e28ab09"
   end
 
   depends_on "rust" => :build # for bcrypt
@@ -37,8 +37,8 @@ class AwsElasticbeanstalk < Formula
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/7f/78/c1b2fa6a267018062a66470e6e779366b4e64ab1178de8870ccc3a393cac/botocore-1.38.19.tar.gz"
-    sha256 "796b948c05017eb33385b798990cd91ed4af0e881eb9eb1ee6e17666be02abc9"
+    url "https://files.pythonhosted.org/packages/22/74/ffc95d7016ce09a85b748cb786ea9f56438d785c458b764bd437c2208b1d/botocore-1.38.45.tar.gz"
+    sha256 "02e14c45c350532cc64e3cc8ccb9adf25af4cca750f7d7e765a43fbe3df06aed"
   end
 
   resource "cement" do
@@ -117,8 +117,8 @@ class AwsElasticbeanstalk < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/63/70/2bf7780ad2d390a8d301ad0b550f1581eadbd9a20f896afe06353c2a2913/requests-2.32.3.tar.gz"
-    sha256 "55365417734eb18255590a9ff9eb97e9e1da868d4ccd6402399eaf68af20a760"
+    url "https://files.pythonhosted.org/packages/e1/0a/929373653770d8a0d7ea76c37de6e41f11eb07559b103b1c02cafb3f7cf8/requests-2.32.4.tar.gz"
+    sha256 "27d0316682c8a29834d3264820024b62a36942083d52caf2f14c0591336d3422"
   end
 
   resource "semantic-version" do
@@ -127,8 +127,8 @@ class AwsElasticbeanstalk < Formula
   end
 
   resource "setuptools" do
-    url "https://files.pythonhosted.org/packages/8d/d2/ec1acaaff45caed5c2dedb33b67055ba9d4e96b091094df90762e60135fe/setuptools-80.8.0.tar.gz"
-    sha256 "49f7af965996f26d43c8ae34539c8d99c5042fbff34302ea151eaa9c207cd257"
+    url "https://files.pythonhosted.org/packages/18/5d/3bf57dcd21979b887f014ea83c24ae194cfcd12b9e0fda66b957c69d1fca/setuptools-80.9.0.tar.gz"
+    sha256 "f36b47402ecde768dbfafc46e8e4207b4360c654f1f3bb84475f0a28628fb19c"
   end
 
   resource "six" do

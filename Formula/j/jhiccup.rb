@@ -10,6 +10,8 @@ class Jhiccup < Formula
     regex(/href=.*?jHiccup[._-]v?(\d+(?:\.\d+)+)-dist(?:-\d+)?\.zip/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   bottle do
     rebuild 1
     sha256 cellar: :any_skip_relocation, all: "010529211ca43ed531a37e60a1c33ee7a38b823038d204992713461c4ef4b56c"
@@ -19,7 +21,7 @@ class Jhiccup < Formula
     bin.install "jHiccup", "jHiccupLogProcessor"
 
     # Simple script to create and open a new plotter spreadsheet
-    (bin+"jHiccupPlotter").write <<~EOS
+    (bin/"jHiccupPlotter").write <<~EOS
       #!/bin/sh
       TMPFILE="/tmp/jHiccupPlotter.$$.xls"
       cp "#{prefix}/jHiccupPlotter.xls" $TMPFILE

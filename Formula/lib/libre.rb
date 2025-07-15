@@ -1,18 +1,18 @@
 class Libre < Formula
   desc "Toolkit library for asynchronous network I/O with protocol stacks"
   homepage "https://github.com/baresip/re"
-  url "https://github.com/baresip/re/archive/refs/tags/v3.22.0.tar.gz"
-  sha256 "31ecb7f7a5569ec0b3d85526c469b24c47673c802d45c58cb13f96a9365f4f14"
+  url "https://github.com/baresip/re/archive/refs/tags/v3.24.0.tar.gz"
+  sha256 "35cfe2cbb52095645334426b17585c080f3457fc1784eed173e54dd1eee41b76"
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "4983d98e34594c1af961549d8b4991421eae2e0cd1fa0d69597e623908a927e6"
-    sha256 cellar: :any,                 arm64_sonoma:  "4bba3d7970ab3d41fe8609485685d8b53f75801c52a2c88f0c2cf83c85260e71"
-    sha256 cellar: :any,                 arm64_ventura: "7ac577319687be8c0c1a88ed24aab3509c489140c32d9088d3e3a490634c8e5b"
-    sha256 cellar: :any,                 sonoma:        "fd33f97a24e6f063f2cc8dd059cd55c69a9769fe7ce5dad231a52ea57bd82e81"
-    sha256 cellar: :any,                 ventura:       "95f939b11e90bb13695da227a90f9d26257f261082586e118ddf783b7236b1d3"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "27d259496e09f08957f633a2d7730a85a740999e8961246e389fd8352a325ccb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f66e9290acb5554710dbb0d0827040d80f835b3d77248e347a4958f814d0634a"
+    sha256 cellar: :any,                 arm64_sequoia: "f9ba11220e558071ed3904fe10c3f85073d6dba1161585e154ab3e7eebf71325"
+    sha256 cellar: :any,                 arm64_sonoma:  "1de3980e87c9be1c3d50a614c1117384b6e53ab5eeef9678e1721ef2a247c7cc"
+    sha256 cellar: :any,                 arm64_ventura: "03a49e8f9fdb1d888bef87fd146e93ad6731edf678627373f6d38d0fe56798c3"
+    sha256 cellar: :any,                 sonoma:        "2074cbea3d5d024e568a06e4517f9461951f0287cb125304f70ce85598c84584"
+    sha256 cellar: :any,                 ventura:       "e3bc949ba71aed571102a8c676826d232c26de10ef9152d99913c337efc14775"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "ceb9527595cc46586b5f8f851ee5e95ca3ef7f0366c9a082abf02a53539cf125"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "04cd0693c27367ca16aa924c1872519e5fafffb6add97e425a1ff8f2e7831ace"
   end
 
   depends_on "cmake" => :build

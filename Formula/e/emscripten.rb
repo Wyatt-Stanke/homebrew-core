@@ -1,8 +1,8 @@
 class Emscripten < Formula
   desc "LLVM bytecode to JavaScript compiler"
   homepage "https://emscripten.org/"
-  url "https://github.com/emscripten-core/emscripten/archive/refs/tags/4.0.9.tar.gz"
-  sha256 "11a7d950453ee31da03ee3c3b261934ad3d7d2e470e41ea3222a13cecb9b98ef"
+  url "https://github.com/emscripten-core/emscripten/archive/refs/tags/4.0.11.tar.gz"
+  sha256 "aecfc5df27141d5fb6dd2d4853d8cff0f7719fac4edea34ea7786a6a86d6ecf5"
   license all_of: [
     "Apache-2.0", # binaryen
     "Apache-2.0" => { with: "LLVM-exception" }, # llvm
@@ -16,13 +16,13 @@ class Emscripten < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "2172717941515d34cc80061ad2bfccb1cb27a55495d883df02f9e76a43e970fa"
-    sha256 cellar: :any,                 arm64_sonoma:  "f2e6d1639aea6a5b695207c32bcd4c159e002994cda047903198b227eca788b7"
-    sha256 cellar: :any,                 arm64_ventura: "23fd15bf9e53d26a30834f744cdab323b1a87126209846ded22d50622f88b05c"
-    sha256 cellar: :any,                 sonoma:        "404e86ec1e428220236c61e7a720eaa2e0d6d6d52cadd77c89c08e3507b759ab"
-    sha256 cellar: :any,                 ventura:       "af21274ed062c984df57aadb10138617b29bfa8d5a8aec0072a33f88e5412b8d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "14a217b33aafc741a2a89504874bb21f7359ad95edb91c14d7a324b2c3c276df"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "08fcca1a2ea98d64cb1d92d6ab9117e65717495a53b00a031534d08fb50a303f"
+    sha256 cellar: :any,                 arm64_sequoia: "d747835082dfac0185527c77113e696d3214208d93c0f7a9c8a1b49df5d8a466"
+    sha256 cellar: :any,                 arm64_sonoma:  "3ec602b49a94a8853305c940589c430489d6471016f661b9679267111bfb3fa9"
+    sha256 cellar: :any,                 arm64_ventura: "bfe7deaaf34701b3cd9c6a4eb6d43a78f6cab99b8a400df8443608660a41658a"
+    sha256 cellar: :any,                 sonoma:        "cbac3c693163d9b5a0b785a8739f939b73e6f47f0a92ec371861cbd0187747a8"
+    sha256 cellar: :any,                 ventura:       "57f0d6b7420e950201351fde62b1b72da1a4f36327672bbd1781c848f60b4032"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "bc7faf3256e904e47de44f0b27bc20f995cb7e430965d2b91eb6cc0675aaa147"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7b56ca42cff7c98e1cb85dd65b07771806a636441a26916d88b95ad3d36a55b3"
   end
 
   depends_on "cmake" => :build
@@ -62,9 +62,9 @@ class Emscripten < Formula
   # https://chromium.googlesource.com/emscripten-releases/+/<commit>/DEPS
   # Then use the listed binaryen_revision for the revision below.
   resource "binaryen" do
-    url "https://github.com/WebAssembly/binaryen/archive/1217a95eb3b3b9a294788ab841ed7363ea8cf173.tar.gz"
-    version "1217a95eb3b3b9a294788ab841ed7363ea8cf173"
-    sha256 "6cb297e5f3948e99da4be56016b5fc3b23d11267e834873cd72db8122abdf73c"
+    url "https://github.com/WebAssembly/binaryen/archive/fc29e302e6708e71cc0a0058fcf4aee97140a750.tar.gz"
+    version "fc29e302e6708e71cc0a0058fcf4aee97140a750"
+    sha256 "aaea58bcfaa4ce311da642a708ec9a126e9b561c5191a182a41ccb5fa7acc0e5"
 
     livecheck do
       url "https://raw.githubusercontent.com/emscripten-core/emsdk/refs/tags/#{LATEST_VERSION}/emscripten-releases-tags.json"
@@ -88,9 +88,9 @@ class Emscripten < Formula
   # See binaryen resource above for instructions on how to update this.
   # Then use the listed llvm_project_revision for the tarball below.
   resource "llvm" do
-    url "https://github.com/llvm/llvm-project/archive/ad3136689090f79b52afcb5a95ec87e893006877.tar.gz"
-    version "ad3136689090f79b52afcb5a95ec87e893006877"
-    sha256 "afce51e2823dc26863e665317955f08bd0c0375bb03f4ce62b7cc036a92cf386"
+    url "https://github.com/llvm/llvm-project/archive/bf94c8ddb321696956365830bf23dd232ef90e74.tar.gz"
+    version "bf94c8ddb321696956365830bf23dd232ef90e74"
+    sha256 "473e8bd776bfd8bea3a0bdc6d1dba7c4c12f07cb1a30c488f096f0566bafe9ff"
 
     livecheck do
       url "https://raw.githubusercontent.com/emscripten-core/emsdk/refs/tags/#{LATEST_VERSION}/emscripten-releases-tags.json"
@@ -237,8 +237,18 @@ class Emscripten < Formula
   end
 
   def post_install
-    return if File.exist?("#{Dir.home}/.emscripten")
     return if (libexec/".emscripten").exist?
+
+    if File.exist?("#{Dir.home}/.emscripten")
+      ohai "Skipping configuration generation"
+      puts <<~EOS
+        You have a ~/.emscripten configuration file, so the default configuration
+        file was not generated. To generate the default configuration:
+          rm ~/.emscripten
+          brew postinstall emscripten
+      EOS
+      return
+    end
 
     system bin/"emcc", "--generate-config"
     inreplace libexec/".emscripten" do |s|
@@ -246,18 +256,6 @@ class Emscripten < Formula
       s.change_make_var! "BINARYEN_ROOT", "'#{libexec}/binaryen'"
       s.change_make_var! "NODE_JS", "'#{Formula["node"].opt_bin}/node'"
     end
-  end
-
-  def caveats
-    return unless File.exist?("#{Dir.home}/.emscripten")
-    return if (libexec/".emscripten").exist?
-
-    <<~EOS
-      You have a ~/.emscripten configuration file, so the default configuration
-      file was not generated. To generate the default configuration:
-        rm ~/.emscripten
-        brew postinstall emscripten
-    EOS
   end
 
   test do

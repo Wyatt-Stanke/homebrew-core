@@ -1,8 +1,8 @@
 class Knot < Formula
   desc "High-performance authoritative-only DNS server"
   homepage "https://www.knot-dns.cz/"
-  url "https://knot-dns.nic.cz/release/knot-3.4.6.tar.xz"
-  sha256 "d19c5a1ff94b4f26027d635de108dbfc88f5652be86ccb3ba9a44ee9be0e5839"
+  url "https://knot-dns.nic.cz/release/knot-3.4.7.tar.xz"
+  sha256 "dd346ca6f3afabcdc5e9ba09dd667b010590bb66a42f4541021fb9d6f073dacc"
   license all_of: ["GPL-3.0-or-later", "0BSD", "BSD-3-Clause", "LGPL-2.0-or-later", "MIT"]
 
   livecheck do
@@ -11,13 +11,14 @@ class Knot < Formula
   end
 
   bottle do
-    sha256 arm64_sequoia: "62241ba2192c8ffce58930ecd47a88899eaccc4251bfb9f7ba23fe18f2e60c03"
-    sha256 arm64_sonoma:  "94f5f562fe7533cb29fc2e53fb6f9308fe16b36b4f1cf41bb7caa273c16f0bfb"
-    sha256 arm64_ventura: "d7b76b9ed9be9a503cc6a21c5c896f0125411dbf119e4f225894f8d2a1d03867"
-    sha256 sonoma:        "9d65336182f586b314fd29bfee25c8652839c3032f9f9afa405e02ae502c8d63"
-    sha256 ventura:       "f2353253ac4781bbb3436823a9e56389edf0091d03874caa3157e042fb7cba2d"
-    sha256 arm64_linux:   "719cc905109bf0ca8a68b009af89ba49a9e2b6f0caa1d90c82a845abd1d1ef55"
-    sha256 x86_64_linux:  "8e0bf75312b54c8edd092dd36139829eaefb5b0f0160f5053d5b47d3a65dedf2"
+    rebuild 1
+    sha256 arm64_sequoia: "1dc4d7ee983b698f773fa5d55a8f0bbe9a328a335966e632f627823c1271c95b"
+    sha256 arm64_sonoma:  "b9d60eb58dc99bb7bd452488aa32baf855a4a453804efe60dc0494d9c95c9480"
+    sha256 arm64_ventura: "08e467b47054a840ccfc604113df50af71f0499c78a829fc04c77ec8f96c72dd"
+    sha256 sonoma:        "924d0d12a0d7b17716b8d4d373441b048b07a85d8e7a4af59176dc02c3a7660d"
+    sha256 ventura:       "86e4f45035be1f9a197fbf9cd23351c904a1c6c4d1b375025192ec08800ba0c7"
+    sha256 arm64_linux:   "f1f7baf441b646da5acecf8240d9ea865c1dd6413b170a6e5762da937be279c5"
+    sha256 x86_64_linux:  "11d5ee8ee5370e2fd1dcececdb6b5e46531306995bda35f5131265a5108680fa"
   end
 
   head do
@@ -39,14 +40,6 @@ class Knot < Formula
   depends_on "userspace-rcu"
 
   uses_from_macos "libedit"
-
-  # Fix 'knot/modules/rrl/./kru.inc.c:250:7: error: always_inline function' on macOS 13 and 14,
-  # see https://github.com/Homebrew/homebrew-core/pull/219163.
-  # Remove in next release.
-  patch do
-    url "https://gitlab.nic.cz/knot/knot-dns/-/commit/509d9d82b51c58ea572dccb09f4fdbe1a3c2571e.diff"
-    sha256 "c9b0d2dd5dddbe3d2fc0b817bbc3171f34fb73d0b099bf2b52cf101f4d0239ff"
-  end
 
   def install
     system "autoreconf", "--force", "--install", "--verbose" if build.head?
@@ -77,7 +70,7 @@ class Knot < Formula
     <<~EOS
       server:
         rundir: "#{var}/knot"
-        listen: [ "0.0.0.0@53", "::@53" ]
+        listen: [ "127.0.0.1@53", "::@53" ]
 
       log:
         - target: "stderr"

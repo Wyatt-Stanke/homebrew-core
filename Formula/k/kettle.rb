@@ -10,6 +10,8 @@ class Kettle < Formula
     regex(/href=.*?pdi-ce[._-]v?(\d+(?:\.\d+)+(?:-\d+)?)\.(?:t|zip)/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   bottle do
     rebuild 1
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "6844f00620d72aea96200ed1d2abae15a9ade480b7cdbe2fe30e023a18efb4b1"
@@ -27,8 +29,8 @@ class Kettle < Formula
     rm_r(Dir["*.{bat}"])
     libexec.install Dir["*"]
 
-    (etc+"kettle").install libexec+"pwd/carte-config-master-8080.xml" => "carte-config.xml"
-    (etc+"kettle/.kettle").install libexec+"pwd/kettle.pwd"
+    (etc+"kettle").install libexec/"pwd/carte-config-master-8080.xml" => "carte-config.xml"
+    (etc+"kettle/.kettle").install libexec/"pwd/kettle.pwd"
     (etc+"kettle/simple-jndi").mkpath
 
     (var+"log/kettle").mkpath

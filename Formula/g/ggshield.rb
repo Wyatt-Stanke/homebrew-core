@@ -3,19 +3,20 @@ class Ggshield < Formula
 
   desc "Scanner for secrets and sensitive data in code"
   homepage "https://www.gitguardian.com"
-  url "https://files.pythonhosted.org/packages/da/85/9cf7b609e64c68edec72bad19e581354d9715d3dbf58a23a76b84a3ba0b4/ggshield-1.40.0.tar.gz"
-  sha256 "7ad3ac8ffef6b488a59363539e36e67e60fea58a221e41a08c871b63be956368"
+  url "https://files.pythonhosted.org/packages/66/f5/25c4bbc960cb90e162534f701f799395cd5416ca80aacbee2831ce942666/ggshield-1.41.0.tar.gz"
+  sha256 "0cb8cd0e86e2012bb210be5a62416352bee5e366c4573874ce5cb225bf440207"
   license "MIT"
   head "https://github.com/GitGuardian/ggshield.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "42b767918ef0f3a747a18abdc29fb3d3efd4edb0f4bbe458bc862dec8bd36194"
-    sha256 cellar: :any,                 arm64_sonoma:  "ebfcb92ac05b6ea2ebba53a088329f1340c1e236eba0868e00efa7cc3499868e"
-    sha256 cellar: :any,                 arm64_ventura: "2619c07d94de78d04d3eadddeab8d78144bc2b7f9d20a22c7c0fe61bf1d9ba71"
-    sha256 cellar: :any,                 sonoma:        "05682730edbe3355b3228670c562a18fabf22036b8998694e756f55023ce4099"
-    sha256 cellar: :any,                 ventura:       "edbbd4d6aa343549cd1826f6cab96b3dda9f95b11b1f9421fbca8a92ee639b08"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "5c6f49189a823128099208e3c088fa2627fa95496e26ccf6a30fab15600c34b3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "47c364fffb807eee00d0ff989b0c449cfccb597b480ce81ee4f13eea26765a7e"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_sequoia: "189c7fb26996b840aca21c43aed5c00c10683c8fae75b8124ea957649095ed1e"
+    sha256 cellar: :any,                 arm64_sonoma:  "aa906bf0b77457b24af1dd53490fea6adc3e3694ed01f9d97446eaf2eb4e467b"
+    sha256 cellar: :any,                 arm64_ventura: "8be25a5943f7e41a37410e9d8e9081da74610a4e6242035365545e28f0828833"
+    sha256 cellar: :any,                 sonoma:        "0b142f22601bf7a4c550d38b8c860cb4c8cedc2bb4f7c8785114435686e56593"
+    sha256 cellar: :any,                 ventura:       "89d17d595632345664e4c998dcf11fa526d415d2c424d07c734a934dfeb0fd94"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "f6ceb3a508813677fe821af78f07a0b1464603798d270e1a55567eddf3f36733"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "15b9587c6eb484c2333a2c461524ddbf54cb90b1b3b58ec84b8278480fc85ecd"
   end
 
   depends_on "certifi"
@@ -74,13 +75,13 @@ class Ggshield < Formula
   end
 
   resource "pygitguardian" do
-    url "https://files.pythonhosted.org/packages/24/55/d55df088734cbfc80bb48608b2fbe3840171396c249e0da8bf93229ebf49/pygitguardian-1.22.0.tar.gz"
-    sha256 "d3e7214e16f06f2ba7c5ca1bc809dc1e1e4dbc9199e09f1c1b2947174d8b043b"
+    url "https://files.pythonhosted.org/packages/dd/8d/1895b125fb9c5b8cec697190c92b7e135c9642c2c396ad1cac54286fe325/pygitguardian-1.23.0.tar.gz"
+    sha256 "53d4c3019cc25a792b4e6e8788f137b98d0558a596aa0ba7bd4e2304cfd949ed"
   end
 
   resource "pygments" do
-    url "https://files.pythonhosted.org/packages/7c/2d/c3338d48ea6cc0feb8446d8e6937e1408088a72a39937982cc6111d17f84/pygments-2.19.1.tar.gz"
-    sha256 "61c16d2a8576dc0649d9f39e089b5f02bcd27fba10d8fb4dcc28173f7a45151f"
+    url "https://files.pythonhosted.org/packages/b0/77/a5b8c569bf593b0140bde72ea885a803b82086995367bf2037de0159d924/pygments-2.19.2.tar.gz"
+    sha256 "636cb2477cec7f8952536970bc533bc43743542f70392ae026374600add5b887"
   end
 
   resource "pyjwt" do
@@ -99,8 +100,8 @@ class Ggshield < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/63/70/2bf7780ad2d390a8d301ad0b550f1581eadbd9a20f896afe06353c2a2913/requests-2.32.3.tar.gz"
-    sha256 "55365417734eb18255590a9ff9eb97e9e1da868d4ccd6402399eaf68af20a760"
+    url "https://files.pythonhosted.org/packages/e1/0a/929373653770d8a0d7ea76c37de6e41f11eb07559b103b1c02cafb3f7cf8/requests-2.32.4.tar.gz"
+    sha256 "27d0316682c8a29834d3264820024b62a36942083d52caf2f14c0591336d3422"
   end
 
   resource "rich" do
@@ -136,7 +137,7 @@ class Ggshield < Formula
   def install
     virtualenv_install_with_resources
 
-    generate_completions_from_executable(bin/"ggshield", shells: [:fish, :zsh], shell_parameter_format: :click)
+    generate_completions_from_executable(bin/"ggshield", shells: [:bash, :fish, :zsh], shell_parameter_format: :click)
   end
 
   test do

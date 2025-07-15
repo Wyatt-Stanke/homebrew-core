@@ -1,18 +1,18 @@
 class Kiota < Formula
   desc "OpenAPI based HTTP Client code generator"
   homepage "https://aka.ms/kiota/docs"
-  url "https://github.com/microsoft/kiota/archive/refs/tags/v1.26.1.tar.gz"
-  sha256 "aec6a8c4a9b8916e45a63063e8b8f73b3c254b60669f3305d39407eeabac0135"
+  url "https://github.com/microsoft/kiota/archive/refs/tags/v1.28.0.tar.gz"
+  sha256 "22ae2c86276a4fadb8fbffa956a9a36dbb2afe7af3e988858a53e3c7b0b9d6fb"
   license "MIT"
   head "https://github.com/microsoft/kiota.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "19a38b19ceef31efe51cc4293e1b1ee698710a53a5f8f7b5e9d0e452a92fd2b4"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "860325dfc1f9cd1ccba1373ff011c96c47a5e2c7444f4d09a77cadc3ce587af2"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "eb077afb1d34e3abb97c60bc1f12606054b95aa1440baf9476ffc5b18e2a23d1"
-    sha256 cellar: :any_skip_relocation, ventura:       "ca7665ea8701539a9a4f8203a8ec60a433a4b9ca4817ca069ad3a79354a90aec"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "6723c526799374b78368a0a1d6fc1b2bfcaf4537de8d48e3cfdd4a3e8450503c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7596fe271778ba74bd1f3711d845e7e730919408ef1c718198ebb50192dce91d"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "1e9c66c91f5ef2b18e89aa4ccec8417711a7fbf6485fd0585c59d19112a21743"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "c038fe33ad77501ad5f09c7a7bb86194e51fb98b42086ff0b5ec20fd98b018a4"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "a2c910e355a8f1c101c4f91f7ec31d86270722e121090a5e1bbe1e48dc421c87"
+    sha256 cellar: :any_skip_relocation, ventura:       "a50a83adf8b4341e334b1990e18bec48b52d7cdb679974a2f2ad434452ff0421"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "47b04dd0b5ae4f5d4bacbbe17b03d58b74cb60a2145acab83ab6da7872a2cc8c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2b82c113a8953e61716bf2a301a62ffcf68eed59f8b2c3d88edf53d6edaf3186"
   end
 
   depends_on "dotnet"

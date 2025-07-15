@@ -1,8 +1,8 @@
 class Mold < Formula
   desc "Modern Linker"
   homepage "https://github.com/rui314/mold"
-  url "https://github.com/rui314/mold/archive/refs/tags/v2.40.0.tar.gz"
-  sha256 "ee93ef0868cd54d1f30dfba1070dbacf04c1a35428bbea307a4b9242a883ad20"
+  url "https://github.com/rui314/mold/archive/refs/tags/v2.40.2.tar.gz"
+  sha256 "28c7976c39e53ee440217b6b9f036a8cf13e3b2f93e8da83e19c66f4fc9a774c"
   license "MIT"
   head "https://github.com/rui314/mold.git", branch: "main"
 
@@ -15,13 +15,13 @@ class Mold < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "6a3b7de9bbbfb364a531a64be2832a97129435985c6dede2f315eab17e5951ce"
-    sha256 cellar: :any,                 arm64_sonoma:  "a651e31a2f57f6064a86070467e4db12fecb379106d4bf5d0f297a788295bcc7"
-    sha256 cellar: :any,                 arm64_ventura: "bf6d2d220e4773eaf8b3e9cfeadae57145dda34462c9a10dbe2f1bda7cd3b01f"
-    sha256 cellar: :any,                 sonoma:        "ef35ce5f2a6a069ad4b37794241c305bf6d17bb2918b5ad1c59dd68aebe31868"
-    sha256 cellar: :any,                 ventura:       "de59aa1cfb6098e23df1cc96e3d62550b39d1a0ffd1ae3c558c82198fa5c1368"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "b750229fe4364318e4a7ba0db1fc60089b7df5fcdec75cf97974f8ed86c90f48"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4edd2600bf10982548f59bf8073afecf049daa14d74c074fedc3ca06516355fc"
+    sha256 cellar: :any,                 arm64_sequoia: "6b035e1987e20ec55242da8d4e7a3af5650a4684093ef7cee286188dee0e7b3c"
+    sha256 cellar: :any,                 arm64_sonoma:  "c58f3a45faa139b03eaeaef0c6b80e5caed68aef4b858efb8f892ac835fd8665"
+    sha256 cellar: :any,                 arm64_ventura: "ea7d4bc369cc1653f9790b8ace2f10e2f2376c222df13f14494a445feb71a422"
+    sha256 cellar: :any,                 sonoma:        "d60cfca625a303a5039e941a48aeef736c279e09d9840d23fa3e20aad4e0071f"
+    sha256 cellar: :any,                 ventura:       "42089804fed13125a258d1d1292e6f7c0e8b3a65aef09c48fb3e76751dd6d84e"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "d2ba46d48f0cd4af081af55c0ba23f2b9915ba31ce4e58269de8fa018c8811f5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "71b8fb8c86b5c6051dcb6083762502f2ac25f485a8d119edbdd89aa74c5101ac"
   end
 
   depends_on "cmake" => :build

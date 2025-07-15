@@ -1,10 +1,9 @@
 class Gnuplot < Formula
   desc "Command-driven, interactive function plotting"
   homepage "http://www.gnuplot.info/"
-  url "https://downloads.sourceforge.net/project/gnuplot/gnuplot/6.0.2/gnuplot-6.0.2.tar.gz"
-  sha256 "f68a3b0bbb7bbbb437649674106d94522c00bf2f285cce0c19c3180b1ee7e738"
+  url "https://downloads.sourceforge.net/project/gnuplot/gnuplot/6.0.3/gnuplot-6.0.3.tar.gz"
+  sha256 "ec52e3af8c4083d4538152b3f13db47f6d29929a3f6ecec5365c834e77f251ab"
   license "gnuplot"
-  revision 1
 
   livecheck do
     url :stable
@@ -12,11 +11,12 @@ class Gnuplot < Formula
   end
 
   bottle do
-    sha256 arm64_sonoma:  "f4614510eee98277e8f6707ede38ff75808199d9142b01b9b5d866c6b04e5e64"
-    sha256 arm64_ventura: "f5b5661e21ff6750664ba916ffff4872223665d294aab46d5f1b0b03a31cb5f5"
-    sha256 sonoma:        "01283156bd481ad990babc7079fa7944a82dc5f8f63b2e7825b775a67a75947a"
-    sha256 ventura:       "0b58f022fee34dd428eba9960931a05af2f0195518a9194a815a709f29ef79d3"
-    sha256 x86_64_linux:  "2aef739e28fc8eebe3c2c005c59cb6e465b921407c615e4cad5a4e39f9828a7a"
+    rebuild 1
+    sha256 arm64_sonoma:  "4f2052aecbd2f736e1b2318acce36c0cb233af6be0935deddcf998bd822b1013"
+    sha256 arm64_ventura: "644cb48402329094a8de79741d5798c3720682f22c11330621d348e69bbb968b"
+    sha256 sonoma:        "e347e5938f393d37b8d2f5e3b0bca7954d6829174af3c7768c13ac0c49874bf4"
+    sha256 ventura:       "f8827be16a188c2388f7ad2ff9ccf5eda60152fc98a8fd64df6bbec7227c7011"
+    sha256 x86_64_linux:  "ab0c9ee561bf5ad5c80c772b0210dc905319ac694e6867cef09dbce7d4c63508"
   end
 
   head do

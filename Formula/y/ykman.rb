@@ -3,19 +3,20 @@ class Ykman < Formula
 
   desc "Tool for managing your YubiKey configuration"
   homepage "https://developers.yubico.com/yubikey-manager/"
-  url "https://files.pythonhosted.org/packages/d1/e2/7037a16f72d10939384744366f3797cc3052fc726a7bd001f9ed28bfe1c9/yubikey_manager-5.7.0.tar.gz"
-  sha256 "9a69212ac32ed82a78a287417d0cf476043388c28f84c356a8196f0f5c29a830"
+  url "https://files.pythonhosted.org/packages/08/56/66cfa3149a54ee55a27de742a0a46944df76acf0b9d2fc8377e43e92167a/yubikey_manager-5.7.2.tar.gz"
+  sha256 "9aeb4035dcff8f6cb792e83f36e6a9152a9b5b65ac2c2e25e5f20d53c6064e62"
   license "BSD-2-Clause"
   head "https://github.com/Yubico/yubikey-manager.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "2db45fdd68c86836c0f2936835e11e5d1385a162d0dff027ce0b56a6630a730f"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "8e101b01d362b695d1818a81c95c5d8fdcdd5170b6e490bc5e1bdfca23a817ac"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "1de046d5180a223cff87dd1a67211404717d9ba6a864bcf1503009dfc37883f4"
-    sha256 cellar: :any_skip_relocation, sonoma:        "f454774ff7aeaba4ebd20bba5c37998600ad872e3d67db713f689b07b17103aa"
-    sha256 cellar: :any_skip_relocation, ventura:       "7febcee7110dd53648ec23859fa376832fb8d343178c74bc3d01c92d5e1e9c88"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "79d978ddcc94eb3c65b409f9be4c9b1122372dc412e9931a654ee7109cfd8801"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fbcf19200208c02459ed0c763124dc7c986215b37cb45338c01026bbeddab301"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "87773a77350d507bd05943f10c30a60a14d73b30043dd0e71ee9a8304bc9773b"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f7b44cc3f306a4626e0851078692fda43e73ca3ab1bde9d9da7d8894460a4261"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "cfab40b274c9ce7d0461bbcdaeb5e4282c14c149bd74b6c498786847d40ac994"
+    sha256 cellar: :any_skip_relocation, sonoma:        "c6a92f7805145991992181297c85062d88c556fe97216aa8e9a663b18bf4db77"
+    sha256 cellar: :any_skip_relocation, ventura:       "f07721117ed5dd7fd675fad16b98c8045ccefcd99ba8cbd10b4206e12056d3c2"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "7fa0324093131a4a4185cd01586e29031d1762475018e59cf6e94a6bbe77a4c0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "25a6128e15cffa903450e28521abf1c5ec918ff7bf29c32dc52a751af47c8a3e"
   end
 
   depends_on "swig" => :build
@@ -92,7 +93,7 @@ class Ykman < Formula
     man1.install "man/ykman.1"
 
     # Click doesn't support generating completions for Bash versions older than 4.4
-    generate_completions_from_executable(bin/"ykman", shells: [:fish, :zsh], shell_parameter_format: :click)
+    generate_completions_from_executable(bin/"ykman", shells: [:bash, :fish, :zsh], shell_parameter_format: :click)
   end
 
   test do

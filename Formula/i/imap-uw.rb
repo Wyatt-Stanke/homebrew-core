@@ -28,6 +28,7 @@ class ImapUw < Formula
   end
 
   deprecate! date: "2024-07-03", because: :unmaintained
+  disable! date: "2025-07-07", because: :unmaintained
 
   depends_on "openssl@3"
 
@@ -91,8 +92,8 @@ class ImapUw < Formula
     #   as such. Pulling from within the src dir achieves the desired result.
     doc.install Dir["docs/*"]
     lib.install "c-client/c-client.a" => "libc-client.a"
-    (include + "imap").install "c-client/osdep.h", "c-client/linkage.h"
-    (include + "imap").install Dir["src/c-client/*.h", "src/osdep/unix/*.h"]
+    (include/"imap").install "c-client/osdep.h", "c-client/linkage.h"
+    (include/"imap").install Dir["src/c-client/*.h", "src/osdep/unix/*.h"]
   end
 
   test do

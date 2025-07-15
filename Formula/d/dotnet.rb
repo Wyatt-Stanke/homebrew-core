@@ -7,12 +7,12 @@ class Dotnet < Formula
 
   stable do
     # Source-build tag announced at https://github.com/dotnet/source-build/discussions
-    url "https://github.com/dotnet/dotnet/archive/refs/tags/v9.0.5.tar.gz"
-    sha256 "0ff026271b8e21db503284b5cfae8e0546f009d18581497ba754084729dc74c3"
+    url "https://github.com/dotnet/dotnet/archive/refs/tags/v9.0.7.tar.gz"
+    sha256 "f68182b95fa441efb63b2a71ca3f98498b664e8d81964690ce4ec4f855981a44"
 
     resource "release.json" do
-      url "https://github.com/dotnet/dotnet/releases/download/v9.0.5/release.json"
-      sha256 "36900c37e54d780ade35f2eaeaa9bf2dc1e7789b5d82c6c11a63d0da2853f813"
+      url "https://github.com/dotnet/dotnet/releases/download/v9.0.7/release.json"
+      sha256 "b812e7e8e30aa47fdea32e68932f1cc23569419f27f4f5ff441160e53f1cff94"
 
       livecheck do
         formula :parent
@@ -26,12 +26,12 @@ class Dotnet < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "9a9c0fea3897f713604263ce3d25755cdc1cc34e9728ce384b1674a23adaf081"
-    sha256 cellar: :any,                 arm64_sonoma:  "a6be60a96abea6c0c5262c1ee7ef44396cf96837c434beb2f1d7ae0643cffaad"
-    sha256 cellar: :any,                 arm64_ventura: "73b20278e33fb2c051e60b19b9aaf216c6edfb6e9b4b615f8a65ee53edff7d00"
-    sha256 cellar: :any,                 ventura:       "e8e49e3b7d72dbd6adf719f368d0a38bb78a3e29e0368b828339657f765c2fa5"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "4bc91b3b6e5934256b7c52e0e4028442cc0c263786408f7c10cab58ecdc96942"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "238d53cd94923a17447e797249358c06e6e5f8b4574a51bd87fb3c7734c7c39b"
+    sha256 cellar: :any,                 arm64_sequoia: "3c54ec18dd398c12d9b3acbeff0035c8c26ffc207ba9cc968706347376c8b436"
+    sha256 cellar: :any,                 arm64_sonoma:  "becdc41681bc5d0b3909765e12427af2d3d97cd706a6eb40246285eef9d24162"
+    sha256 cellar: :any,                 arm64_ventura: "2c7b96f5ebcecba40674ad288fc85c683a0a1eb03769825273fea145d134bc9a"
+    sha256 cellar: :any,                 ventura:       "1a4f9857880a0221d34c99a134cf7f1104fe3c36167c0302a858af4fecb039f8"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "e56bc127bd146f1fe824bacce689be414ff6079367075f836279a1b5d5d7be62"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "bdb49499d4e711256bd209c523bd58f65154381df83ea6aa912883aae229aaaa"
   end
 
   depends_on "cmake" => :build

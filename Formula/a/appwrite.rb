@@ -1,21 +1,26 @@
 class Appwrite < Formula
   desc "Command-line tool for Appwrite"
   homepage "https://appwrite.io"
-  url "https://registry.npmjs.org/appwrite-cli/-/appwrite-cli-7.0.0.tgz"
-  sha256 "9056ace48bf565a5d931dcaaaf9591953c5b4dd31fdb2ac42e8e7be0088e3981"
+  url "https://registry.npmjs.org/appwrite-cli/-/appwrite-cli-8.2.0.tgz"
+  sha256 "0aad75dd81491414aa360d68c631e8a8691703f1d5d2a5bd3eaf6306556cc7ac"
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "d375dce9b14753fb79e1c318c64e58c69240f89293c98dc792595a9f1a4ac140"
+    sha256 cellar: :any_skip_relocation, all: "e7aa17e19fe4c6c3dc425ebaa3d75a50eba8667808f820478d9674d7cfd98f9f"
   end
 
   depends_on "node"
 
   def install
     system "npm", "install", *std_npm_args
-    inreplace libexec/"lib/node_modules/appwrite-cli/install.sh", "/usr/local", "@@HOMEBREW_PREFIX@@"
-    inreplace libexec/"lib/node_modules/appwrite-cli/ldid/Makefile", "/usr/local", "@@HOMEBREW_PREFIX@@"
-    bin.install_symlink Dir["#{libexec}/bin/*"]
+    bin.install_symlink libexec.glob("bin/*")
+
+    # Ensure uniform bottles
+    inreplace [
+      libexec/"lib/node_modules/appwrite-cli/install.sh",
+      libexec/"lib/node_modules/appwrite-cli/ldid/Makefile",
+      libexec/"lib/node_modules/appwrite-cli/node_modules/jake/Makefile",
+    ], "/usr/local", HOMEBREW_PREFIX
   end
 
   test do

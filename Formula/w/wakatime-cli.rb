@@ -2,18 +2,18 @@ class WakatimeCli < Formula
   desc "Command-line interface to the WakaTime api"
   homepage "https://wakatime.com/"
   url "https://github.com/wakatime/wakatime-cli.git",
-      tag:      "v1.115.3",
-      revision: "0d0dad60ca98ce9e9aa5aff4afeeb389d2b1a9ab"
+      tag:      "v1.118.0",
+      revision: "677c1c90bf3b2e052efd447ef2800a5ac3f1246c"
   license "BSD-3-Clause"
   version_scheme 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "8b3c04175a831da198087d7d24d61f57c7dbef4e7768edaa44ad351d0bae2f5b"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "8b3c04175a831da198087d7d24d61f57c7dbef4e7768edaa44ad351d0bae2f5b"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "8b3c04175a831da198087d7d24d61f57c7dbef4e7768edaa44ad351d0bae2f5b"
-    sha256 cellar: :any_skip_relocation, sonoma:        "4811407c291065b4bbdac0a077447f1f6e1b3fe58352ae224234dd1ac496f3fa"
-    sha256 cellar: :any_skip_relocation, ventura:       "4811407c291065b4bbdac0a077447f1f6e1b3fe58352ae224234dd1ac496f3fa"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "85a03419a74b0c3daf71f21ec10ab7caff2160461d88a4d942ef711a3672def1"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "91c80f68ecf2f998eb42f908c2d0a65272f1e27bda9a66d375c1fae2cd41ab3d"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "91c80f68ecf2f998eb42f908c2d0a65272f1e27bda9a66d375c1fae2cd41ab3d"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "91c80f68ecf2f998eb42f908c2d0a65272f1e27bda9a66d375c1fae2cd41ab3d"
+    sha256 cellar: :any_skip_relocation, sonoma:        "7eed44f3843b50d37c7735aec91d4d01848b933f4af50dda59f5e7490328ff27"
+    sha256 cellar: :any_skip_relocation, ventura:       "7eed44f3843b50d37c7735aec91d4d01848b933f4af50dda59f5e7490328ff27"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "307aaa63c875168080b61003424a1e7de95aeb49f3139296ff59f080a1df3aa6"
   end
 
   depends_on "go" => :build

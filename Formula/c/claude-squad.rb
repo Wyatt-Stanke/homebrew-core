@@ -1,18 +1,18 @@
 class ClaudeSquad < Formula
   desc "Manage multiple AI agents like Claude Code, Aider and Codex in your terminal"
   homepage "https://smtg-ai.github.io/claude-squad/"
-  url "https://github.com/smtg-ai/claude-squad/archive/refs/tags/v1.0.3.tar.gz"
-  sha256 "d790acb3d3ad80fdcd73be1200b6548367fde4abf39168d3d85a772bad0e84f6"
+  url "https://github.com/smtg-ai/claude-squad/archive/refs/tags/v1.0.10.tar.gz"
+  sha256 "06b8de4bfdf06ea49f65559749bb08c8da3ede822a41c642ec6e726baffa7cc7"
   license "AGPL-3.0-only"
   head "https://github.com/smtg-ai/claude-squad.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "abf592d9a27f321cc6654eeba356d98f164de9c1345dd6b28d45eafcd683739e"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "abf592d9a27f321cc6654eeba356d98f164de9c1345dd6b28d45eafcd683739e"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "abf592d9a27f321cc6654eeba356d98f164de9c1345dd6b28d45eafcd683739e"
-    sha256 cellar: :any_skip_relocation, sonoma:        "0a1b902a8120cb20125cb483ae698ba096f57c0ba3d4616bdc9a4064ed8c3471"
-    sha256 cellar: :any_skip_relocation, ventura:       "0a1b902a8120cb20125cb483ae698ba096f57c0ba3d4616bdc9a4064ed8c3471"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ec66bbab559e3a66c78cb20994f2b8412624ea8787f030b2686c05ce3953712e"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "341da81f5073727c0ef8877f9e932db5da508284492b459d195ba357d7731b49"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "341da81f5073727c0ef8877f9e932db5da508284492b459d195ba357d7731b49"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "341da81f5073727c0ef8877f9e932db5da508284492b459d195ba357d7731b49"
+    sha256 cellar: :any_skip_relocation, sonoma:        "d1a38a92529ba991346d51510d6dd59ec9acc877b3725374ef235a7cdf52a834"
+    sha256 cellar: :any_skip_relocation, ventura:       "d1a38a92529ba991346d51510d6dd59ec9acc877b3725374ef235a7cdf52a834"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "35f35f1b7280b0461d0d81d3e615d069a70b5ecbd940cbbaeaa91bb51a4fb9c8"
   end
 
   depends_on "go" => :build
